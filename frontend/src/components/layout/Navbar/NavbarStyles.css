@@ -1,0 +1,19 @@
+.navbar-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    padding: 10px 15px;
+    align-items: center;
+}
+
+.navbar-titles {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar-titles h2 {
+    background: var()
+}
