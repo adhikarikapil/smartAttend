@@ -10,7 +10,7 @@ function App() {
     <div className="main-container">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navbar />} />
+          <Route path="/" element={<Register />} />
         </Routes>
       </BrowserRouter>
     </div>

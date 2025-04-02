@@ -1,18 +1,24 @@
 :root {
-    --primary-color: #4CAF50;   
-    --secondary-color: #FF9800;
-    --background-color: #FAFAFA;
-    --text-color: #212121;
-    --success-color: #388E3C;
-    --error-color: #D32F2F;
-    --warning-color: #F57C00;
-    --info-color: #1976d2;
+    --primary-1: #357a38;   
+    --primary-2: #3d8b40;
+    --primary-3: #449d48;
+    --primary-4: #4caf50;
+    --primary-5: #5cb860;
+    --primary-6: #6ec071;
+    --primary-7: #bdf5bf;
+    --secondary: #ff9900;
+    --background: #dbdbdb;
+    --text: #212121;
+    --success: #388E3C;
+    --error: #D32F2F;
+    --warning: #F57C00;
+    --info: #1976d2;
 }
 
 body {
     max-width: 100%;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--background);
+    color: var(--text);
 }
 
 .main-container {

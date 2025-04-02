@@ -1,19 +1,101 @@
+@import 'tailwindcss';
+
 .navbar-container {
     display: flex;
     position: fixed;
     top: 0;
     width: 100%;
-    height: 60px;
+    height: 70px;
     padding: 10px 15px;
     align-items: center;
+    background: linear-gradient(270deg, var(--primary-5), var(--primary-1));
+    justify-content: space-between;
 }
 
 .navbar-titles {
     display: flex;
     justify-content: center;
     text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--secondary);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.navbar-titles:hover {
+    transform: scale(1.1);
+}
+
+.navbar-titles:active {
+    transform: scale(0.8);
 }
 
 .navbar-titles h2 {
     background: var()
+}
+
+.navbar-tags {
+    display: flex;
+    position: fixed;
+    left: 250px;
+    gap: 35px;
+}
+
+.navbar-tags {
+    color: var(text);
+    font-size: 19px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-menu {
+    transition: 0.3s;
+}
+
+.navbar-tags div:hover {
+    transform: scale(1.1);
+}
+
+.navbar-tags div:active {
+    transform: scale(0.8);
+}
+
+.navbar-profile {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    margin: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.navbar-profile img:hover {
+    transform: scale(1.1);
+}
+
+.navbar-profile img:active {
+    transform: scale(0.8);
+}
+
+.navbar-dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-dropdown button {
+    color: var(--text);
+    background-color: var(--primary-5);
+    border: none;
+}
+
+.navbar-dropdown button:hover {
+    background: var(--secondary);
+    transform: scale(1.1);
+}
+
+.navbar-dropdown button:active {
+    transform: scale(0.8);
 }
