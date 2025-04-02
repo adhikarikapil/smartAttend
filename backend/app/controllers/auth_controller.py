@@ -1,7 +1,7 @@
 from flask import request, jsonify
 from app import db
 from app.models import User
-from datetime import datetime, timezone
+from app.services.auth_service import authenticate_user, refresh_access_token
 
 
 # Handle http request and response
@@ -15,10 +15,6 @@ def register_user():
         email = data.get("email")
         password = data.get("password")
         role = data.get("role")
-
-        print(
-            f"firstName: {first_name}, secondName: {second_name}, email: {email}, password: {password}, role: {role}"
-        )
 
         # Make sure user gives all field
         if not first_name or not second_name or not email or not password or not role:
@@ -46,3 +42,48 @@ def register_user():
 
     except Exception as e:
         return jsonify({"error": str(e)})
+
+
+
+def login_user():
+    try:
+        data = request.get_json()
+
+        email = data.get('email')
+        password = data.get('password')
+
+        if not email or not password:
+            return jsonify({'error': 'Email and password are required!!!'}), 400
+        
+        access_token, refresh_token = authenticate_user(email, password)
+
+        if access_token:
+            return jsonify({
+                'message': 'Login Sucessful!!!',
+                'accessToken': access_token,
+                'refreshToken': refresh_token
+            }), 200
+        else:
+            return jsonify({'error': 'Invalid Email or Password!!!'}), 401
+
+    except Exception as e:
+        return jsonify({'error': str(e)})
+    
+
+def refresh_token():
+    try:
+        data = request.get_json()
+        refresh_token = data.get('refreshToken')
+
+        if not refresh_token:
+            return jsonify({'error': 'Refresh Token is Required!!!'}), 400
+        
+        new_access_token = refresh_access_token(refresh_token)
+
+        if new_access_token:
+            return jsonify({'accessToken': new_access_token}), 200
+        else:
+            return jsonify({'error': 'Invalid or expired refresh token!!!'}), 401
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 400

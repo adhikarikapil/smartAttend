@@ -1,26 +1,214 @@
 :root {
-    --primary-1: #357a38;   
-    --primary-2: #3d8b40;
-    --primary-3: #449d48;
-    --primary-4: #4caf50;
-    --primary-5: #5cb860;
-    --primary-6: #6ec071;
-    --primary-7: #bdf5bf;
-    --secondary: #ff9900;
-    --background: #dbdbdb;
-    --text: #212121;
-    --success: #388E3C;
-    --error: #D32F2F;
-    --warning: #F57C00;
-    --info: #1976d2;
+    /* Primary Colors - Use for main brand elements, primary buttons, and important UI elements */
+    --primary-1: #4f46e5;  /* Indigo 600 - Main primary color, use for primary buttons */
+    --primary-2: #7c3aed;  /* Purple 600 - Secondary primary color, use for gradients */
+    --primary-3: #6366f1;  /* Indigo 500 - Lighter primary, use for hover states */
+    --primary-4: #8b5cf6;  /* Purple 500 - Light primary, use for subtle accents */
+    --primary-5: #818cf8;  /* Indigo 400 - Very light primary, use for backgrounds */
+    --primary-6: #a78bfa;  /* Purple 400 - Lightest primary, use for subtle highlights */
+    
+    /* Secondary Colors - Use for supporting elements, secondary buttons, and accents */
+    --secondary-1: #0ea5e9;  /* Sky 500 - Main secondary color, use for secondary buttons */
+    --secondary-2: #38bdf8;  /* Sky 400 - Lighter secondary, use for hover states */
+    --secondary-3: #06b6d4;  /* Cyan 500 - Alternative secondary, use for accents */
+    --secondary-4: #22d3ee;  /* Cyan 400 - Light secondary, use for subtle accents */
+    
+    /* Success Colors - Use for success states, positive actions, and confirmations */
+    --success-1: #16a34a;  /* Green 600 - Main success color, use for success buttons */
+    --success-2: #22c55e;  /* Green 500 - Lighter success, use for success states */
+    --success-3: #4ade80;  /* Green 400 - Light success, use for success backgrounds */
+    
+    /* Error Colors - Use for error states, destructive actions, and warnings */
+    --error-1: #dc2626;  /* Red 600 - Main error color, use for error buttons */
+    --error-2: #ef4444;  /* Red 500 - Lighter error, use for error states */
+    --error-3: #f87171;  /* Red 400 - Light error, use for error backgrounds */
+    
+    /* Warning Colors - Use for warning states and cautionary messages */
+    --warning-1: #d97706;  /* Amber 600 - Main warning color, use for warning buttons */
+    --warning-2: #f59e0b;  /* Amber 500 - Lighter warning, use for warning states */
+    --warning-3: #fbbf24;  /* Amber 400 - Light warning, use for warning backgrounds */
+    
+    /* Neutral Colors - Use for text, backgrounds, and UI elements */
+    --neutral-1: #1e293b;  /* Slate 800 - Main text color, headings */
+    --neutral-2: #334155;  /* Slate 700 - Secondary text, subheadings */
+    --neutral-3: #475569;  /* Slate 600 - Tertiary text, body text */
+    --neutral-4: #64748b;  /* Slate 500 - Muted text, placeholders */
+    --neutral-5: #94a3b8;  /* Slate 400 - Light text, disabled states */
+    --neutral-6: #cbd5e1;  /* Slate 300 - Border colors, dividers */
+    --neutral-7: #e2e8f0;  /* Slate 200 - Light borders, backgrounds */
+    --neutral-8: #f1f5f9;  /* Slate 100 - Very light backgrounds */
+    --neutral-9: #f8fafc;  /* Slate 50 - Lightest backgrounds, page background */
+    
+    /* Text Colors - Semantic text color variables */
+    --text-dark: var(--neutral-1);    /* Use for main text content */
+    --text-light: var(--neutral-9);   /* Use for text on dark backgrounds */
+    --text-muted: var(--neutral-4);   /* Use for secondary text */
+    
+    /* Background Colors - Semantic background color variables */
+    --bg-primary: var(--neutral-9);   /* Use for main page background */
+    --bg-secondary: var(--neutral-8); /* Use for card backgrounds, sections */
+    --bg-tertiary: var(--neutral-7);  /* Use for subtle backgrounds */
+    
+    /* Gradients - Use for buttons, headers, and decorative elements */
+    --primary-gradient: linear-gradient(135deg, var(--primary-1), var(--primary-2));    /* Main gradient */
+    --secondary-gradient: linear-gradient(135deg, var(--secondary-1), var(--secondary-2)); /* Secondary gradient */
+    --success-gradient: linear-gradient(135deg, var(--success-1), var(--success-2));    /* Success gradient */
+    --error-gradient: linear-gradient(135deg, var(--error-1), var(--error-2));          /* Error gradient */
+    --warning-gradient: linear-gradient(135deg, var(--warning-1), var(--warning-2));    /* Warning gradient */
+    
+    /* Shadows - Use for depth and elevation */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);    /* Use for subtle elevation */
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Use for cards and raised elements */
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1); /* Use for modals and dropdowns */
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1); /* Use for highest elevation */
+    
+    /* Border Radius - Use for rounded corners */
+    --radius-sm: 0.375rem;  /* Use for small elements like buttons */
+    --radius-md: 0.5rem;    /* Use for medium elements like cards */
+    --radius-lg: 0.75rem;   /* Use for larger elements */
+    --radius-xl: 1rem;      /* Use for very large elements */
+    --radius-2xl: 1.5rem;   /* Use for extra large elements */
+    
+    /* Spacing - Use for consistent spacing throughout the app */
+    --spacing-xs: 0.25rem;  /* Use for very small spacing */
+    --spacing-sm: 0.5rem;   /* Use for small spacing */
+    --spacing-md: 1rem;     /* Use for medium spacing (default) */
+    --spacing-lg: 1.5rem;   /* Use for large spacing */
+    --spacing-xl: 2rem;     /* Use for extra large spacing */
+    --spacing-2xl: 3rem;    /* Use for very large spacing */
+    
+    /* Font Sizes - Use for consistent typography */
+    --text-xs: 0.75rem;     /* Use for very small text */
+    --text-sm: 0.875rem;    /* Use for small text */
+    --text-base: 1rem;      /* Use for body text (default) */
+    --text-lg: 1.125rem;    /* Use for large text */
+    --text-xl: 1.25rem;     /* Use for extra large text */
+    --text-2xl: 1.5rem;     /* Use for headings */
+    --text-3xl: 1.875rem;   /* Use for large headings */
+    
+    /* Font Weights - Use for text emphasis */
+    --font-normal: 400;     /* Use for regular text */
+    --font-medium: 500;     /* Use for slightly emphasized text */
+    --font-semibold: 600;   /* Use for emphasized text */
+    --font-bold: 700;       /* Use for strongly emphasized text */
+    
+    /* Transitions - Use for smooth animations */
+    --transition-fast: 0.2s ease;     /* Use for quick interactions */
+    --transition-normal: 0.3s ease;   /* Use for standard transitions */
+    --transition-slow: 0.4s ease;     /* Use for slower transitions */
+    --transition-bounce: cubic-bezier(0.4, 0, 0.2, 1); /* Use for bouncy animations */
+    
+    /* Z-index - Use for layering elements */
+    --z-0: 0;      /* Use for base layer */
+    --z-10: 10;    /* Use for slightly raised elements */
+    --z-20: 20;    /* Use for dropdowns */
+    --z-30: 30;    /* Use for modals */
+    --z-40: 40;    /* Use for tooltips */
+    --z-50: 50;    /* Use for highest elements */
+    --z-auto: auto; /* Use when z-index needs to be automatic */
+}
+
+/* Example Usage - Fix CSS comment syntax */
+/*
+.my-component {
+    color: var(--text-dark);
+    background: var(--bg-primary);
+    padding: var(--spacing-md);
+    margin: var(--spacing-lg);
+    font-size: var(--text-base);
+    font-weight: var(--font-medium);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--neutral-6);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    z-index: var(--z-10);
+}
+*/
+
+/* Base Styles - More aggressive reset to fix overflow */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    max-width: 100%;
 }
 
 body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg-primary);
+    color: var(--text-dark);
+    line-height: 1.5;
+    position: relative;
+}
+
+#root {
+    width: 100%;
     max-width: 100%;
-    background-color: var(--background);
-    color: var(--text);
+    overflow-x: hidden;
 }
 
 .main-container {
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Utility Classes */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    overflow-x: hidden;
+}
+
+/* Glass Effect - Use for frosted glass UI elements */
+.glass {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animations - Use for consistent motion */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

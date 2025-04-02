@@ -1,13 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./NavbarStyles.css";
 import Profile from "../../../assets/profile.jpeg";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    setCurrentPath(window.location.pathname);
+  }, []);
+
+  // Navigation handlers
+  const handleRegisterClick = () => {
+    window.location.href = "/register";
+  };
+
+  const handleLoginClick = () => {
+    window.location.href = "/";
+  };
+
+  const showLoginLink = currentPath === "/register";
+  const showRegisterLink = currentPath === "/" || currentPath === "/login";
 
   return (
     <div className="navbar-container">
-      <div className="navbar-titles" onClick={()=>{
+      <div className="navbar-titles" onClick={() => {
         window.location.href = '/'
       }}>
         <h2>SmartAttend</h2>
@@ -39,6 +56,25 @@ function Navbar() {
         </div>
       </div>
       <div className="navbar-profile">
+        {/* Conditionally render auth links */}
+        {showLoginLink && (
+          <button 
+            className="auth-link login-link" 
+            onClick={handleLoginClick}
+          >
+            Login
+          </button>
+        )}
+        
+        {showRegisterLink && (
+          <button 
+            className="auth-link register-link" 
+            onClick={handleRegisterClick}
+          >
+            Register
+          </button>
+        )}
+
         <img
           src={Profile}
           alt=""
@@ -48,7 +84,7 @@ function Navbar() {
         />
 
         {isOpen && (
-          <div className="navbar-dropdown absolute right-0 mt-13 ">
+          <div className="navbar-dropdown">
             <button className="w-40">Re-register Face</button>
             <button>Logout</button>
           </div>

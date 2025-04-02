@@ -11,6 +11,7 @@ class User(db.Model):
     role = db.Column(db.String(50), nullable=False)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now(timezone.utc))
 
+    refresh_token = db.relationship('Refresh_token', backref='user', lazy=True, cascade='all, delete-orphan')
 
     def __init__(self, first_name, second_name, email, password, role):
         self.first_name = first_name
