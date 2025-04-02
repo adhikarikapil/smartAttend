@@ -1,5 +1,5 @@
 from flask import Blueprint
-from app.controllers.auth_controller import register_user, login_user, refresh_token
+from app.controllers.auth_controller import register_user, login_user, refresh_token, logout_user, test_blacklist
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -7,3 +7,5 @@ auth_bp = Blueprint('auth', __name__)
 auth_bp.route('/register', methods=["POST"])(register_user)
 auth_bp.route('/login', methods=["POST"])(login_user)
 auth_bp.route('/refresh', methods=["POST"])(refresh_token)
+auth_bp.route('/logout', methods=["POST"])(logout_user)
+auth_bp.route('/test-blacklist', methods=["GET"])(test_blacklist)

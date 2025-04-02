@@ -1,7 +1,8 @@
 from flask import request, jsonify
-from app import db
+from app.extentions import db
 from app.models import User
-from app.services.auth_service import authenticate_user, refresh_access_token
+from app.services.auth_service import authenticate_user, refresh_access_token, logout
+from app.utils import is_token_blacklisted
 
 
 # Handle http request and response
@@ -44,7 +45,6 @@ def register_user():
         return jsonify({"error": str(e)})
 
 
-
 def login_user():
     try:
         data = request.get_json()
@@ -68,7 +68,7 @@ def login_user():
 
     except Exception as e:
         return jsonify({'error': str(e)})
-    
+
 
 def refresh_token():
     try:
@@ -77,6 +77,10 @@ def refresh_token():
 
         if not refresh_token:
             return jsonify({'error': 'Refresh Token is Required!!!'}), 400
+        
+        # Check if token is blacklisted
+        if is_token_blacklisted(refresh_token):
+            return jsonify({'error': 'Token has been revoked. Please login again.'}), 401
         
         new_access_token = refresh_access_token(refresh_token)
 
@@ -87,3 +91,38 @@ def refresh_token():
 
     except Exception as e:
         return jsonify({'error': str(e)}), 400
+
+
+def logout_user():
+    try:
+        data = request.get_json()
+        access_token = data.get('accessToken')
+        refresh_token = data.get('refreshToken')
+        
+        if not access_token or not refresh_token:
+            return jsonify({'error': 'Access token and refresh token are required!!!'}), 400
+        
+        # Blacklist the tokens
+        success = logout(access_token, refresh_token)
+        
+        if success:
+            return jsonify({'message': 'Logout successful'}), 200
+        else:
+            return jsonify({'error': 'Error processing logout'}), 500
+            
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+def test_blacklist():
+    """Test endpoint to check if blacklist functionality is working"""
+    try:
+        from app.utils.blacklist import blacklist
+        
+        return jsonify({
+            'message': 'Blacklist status',
+            'total_blacklisted_tokens': len(blacklist),
+            'blacklist': list(blacklist)
+        }), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500

@@ -18,7 +18,7 @@ function Login() {
       const timer = setTimeout(() => {
         setAlertMessage("");
         setAlertType("");
-      }, 2000);
+      }, 1000);
 
       return () => clearTimeout(timer);
     }
@@ -51,15 +51,18 @@ function Login() {
 
       const data = await response.json();
 
+      console.log(data)
+
       if (response.ok) {
         setAlertMessage("Login successful!");
         setAlertType("success");
-        // Store the token
-        localStorage.setItem('token', data.token);
-        // Redirect based on role or to dashboard
+
+        localStorage.setItem('accessToken', data.accessToken);
+        localStorage.setItem('refreshToken', data.refreshToken);
+
         setTimeout(() => {
           window.location.href = '/dashboard';
-        }, 1000);
+        }, 1300);
       } else {
         setAlertMessage(data.error || "Login failed");
         setAlertType("error");
