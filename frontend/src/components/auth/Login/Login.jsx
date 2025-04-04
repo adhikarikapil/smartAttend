@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from "react";
 import Navbar from "../../layout/Navbar/Navbar";
 import "./LoginStyles.css";
+import { loginUser } from "../../../services/authService";
 
 function Login() {
   const API_URL = import.meta.env.VITE_API_URL;
@@ -12,17 +13,6 @@ function Login() {
     email: "",
     password: "",
   });
-
-  useEffect(() => {
-    if (alertMessage) {
-      const timer = setTimeout(() => {
-        setAlertMessage("");
-        setAlertType("");
-      }, 1000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [alertMessage]);
 
   const handleFormChange = (e) => {
     e.preventDefault();
@@ -37,39 +27,19 @@ function Login() {
     setAlertMessage("");
     setAlertType("");
 
-    try {
-      const response = await fetch(`${API_URL}/auth/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: formData.email,
-          password: formData.password,
-        }),
-      });
+    const response = await loginUser(formData.email, formData.password);
 
-      const data = await response.json();
+    console.log("Response: ", response);
 
-      console.log(data)
+    const user = response.user;
+    localStorage.setItem("userData", JSON.stringify(user));
 
-      if (response.ok) {
-        setAlertMessage("Login successful!");
-        setAlertType("success");
-
-        localStorage.setItem('accessToken', data.accessToken);
-        localStorage.setItem('refreshToken', data.refreshToken);
-
-        setTimeout(() => {
-          window.location.href = '/dashboard';
-        }, 1300);
-      } else {
-        setAlertMessage(data.error || "Login failed");
-        setAlertType("error");
-      }
-    } catch (error) {
-      setAlertMessage(`An error occurred: ${error.message}`);
+    if (response.message) {
+      setAlertType("success");
+      setAlertMessage(response.message);
+    } else {
       setAlertType("error");
+      setAlertMessage(response.error);
     }
   };
 

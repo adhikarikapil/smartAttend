@@ -1,17 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./DashboardStyles.css";
 import Navbar from "../Navbar/Navbar";
-import { logoutUser, checkToken} from "../../../services/authService";
+import { isTokenExpired } from "../../../services/authService";
 
 function Dashboard() {
+  const [currentUser, setCurrentUser] = useState({
+    userId: "",
+    firstName: "",
+    secondName: "",
+    email: "",
+    role: "",
+  });
+
+  useEffect(() => {
+    isTokenExpired();
+  }, []);
+
+  useEffect(() => {
+    const storedUserData = localStorage.getItem("userData");
+    if (storedUserData) {
+      setCurrentUser(JSON.parse(storedUserData));
+    }
+  }, []);
+
   return (
     <>
       <div className="">
         <header>
-          <Navbar />
+          <Navbar existingUser={currentUser}/>
         </header>
-        <button style={{color: 'white'}} onClick={logoutUser}>logout</button>
-        <button style={{color: 'white'}} onClick={checkToken}>Check</button>
       </div>
     </>
   );

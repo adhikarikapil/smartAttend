@@ -3,7 +3,6 @@ from app.extentions import db
 from app.models import User
 from app.services.auth_service import authenticate_user, refresh_access_token, logout
 from app.utils import is_token_blacklisted
-from flask_jwt_extended import get_jwt_identity, decode_token
 
 
 # Handle http request and response
@@ -58,6 +57,8 @@ def login_user():
 
         access_token, refresh_token = authenticate_user(email, password)
 
+        user = User.query.filter_by(email=email).first()
+
         if access_token:
             return (
                 jsonify(
@@ -65,6 +66,13 @@ def login_user():
                         "message": "Login Sucessful!!!",
                         "accessToken": access_token,
                         "refreshToken": refresh_token,
+                        "user": {
+                            "userId": user.id,
+                            'firstName': user.first_name,
+                            'secondName': user.second_name,
+                            'email': user.email,
+                            'role': user.role,
+                        }
                     }
                 ),
                 200,
@@ -83,8 +91,8 @@ def refresh_token():
 
         if not refresh_token:
             return jsonify({"error": "Refresh Token is Required!!!"}), 400
+        
 
-        # Check if token is blacklisted
         if is_token_blacklisted(refresh_token):
             return (
                 jsonify({"error": "Token has been revoked. Please login again."}),
@@ -144,29 +152,3 @@ def test_blacklist():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-
-def token_checking():
-    auth_header = request.headers.get("Authorization")
-
-    if not auth_header or not auth_header.startswith("Bearer "):
-        return jsonify({"error": "Authorization header missing or Invalid format"})
-
-    token = auth_header[7:]
-
-    try:
-        # decoded_token = check_token(token)
-        decoded_token = decode_token(token)
-
-        print("DECODED: ", decoded_token)
-
-        user_info = decoded_token.get("sub")
-
-        print("UserInfo: ",user_info)
-
-        if user_info:
-            return jsonify({"message": "Token is valid", "user": user_info}), 200
-        else:
-            return jsonify({"error": "No information in token"}), 400
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400

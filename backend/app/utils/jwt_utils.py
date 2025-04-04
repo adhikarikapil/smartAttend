@@ -1,9 +1,7 @@
 from flask_jwt_extended import (
     create_access_token,
     create_refresh_token,
-    decode_token as jwt_decode,
-    get_jwt_identity,
-    jwt_required,
+    decode_token,
 )
 from flask import current_app
 from datetime import datetime, timezone, timedelta
@@ -11,7 +9,7 @@ from app.utils.blacklist import blacklist
 import json
 
 ACCESS_TOKEN_EXPIRY = 30  # In minutes
-REFRESH_TOKEN_EXPIRY = 30  # In days
+REFRESH_TOKEN_EXPIRY = 90  # In days
 
 
 def generate_access_token(user_id, role, first_name, second_name, email):
@@ -40,23 +38,6 @@ def generate_refresh_token(user_id):
     )
 
 
-def check_if_token_in_blacklist(jwt_header, jwt_payload):
-    jti = jwt_payload.get("jti")
-    if not jti:
-        return True  # If no JTI, consider it invalid
-    return jti in blacklist
-
-
-def decode_token(token):
-    try:
-        from flask_jwt_extended.jwt_manager import decode_token
-
-        return decode_token(token, csrf_value=None, allow_expired=True)
-    except Exception as e:
-        print(f"Token decode error: {e}")
-        return None
-
-
 def logout_user(access_token, refresh_token):
     try:
         # Get JTIs from tokens
@@ -76,7 +57,6 @@ def logout_user(access_token, refresh_token):
 
 
 def is_token_blacklisted(token):
-    """Check if a token is in the blacklist"""
     try:
         decoded = decode_token(token)
         if decoded and "jti" in decoded:

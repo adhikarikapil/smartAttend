@@ -17,6 +17,7 @@
     "@mui/styled-engine-sc": "^7.0.1",
     "@tailwindcss/vite": "^4.0.17",
     "bootstrap": "^5.3.3",
+    "jwt-decode": "^4.0.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
