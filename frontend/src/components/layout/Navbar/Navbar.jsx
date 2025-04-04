@@ -24,9 +24,12 @@ function Navbar() {
 
   return (
     <div className="navbar-container">
-      <div className="navbar-titles" onClick={() => {
-        window.location.href = '/'
-      }}>
+      <div
+        className="navbar-titles"
+        onClick={() => {
+          window.location.href = "/";
+        }}
+      >
         <h2>SmartAttend</h2>
       </div>
       <div className="navbar-tags">
@@ -58,17 +61,14 @@ function Navbar() {
       <div className="navbar-profile">
         {/* Conditionally render auth links */}
         {showLoginLink && (
-          <button 
-            className="auth-link login-link" 
-            onClick={handleLoginClick}
-          >
+          <button className="auth-link login-link" onClick={handleLoginClick}>
             Login
           </button>
         )}
-        
+
         {showRegisterLink && (
-          <button 
-            className="auth-link register-link" 
+          <button
+            className="auth-link register-link"
             onClick={handleRegisterClick}
           >
             Register
