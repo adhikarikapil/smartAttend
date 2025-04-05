@@ -10,9 +10,20 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const initializeAuth = async () => {
       try {
-        await isTokenExpired();
+        const accessToken = localStorage.getItem("accessToken");
+        const storedUserData = localStorage.getItem("userData");
+
+        if (accessToken && storedUserData) {
+          await isTokenExpired();
+          setUser(JSON.parse(storedUserData));
+        }
       } catch (error) {
         console.error("Auth initialization error:", error);
+        // Clear invalid data
+        localStorage.removeItem("accessToken");
+        localStorage.removeItem("refreshToken");
+        localStorage.removeItem("userData");
+        setUser(null);
       } finally {
         setLoading(false);
       }
@@ -26,12 +37,13 @@ export const AuthProvider = ({ children }) => {
       const response = await loginUser(email, password);
       if (response.user) {
         setUser(response.user);
+        localStorage.setItem("userData", JSON.stringify(response.user));
         return { success: true };
       }
       return { success: false, error: response.error };
     } catch (error) {
-      console.error("Login Failded: ", error);
-      return { error: "Login Failed" };
+      console.error("Login Failed: ", error);
+      return { success: false, error: "Login failed" };
     }
   };
 
@@ -39,6 +51,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const response = await logoutUser();
       setUser(null);
+      localStorage.removeItem("userData");
       return { success: true, message: response.message };
     } catch (error) {
       console.error("Logout Failed: ", error);

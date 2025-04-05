@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Navbar from "../../layout/Navbar/Navbar";
 import "./LoginStyles.css";
-import { loginUser } from "../../../services/authService";
+import { useAuth } from "../../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const API_URL = import.meta.env.VITE_API_URL;
-
+  const { login } = useAuth();
+  const navigate = useNavigate();
   const [alertMessage, setAlertMessage] = useState("");
   const [alertType, setAlertType] = useState("");
 
@@ -27,19 +28,17 @@ function Login() {
     setAlertMessage("");
     setAlertType("");
 
-    const response = await loginUser(formData.email, formData.password);
+    const response = await login(formData.email, formData.password);
 
-    console.log("Response: ", response);
-
-    const user = response.user;
-    localStorage.setItem("userData", JSON.stringify(user));
-
-    if (response.message) {
+    if (response.success) {
       setAlertType("success");
-      setAlertMessage(response.message);
+      setAlertMessage("Login successful!");
+      setTimeout(() => {
+        navigate("/dashboard");
+      }, 1000);
     } else {
       setAlertType("error");
-      setAlertMessage(response.error);
+      setAlertMessage(response.error || "Login failed");
     }
   };
 

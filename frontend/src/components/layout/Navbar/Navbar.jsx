@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./NavbarStyles.css";
 import Profile from "../../../assets/profile.jpeg";
-import { logoutUser } from "../../../services/authService";
 import { useAuth } from "../../../context/AuthContext";
 
 function Navbar() {
-  const { user, logout, isAuthenticated } = useAuth;
+  const { user, logout, isAuthenticated } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState("");
   const [alertType, setAlertType] = useState("");
@@ -29,7 +28,7 @@ function Navbar() {
   const isDashboard = currentPath === "/dashboard";
 
   const isLoggingOut = async () => {
-    const data = await logoutUser();
+    const data = await logout();
     if (data.message) {
       setAlertMessage(data.message);
       setAlertType("success");
@@ -101,7 +100,7 @@ function Navbar() {
           </button>
         )}
 
-        {isDashboard && (
+        {isDashboard && user && (
           <>
             <h3 className="hello-message">
               Hello, {user.firstName} {user.secondName}
