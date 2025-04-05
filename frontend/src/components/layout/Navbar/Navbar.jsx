@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./NavbarStyles.css";
 import Profile from "../../../assets/profile.jpeg";
 import { logoutUser } from "../../../services/authService";
+import { useAuth } from "../../../context/AuthContext";
 
-function Navbar({ existingUser = {} }) {
+function Navbar() {
+  const { user, logout, isAuthenticated } = useAuth;
   const [isOpen, setIsOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState("");
   const [alertType, setAlertType] = useState("");
@@ -37,6 +39,9 @@ function Navbar({ existingUser = {} }) {
     }
   };
 
+  const isLogin = () => {
+    window.location.href = "/login";
+  };
 
   return (
     <div className="navbar-container">
@@ -99,7 +104,7 @@ function Navbar({ existingUser = {} }) {
         {isDashboard && (
           <>
             <h3 className="hello-message">
-              Hello, {existingUser.firstName} {existingUser.secondName}
+              Hello, {user.firstName} {user.secondName}
             </h3>
           </>
         )}
@@ -113,8 +118,17 @@ function Navbar({ existingUser = {} }) {
         />
         {isDashboard && isOpen && (
           <div className={`navbar-dropdown ${isOpen ? "active" : ""}`}>
-            <button className="w-40">Re-register Face</button>
-            <button onClick={isLoggingOut}>Logout</button>
+            {isAuthenticated ? (
+              <>
+                <button className="w-40">Re-register Face</button>
+                <button onClick={isLoggingOut}>Logout</button>
+              </>
+            ) : (
+              <>
+                <p>You are not logged in. Login yourself!!</p>
+                <button onClick={isLogin}>Login In</button>
+              </>
+            )}
           </div>
         )}
       </div>
