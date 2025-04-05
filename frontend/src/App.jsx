@@ -5,6 +5,7 @@ import Login from "./components/auth/Login/Login";
 import Navbar from "./components/layout/Navbar/Navbar";
 import Register from "./components/auth/Register/Register";
 import Dashboard from "./components/layout/Dashboard/Dashboard";
+import Classes from "./components/layout/Classes/Classes";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/common/ProtectedRoute/ProtectedRoute";
 
@@ -26,6 +27,14 @@ function App() {
               element={
                 <ProtectedRoute allowedRoles={["teacher", "student"]}>
                   <Dashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/classes"
+              element={
+                <ProtectedRoute allowedRoles={["teacher", "student"]}>
+                  <Classes />
                 </ProtectedRoute>
               }
             />
