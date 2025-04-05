@@ -1,16 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ClassesStyles.css";
 import Navbar from "../Navbar/Navbar";
 import { useAuth } from "../../../context/AuthContext";
 
 function Classes() {
   const { user } = useAuth();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [newClass, setNewClass] = useState({
+    className: "",
+    classCode: "",
+    schedule: "",
+    startTime: "",
+    endTime: "",
+    description: ""
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    if (name === 'classCode') {
+      setNewClass(prev => ({
+        ...prev,
+        [name]: value.toUpperCase()
+      }));
+    } else {
+      setNewClass(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically make an API call to create the class
+    console.log("Creating new class:", newClass);
+    setIsModalOpen(false);
+    setNewClass({
+      className: "",
+      classCode: "",
+      schedule: "",
+      startTime: "",
+      endTime: "",
+      description: ""
+    });
+  };
 
   const TeacherClasses = () => (
     <div className="classes-content">
       <div className="classes-header">
         <h1>My Classes</h1>
-        <button className="create-class-btn">
+        <button className="create-class-btn" onClick={() => setIsModalOpen(true)}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="add-icon">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
           </svg>
@@ -37,12 +76,6 @@ function Classes() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span>9:00 AM - 10:30 AM</span>
-              </div>
-              <div className="class-info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-                <span>Room 101</span>
               </div>
             </div>
             <div className="class-card-footer">
@@ -121,8 +154,106 @@ function Classes() {
       <main>
         {user?.role === "teacher" ? <TeacherClasses /> : <StudentClasses />}
       </main>
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <div className="modal-header">
+              <h2>Create New Class</h2>
+              <button className="close-button" onClick={() => setIsModalOpen(false)}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <form onSubmit={handleSubmit} className="create-class-form">
+              <div className="form-group">
+                <label htmlFor="className">Class Name</label>
+                <input
+                  type="text"
+                  id="className"
+                  name="className"
+                  value={newClass.className}
+                  onChange={handleInputChange}
+                  placeholder="e.g., Advanced Mathematics"
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="classCode">Class Code</label>
+                <input
+                  type="text"
+                  id="classCode"
+                  name="classCode"
+                  value={newClass.classCode}
+                  onChange={handleInputChange}
+                  placeholder="e.g., ABC123"
+                  maxLength="6"
+                  required
+                  className="code-input"
+                />
+                <span className="code-hint">Enter a 6-character code for students to join the class</span>
+              </div>
+              <div className="form-group">
+                <label htmlFor="schedule">Schedule (Days)</label>
+                <input
+                  type="text"
+                  id="schedule"
+                  name="schedule"
+                  value={newClass.schedule}
+                  onChange={handleInputChange}
+                  placeholder="e.g., Mon, Wed, Fri"
+                  required
+                />
+              </div>
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="startTime">Start Time</label>
+                  <input
+                    type="time"
+                    id="startTime"
+                    name="startTime"
+                    value={newClass.startTime}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="endTime">End Time</label>
+                  <input
+                    type="time"
+                    id="endTime"
+                    name="endTime"
+                    value={newClass.endTime}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="form-group">
+                <label htmlFor="description">Description</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  value={newClass.description}
+                  onChange={handleInputChange}
+                  placeholder="Enter class description..."
+                  rows="3"
+                />
+              </div>
+              <div className="form-actions">
+                <button type="button" className="cancel-btn" onClick={() => setIsModalOpen(false)}>
+                  Cancel
+                </button>
+                <button type="submit" className="submit-btn">
+                  Create Class
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
-export default Classes; 
+export default Classes;
