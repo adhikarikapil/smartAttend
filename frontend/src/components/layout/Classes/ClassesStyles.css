@@ -189,6 +189,18 @@
   border: 1px solid #4f46e5;
 }
 
+.class-action-btn.leave {
+  background: white;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+}
+
+.class-action-btn.leave:hover {
+  background: #fef2f2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
 .class-action-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
@@ -390,4 +402,125 @@
   font-size: 0.75rem;
   color: #64748b;
   margin-top: 0.25rem;
+}
+
+.student-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.join-class-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.join-class-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.class-code-display {
+  background: rgba(79, 70, 229, 0.1);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+.class-code-display svg {
+  color: #4f46e5;
+}
+
+@media (max-width: 768px) {
+  .student-header-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .join-class-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .classes-filter {
+    width: 100%;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+}
+
+.leave-class-content {
+  padding: 1.5rem;
+}
+
+.warning-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.warning-icon {
+  width: 48px;
+  height: 48px;
+  color: #ef4444;
+}
+
+.warning-message p {
+  color: #1e293b;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.warning-message .warning-details {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.leave-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ef4444;
+  border: none;
+  color: white;
+}
+
+.leave-btn:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+@media (max-width: 640px) {
+  .class-card-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .class-action-btn {
+    width: 100%;
+  }
+
+  .warning-message {
+    gap: 0.75rem;
+  }
 } 

@@ -84,17 +84,6 @@ function Dashboard() {
             <p className="stat-number">6</p>
           </div>
         </div>
-        <div className="stat-card">
-          <div className="stat-icon status">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <div className="stat-info">
-            <h3>Today's Status</h3>
-            <p className="stat-number">Present</p>
-          </div>
-        </div>
       </div>
       <div className="dashboard-sections">
         <div className="section upcoming-classes">
@@ -111,18 +100,6 @@ function Dashboard() {
                 </span>
               </div>
             ))}
-          </div>
-        </div>
-        <div className="section attendance-history">
-          <h2>Attendance History</h2>
-          <div className="attendance-chart">
-            <div className="chart-placeholder">
-              <div className="bar" style={{ height: '95%' }}></div>
-              <div className="bar" style={{ height: '88%' }}></div>
-              <div className="bar" style={{ height: '92%' }}></div>
-              <div className="bar" style={{ height: '85%' }}></div>
-              <div className="bar" style={{ height: '90%' }}></div>
-            </div>
           </div>
         </div>
       </div>

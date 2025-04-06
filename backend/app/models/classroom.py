@@ -14,9 +14,12 @@ class Classroom(db.Model):
     creator = db.relationship('User', backref='created_classrooms')
     members = db.relationship('ClassroomUser', backref='classroom', cascade='all, delete-orphan')
 
-    def __init__(self, name, code):
+    def __init__(self, name, code, creator_id, description):
         self.name = name
         self.code = code
+        self.creator_id = creator_id
+        self.description = description
+
 
 
 class ClassroomUser(db.Model):
@@ -27,5 +30,11 @@ class ClassroomUser(db.Model):
 
     classroom_id = db.Column(db.Integer, db.ForeignKey('classrooms.id'), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user_email = db.Column(db.String(120), nullable=False)
 
     user = db.relationship('User', backref='joined_classrooms')
+
+    def __init__(self, classroom_id, user_id, user_email):
+        self.classroom_id = classroom_id
+        self.user_id = user_id
+        self.user_email = user_email
