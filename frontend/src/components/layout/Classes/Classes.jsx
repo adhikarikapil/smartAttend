@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ClassesStyles.css";
 import Navbar from "../Navbar/Navbar";
 import { useAuth } from "../../../context/AuthContext";
@@ -36,9 +36,12 @@ function Classes() {
     }
   };
 
+  useEffect(()=>{
+    console.log(accessToken)
+  })
+
   const handleJoinCodeChange = (e) => {
     setJoinCode(e.target.value.toUpperCase());
-    console.log(accessToken)
   };
 
   const handleCreateSubmit = (e) => {
