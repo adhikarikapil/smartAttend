@@ -69,14 +69,6 @@ function Navbar() {
         <div
           className="navbar-menu"
           onClick={() => {
-            window.location.href = "/classes";
-          }}
-        >
-          Classes
-        </div>
-        <div
-          className="navbar-menu"
-          onClick={() => {
             window.location.href = "/attendance";
           }}
         >

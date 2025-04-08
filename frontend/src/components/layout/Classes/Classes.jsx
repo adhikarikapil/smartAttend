@@ -2,39 +2,38 @@ import React, { useEffect, useState } from "react";
 import "./ClassesStyles.css";
 import Navbar from "../Navbar/Navbar";
 import { useAuth } from "../../../context/AuthContext";
+import CreateClassroom from "../../classroom/CreateClassroom/CreateClassroom";
 
 function Classes() {
   const { user } = useAuth();
-  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
-  const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
-  const [isLeaveModalOpen, setIsLeaveModalOpen] = useState(false);
-  const [selectedClass, setSelectedClass] = useState(null);
-  const [joinCode, setJoinCode] = useState("");
-  const [newClass, setNewClass] = useState({
-    className: "",
-    classCode: "",
-    schedule: "",
-    startTime: "",
-    endTime: "",
-    description: "",
-  });
+  // const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  // const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
+  // const [isLeaveModalOpen, setIsLeaveModalOpen] = useState(false);
+  // const [selectedClass, setSelectedClass] = useState(null);
+  // const [joinCode, setJoinCode] = useState("");
+  // const [newClass, setNewClass] = useState({
+  //   className: "",
+  //   classCode: "",
+  //   schedule: "",
+  //   startTime: "",
+  //   endTime: "",
+  //   description: "",
+  // });
 
-  const accessToken = localStorage.getItem("accessToken");
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    if (name === "classCode") {
-      setNewClass((prev) => ({
-        ...prev,
-        [name]: value.toUpperCase(),
-      }));
-    } else {
-      setNewClass((prev) => ({
-        ...prev,
-        [name]: value,
-      }));
-    }
-  };
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   if (name === "classCode") {
+  //     setNewClass((prev) => ({
+  //       ...prev,
+  //       [name]: value.toUpperCase(),
+  //     }));
+  //   } else {
+  //     setNewClass((prev) => ({
+  //       ...prev,
+  //       [name]: value,
+  //     }));
+  //   }
+  // };
 
 
   const handleJoinCodeChange = (e) => {
@@ -474,17 +473,20 @@ function Classes() {
   );
 
   return (
-    <div className="classes-container">
-      <header>
-        <Navbar />
-      </header>
-      <main>
-        {user?.role === "teacher" ? <TeacherClasses /> : <StudentClasses />}
-      </main>
-      {isCreateModalOpen && <CreateClassModal />}
-      {isJoinModalOpen && <JoinClassModal />}
-      {isLeaveModalOpen && <LeaveClassModal />}
-    </div>
+    // <div className="classes-container">
+    //   <header>
+    //     <Navbar />
+    //   </header>
+    //   <main>
+    //     {user?.role === "teacher" ? <TeacherClasses /> : <StudentClasses />}
+    //   </main>
+    //   {isCreateModalOpen && <CreateClassModal />}
+    //   {isJoinModalOpen && <JoinClassModal />}
+    //   {isLeaveModalOpen && <LeaveClassModal />}
+    // </div>
+    <>
+      <CreateClassroom />
+    </>
   );
 }
 

@@ -1,7 +1,6 @@
 :root {
-    /* Primary Colors - Use for main brand elements, primary buttons, and important UI elements */
-    --primary-1: #4f46e5;  /* Indigo 600 - Main primary color, use for primary buttons */
-    --primary-2: #7c3aed;  /* Purple 600 - Secondary primary color, use for gradients */
+    --primary-1: #4f46e5;  
+    --primary-2: #7c3aed;  
     --primary-3: #6366f1;  /* Indigo 500 - Lighter primary, use for hover states */
     --primary-4: #8b5cf6;  /* Purple 500 - Light primary, use for subtle accents */
     --primary-5: #818cf8;  /* Indigo 400 - Very light primary, use for backgrounds */
