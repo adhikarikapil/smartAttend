@@ -6,7 +6,7 @@ class Classroom(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
-    code = db.Column(db.String(10), nullable=False, unique=True)
+    code = db.Column(db.String(10), nullable=False)
     description = db.Column(db.String(500), nullable=True)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now(timezone.utc))
 
@@ -16,7 +16,7 @@ class Classroom(db.Model):
 
     def __init__(self, name, code, creator_id, description):
         self.name = name
-        self.code = code
+        self.code = code.upper()
         self.creator_id = creator_id
         self.description = description
 

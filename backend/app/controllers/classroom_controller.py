@@ -36,8 +36,11 @@ def create_classroom():
         if not name or not code:
             return jsonify({"error": "Missing required Field"}), 400
 
-        existing_classroom = Classroom.query.filter_by(name=name).first()
+        db_code = Classroom.query.filter_by(code=code).first()
+        if db_code:
+            return jsonify({"error": "Code already used!!"}), 400
 
+        existing_classroom = Classroom.query.filter_by(name=name).first()
         if existing_classroom:
             return jsonify({"error": "Classroom already exists"}), 400
 
@@ -45,15 +48,12 @@ def create_classroom():
             name=name, code=code, description=description, creator_id=user_id
         )
 
-        try:
-            db.session.add(new_classroom)
-            db.session.commit()
-        except:
-            return jsonify({"error": "Cannot create classroom!!"}), 400
+        db.session.add(new_classroom)
+        db.session.commit()
 
         return jsonify({"message": "Classroom Created Successfully!!"}), 201
     except Exception as e:
-        return jsonify({"error": str(e)})
+        return jsonify({"error": str(e)}), 400
 
 
 def join_classroom():
@@ -83,7 +83,14 @@ def join_classroom():
 
         classroom_to_join = Classroom.query.filter_by(code=code).first()
 
+        if not classroom_to_join:
+            return jsonify({'error': 'Invalid Code!!'}), 400
+
         classroom_id = classroom_to_join.id
+
+        already_join = ClassroomUser.query.filter_by(classroom_id=classroom_id).first()
+        if already_join:
+            return jsonify({'error': 'Classroom Already Joined'}), 400
 
         new_join = ClassroomUser(
             classroom_id=classroom_id, user_id=user_id, user_email=user_email
@@ -97,7 +104,7 @@ def join_classroom():
         return jsonify({"message": "User joined successfully!!"}), 200
 
     except Exception as e:
-        return jsonify({"error": str(e)})
+        return jsonify({"error": str(e)}), 400
 
 
 def list_classroom():
@@ -143,7 +150,8 @@ def list_classroom():
                     for c in classroom
                 ]
                 return jsonify(
-                    {"message": "Classrooms found", "classroom": serialized_classroom}, 200
+                    {"message": "Classrooms found", "classroom": serialized_classroom},
+                    200,
                 )
             except:
                 return jsonify({"error": "Cannot show classroom you created!!"}), 400
@@ -154,22 +162,24 @@ def list_classroom():
 
                 serialized_classroom = [
                     {
-                        'classroomId': c.id,
-                        'name': c.id,
-                        'description': c.id,
-                        'firstName': user.first_name,
-                        'secondName': user.second_name,
-                        'email': user.email,
+                        "classroomId": c.id,
+                        "name": c.id,
+                        "description": c.id,
+                        "firstName": user.first_name,
+                        "secondName": user.second_name,
+                        "email": user.email,
                     }
                     for c in classroom
                 ]
-                return jsonify({
-                    'message': 'Found classroom you joined!!',
-                    'classroom': serialized_classroom
-                })
+                return jsonify(
+                    {
+                        "message": "Found classroom you joined!!",
+                        "classroom": serialized_classroom,
+                    }
+                )
 
             except:
-                return jsonify({'error': 'Cannot show classroom you joined'}), 400
+                return jsonify({"error": "Cannot show classroom you joined"}), 400
         else:
             return jsonify({"error": "wait for admin"})
 

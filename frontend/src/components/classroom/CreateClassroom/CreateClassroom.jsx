@@ -1,12 +1,22 @@
 import React, { useState } from "react";
 import "./CreateClassroomStyles.css";
 
-function CreateClassroom() {
+function CreateClassroom({ closeModal }) {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const [formData, setFormData] = useState({
     className: "",
     code: "",
     description: "",
   });
+  const [alertMessage, setAlertMessage] = useState("");
+  const [alertType, setAlertType] = useState("");
+
+  const closeCreateModal = () => {
+    setTimeout(() => {
+      closeModal();
+    }, 2000);
+  };
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -22,20 +32,57 @@ function CreateClassroom() {
     for (let i = 0; i < 6; i++) {
       randomCode += characters.charAt(Math.floor(Math.random() * 6));
     }
+    setFormData((prevData) => ({ ...prevData, code: randomCode }));
+  };
 
-    setFormData((prevData) => ({
-      ...prevData,
-      code: randomCode,
-    }));
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setAlertMessage("");
+    setAlertType("");
+
+    const accessToken = localStorage.getItem("accessToken");
+
+    const response = await fetch(`${API_URL}/classroom/create`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify({
+        className: formData.className,
+        code: formData.code,
+        description: formData.description,
+      }),
+    });
+    const data = await response.json();
+    console.log(data);
+
+    if (response.status == 200 || response.status == 201) {
+      setAlertMessage("Classroom Created Sucessfully!!!");
+      setAlertType("success");
+      setFormData({
+        className: "",
+        code: "",
+        description: "",
+      });
+    } else {
+      setAlertMessage(data.error || "Classroom Create Failed!!!");
+      setAlertType("error");
+    }
   };
 
   return (
     <div>
       <div className="modal-overlay">
         <div className="modal-content">
+            {alertMessage && (
+              <div className={`modal-alert-message ${alertType}`}>
+                {alertMessage}
+              </div>
+            )}
           <div className="modal-header">
             <h2>Create New Class</h2>
-            <button className="close-button">
+            <button className="close-button" onClick={() => closeModal()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -51,7 +98,11 @@ function CreateClassroom() {
               </svg>
             </button>
           </div>
-          <form action="submit" className="create-class-form">
+          <form
+            action="submit"
+            className="create-class-form"
+            onSubmit={handleSubmit}
+          >
             <div className="form-group">
               <label htmlFor="className">Class Name</label>
               <input
@@ -96,10 +147,18 @@ function CreateClassroom() {
               />
             </div>
             <div className="form-actions">
-              <button type="button" className="cancel-btn">
+              <button
+                type="button"
+                className="cancel-btn"
+                onClick={() => closeModal()}
+              >
                 Cancel
               </button>
-              <button type="submit" className="submit-btn">
+              <button
+                type="submit"
+                className="submit-btn"
+                onClick={closeCreateModal}
+              >
                 Create Class
               </button>
             </div>

@@ -3,6 +3,7 @@ import "./ClassesStyles.css";
 import Navbar from "../Navbar/Navbar";
 import { useAuth } from "../../../context/AuthContext";
 import CreateClassroom from "../../classroom/CreateClassroom/CreateClassroom";
+import JoinClassroom from "../../classroom/JoinClassroom/JoinClassroom";
 
 function Classes() {
   const { user } = useAuth();
@@ -34,7 +35,6 @@ function Classes() {
   //     }));
   //   }
   // };
-
 
   const handleJoinCodeChange = (e) => {
     setJoinCode(e.target.value.toUpperCase());
@@ -485,7 +485,8 @@ function Classes() {
     //   {isLeaveModalOpen && <LeaveClassModal />}
     // </div>
     <>
-      <CreateClassroom />
+      {/* <CreateClassroom /> */}
+      <JoinClassroom />
     </>
   );
 }
