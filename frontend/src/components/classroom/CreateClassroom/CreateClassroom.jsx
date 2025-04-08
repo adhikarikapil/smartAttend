@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./CreateClassroomStyles.css";
+import { createClassroom } from "../../../services/classroomService";
 
 function CreateClassroom({ closeModal }) {
   const API_URL = import.meta.env.VITE_API_URL;
@@ -40,24 +41,13 @@ function CreateClassroom({ closeModal }) {
     setAlertMessage("");
     setAlertType("");
 
-    const accessToken = localStorage.getItem("accessToken");
-
-    const response = await fetch(`${API_URL}/classroom/create`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken}`,
-      },
-      body: JSON.stringify({
-        className: formData.className,
-        code: formData.code,
-        description: formData.description,
-      }),
-    });
-    const data = await response.json();
-    console.log(data);
-
-    if (response.status == 200 || response.status == 201) {
+    const response = await createClassroom(
+      formData.className,
+      formData.code,
+      formData.description
+    );
+    console.log(response)
+    if (response.message) {
       setAlertMessage("Classroom Created Sucessfully!!!");
       setAlertType("success");
       setFormData({
@@ -66,7 +56,7 @@ function CreateClassroom({ closeModal }) {
         description: "",
       });
     } else {
-      setAlertMessage(data.error || "Classroom Create Failed!!!");
+      setAlertMessage(response.error || "Classroom Create Failed!!!");
       setAlertType("error");
     }
   };
@@ -75,11 +65,11 @@ function CreateClassroom({ closeModal }) {
     <div>
       <div className="modal-overlay">
         <div className="modal-content">
-            {alertMessage && (
-              <div className={`modal-alert-message ${alertType}`}>
-                {alertMessage}
-              </div>
-            )}
+          {alertMessage && (
+            <div className={`modal-alert-message ${alertType}`}>
+              {alertMessage}
+            </div>
+          )}
           <div className="modal-header">
             <h2>Create New Class</h2>
             <button className="close-button" onClick={() => closeModal()}>
@@ -129,7 +119,7 @@ function CreateClassroom({ closeModal }) {
                   required
                   onChange={handleChange}
                 />
-                <button onClick={generateRandomCode}>Generate Code</button>
+                <button type="button" onClick={generateRandomCode}>Generate Code</button>
               </div>
               <span className="code-hint">
                 Enter a 6-character code for students to join the class

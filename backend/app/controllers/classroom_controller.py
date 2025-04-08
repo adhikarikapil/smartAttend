@@ -135,7 +135,9 @@ def list_classroom():
         if role == "teacher":
             try:
                 classroom = Classroom.query.filter_by(creator_id=user_id).all()
-                user = User.query.filter_by(id=user_id).first()
+
+                if not classroom:
+                    return jsonify({'error': 'Classroom not found'})
 
                 serialized_classroom = [
                     {
@@ -143,18 +145,23 @@ def list_classroom():
                         "name": c.name,
                         "code": c.code,
                         "description": c.description,
-                        "firstName": user.second_name,
-                        "secondName": user.second_name,
-                        "email": user.email,
+                        "firstName": c.creator.first_name,
+                        "secondName": c.creator.second_name,
+                        "email": c.creator.email,
                     }
                     for c in classroom
                 ]
+                
                 return jsonify(
-                    {"message": "Classrooms found", "classroom": serialized_classroom},
-                    200,
-                )
-            except:
-                return jsonify({"error": "Cannot show classroom you created!!"}), 400
+                    {
+                        'message': 'Classroom Found!!',
+                        'classroom': serialized_classroom,
+                    }
+                ), 200
+            
+            except Exception as e:
+                return jsonify({"error": f"Cannot show classroom you created!!: {str(e)}"}), 400
+            
         elif role == "student":
             try:
                 user = User.query.filter_by(id=user_id).first()
@@ -162,21 +169,26 @@ def list_classroom():
 
                 serialized_classroom = [
                     {
-                        "classroomId": c.id,
-                        "name": c.id,
-                        "description": c.id,
+                        "classroomId": c.classroom.id,
+                        "name": c.classroom.name,
+                        "description": c.classroom.description,
+                        "creatorId": c.classroom.creator_id,
+                        'creatorFirstName': c.classroom.creator.first_name,
+                        'creatorSecondName': c.classroom.creator.second_name,
+                        'email': c.classroom.creator.email,
                         "firstName": user.first_name,
                         "secondName": user.second_name,
                         "email": user.email,
                     }
                     for c in classroom
                 ]
+
                 return jsonify(
                     {
                         "message": "Found classroom you joined!!",
                         "classroom": serialized_classroom,
                     }
-                )
+                ), 200
 
             except:
                 return jsonify({"error": "Cannot show classroom you joined"}), 400

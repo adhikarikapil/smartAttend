@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./JoinClassroomStyles.css";
+import { joinClassroom } from "../../../services/classroomService";
 
 function JoinClassroom({ closeModal }) {
   const API_URL = import.meta.env.VITE_API_URL;
@@ -24,31 +25,20 @@ function JoinClassroom({ closeModal }) {
   };
 
   const handleSubmit = async (e) => {
-    const accessToken = localStorage.getItem("accessToken");
     e.preventDefault();
     setAlertMessage("");
     setAlertType("");
 
-    const response = await fetch(`${API_URL}/classroom/join`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken}`,
-      },
-      body: JSON.stringify({
-        code: formData.code,
-      }),
-    });
+    const response = await joinClassroom(formData.code);
 
-    const data = await response.json();
-    if (response.status == 200 || response.status == 201) {
+    if (response.message) {
       setFormData({
         code: "",
       });
       setAlertMessage("Classroom Joined Successfully!!!");
       setAlertType("success");
     } else {
-      setAlertMessage(data.error || "Cannot Join Classroom!!!");
+      setAlertMessage(response.error || "Cannot Join Classroom!!!");
       setAlertType("error");
     }
   };
