@@ -143,12 +143,33 @@ def list_classroom():
                     for c in classroom
                 ]
                 return jsonify(
-                    {"message": "Classrooms found", "classroom": serialized_classroom}
+                    {"message": "Classrooms found", "classroom": serialized_classroom}, 200
                 )
             except:
                 return jsonify({"error": "Cannot show classroom you created!!"}), 400
         elif role == "student":
-            pass
+            try:
+                user = User.query.filter_by(id=user_id).first()
+                classroom = ClassroomUser.query.filter_by(user_id=user_id).all()
+
+                serialized_classroom = [
+                    {
+                        'classroomId': c.id,
+                        'name': c.id,
+                        'description': c.id,
+                        'firstName': user.first_name,
+                        'secondName': user.second_name,
+                        'email': user.email,
+                    }
+                    for c in classroom
+                ]
+                return jsonify({
+                    'message': 'Found classroom you joined!!',
+                    'classroom': serialized_classroom
+                })
+
+            except:
+                return jsonify({'error': 'Cannot show classroom you joined'}), 400
         else:
             return jsonify({"error": "wait for admin"})
 
