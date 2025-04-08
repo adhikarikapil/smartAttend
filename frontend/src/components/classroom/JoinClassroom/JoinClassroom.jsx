@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./JoinClassroomStyles.css";
 import { joinClassroom } from "../../../services/classroomService";
 
-function JoinClassroom({ closeModal }) {
+function JoinClassroom({ closeModal, onClassroomJoined }) {
   const API_URL = import.meta.env.VITE_API_URL;
   const [formData, setFormData] = useState({
     code: "",
@@ -37,6 +37,9 @@ function JoinClassroom({ closeModal }) {
       });
       setAlertMessage("Classroom Joined Successfully!!!");
       setAlertType("success");
+      setTimeout(() => {
+        onClassroomJoined();
+      }, 1000);
     } else {
       setAlertMessage(response.error || "Cannot Join Classroom!!!");
       setAlertType("error");

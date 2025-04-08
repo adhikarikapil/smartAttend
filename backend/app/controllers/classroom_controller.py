@@ -84,13 +84,13 @@ def join_classroom():
         classroom_to_join = Classroom.query.filter_by(code=code).first()
 
         if not classroom_to_join:
-            return jsonify({'error': 'Invalid Code!!'}), 400
+            return jsonify({"error": "Invalid Code!!"}), 400
 
         classroom_id = classroom_to_join.id
 
         already_join = ClassroomUser.query.filter_by(classroom_id=classroom_id).first()
         if already_join:
-            return jsonify({'error': 'Classroom Already Joined'}), 400
+            return jsonify({"error": "Classroom Already Joined"}), 400
 
         new_join = ClassroomUser(
             classroom_id=classroom_id, user_id=user_id, user_email=user_email
@@ -137,7 +137,7 @@ def list_classroom():
                 classroom = Classroom.query.filter_by(creator_id=user_id).all()
 
                 if not classroom:
-                    return jsonify({'error': 'Classroom not found'})
+                    return jsonify({"error": "Classroom not found"})
 
                 serialized_classroom = [
                     {
@@ -148,20 +148,30 @@ def list_classroom():
                         "firstName": c.creator.first_name,
                         "secondName": c.creator.second_name,
                         "email": c.creator.email,
+                        "members": len(c.members)
                     }
                     for c in classroom
                 ]
-                
-                return jsonify(
-                    {
-                        'message': 'Classroom Found!!',
-                        'classroom': serialized_classroom,
-                    }
-                ), 200
-            
+
+
+                return (
+                    jsonify(
+                        {
+                            "message": "Classroom Found!!",
+                            "classroom": serialized_classroom,
+                        }
+                    ),
+                    200,
+                )
+
             except Exception as e:
-                return jsonify({"error": f"Cannot show classroom you created!!: {str(e)}"}), 400
-            
+                return (
+                    jsonify(
+                        {"error": f"Cannot show classroom you created!!: {str(e)}"}
+                    ),
+                    400,
+                )
+
         elif role == "student":
             try:
                 user = User.query.filter_by(id=user_id).first()
@@ -173,9 +183,9 @@ def list_classroom():
                         "name": c.classroom.name,
                         "description": c.classroom.description,
                         "creatorId": c.classroom.creator_id,
-                        'creatorFirstName': c.classroom.creator.first_name,
-                        'creatorSecondName': c.classroom.creator.second_name,
-                        'email': c.classroom.creator.email,
+                        "creatorFirstName": c.classroom.creator.first_name,
+                        "creatorSecondName": c.classroom.creator.second_name,
+                        "email": c.classroom.creator.email,
                         "firstName": user.first_name,
                         "secondName": user.second_name,
                         "email": user.email,
@@ -183,12 +193,15 @@ def list_classroom():
                     for c in classroom
                 ]
 
-                return jsonify(
-                    {
-                        "message": "Found classroom you joined!!",
-                        "classroom": serialized_classroom,
-                    }
-                ), 200
+                return (
+                    jsonify(
+                        {
+                            "message": "Found classroom you joined!!",
+                            "classroom": serialized_classroom,
+                        }
+                    ),
+                    200,
+                )
 
             except:
                 return jsonify({"error": "Cannot show classroom you joined"}), 400
@@ -197,3 +210,7 @@ def list_classroom():
 
     except Exception as e:
         return jsonify({"error": str(e)})
+
+
+def student_list():
+    pass

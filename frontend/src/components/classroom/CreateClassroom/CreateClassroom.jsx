@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./CreateClassroomStyles.css";
 import { createClassroom } from "../../../services/classroomService";
 
-function CreateClassroom({ closeModal }) {
+function CreateClassroom({ closeModal, onClassroomCreated }) {
   const API_URL = import.meta.env.VITE_API_URL;
 
   const [formData, setFormData] = useState({
@@ -36,8 +36,7 @@ function CreateClassroom({ closeModal }) {
     setFormData((prevData) => ({ ...prevData, code: randomCode }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     setAlertMessage("");
     setAlertType("");
 
@@ -55,6 +54,9 @@ function CreateClassroom({ closeModal }) {
         code: "",
         description: "",
       });
+      setTimeout(() => {
+        onClassroomCreated(); 
+      }, 1000);
     } else {
       setAlertMessage(response.error || "Classroom Create Failed!!!");
       setAlertType("error");

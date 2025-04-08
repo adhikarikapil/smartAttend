@@ -30,7 +30,7 @@ export const joinClassroom = async (code) => {
 };
 
 
-export const listClassroom = async () => {
+export const classroomList = async () => {
     const accessToken = localStorage.getItem('accessToken');
     const response = await fetch(`${API_URL}/classroom/list`, {
         method: "GET",
