@@ -1,13 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
+import "./ListStudentStyles.css";
+import { removeStudent } from "../../../services/classroomService";
 
-function ListStudent({ existingStudents = [] }) {
+function ListStudent({
+  existingStudents = [],
+  closeModal,
+  existingClassroomId,
+  listStudentTable,
+  onStudentRemoved,
+}) {
+  const [alertMessage, setAlertMessage] = useState("");
+  const [alertType, setAlertType] = useState("");
+
+  const studentRemove = async (userId) => {
+    setAlertMessage("");
+    setAlertType("");
+
+    const response = await removeStudent(existingClassroomId, userId);
+
+    if (response.message) {
+      setAlertMessage("Student Removed!!");
+      setAlertType("success");
+      listStudentTable(existingClassroomId);
+      onStudentRemoved();
+    } else {
+      setAlertMessage(response.error || "Student not removed!!");
+      setAlertType("error");
+    }
+    setTimeout(() => {
+      setAlertMessage("");
+    }, 1000);
+  };
+
   return (
     <div>
       <div className="modal-overlay">
         <div className="modal-content">
+          {alertMessage && (
+            <div className={`modal-alert-message ${alertType}`}>
+              {alertMessage}
+            </div>
+          )}
           <div className="modal-header">
             <h2>Students</h2>
-            <button className="close-button">
+            <button className="close-button" onClick={closeModal}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -39,7 +75,13 @@ function ListStudent({ existingStudents = [] }) {
                   <td>{student.secondName}</td>
                   <td>{student.email}</td>
                   <td>
-                    <button>Remove</button>
+                    <button
+                      onClick={() => {
+                        studentRemove(student.userId);
+                      }}
+                    >
+                      Remove
+                    </button>
                   </td>
                 </tr>
               ))}

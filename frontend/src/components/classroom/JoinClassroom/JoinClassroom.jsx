@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./JoinClassroomStyles.css";
 import { joinClassroom } from "../../../services/classroomService";
 
-function JoinClassroom({ closeModal, onClassroomJoined }) {
+function JoinClassroom({ closeModal, onClassroomJoined, onJoined }) {
   const API_URL = import.meta.env.VITE_API_URL;
   const [formData, setFormData] = useState({
     code: "",
@@ -32,6 +32,7 @@ function JoinClassroom({ closeModal, onClassroomJoined }) {
     const response = await joinClassroom(formData.code);
 
     if (response.message) {
+      onJoined();
       setFormData({
         code: "",
       });

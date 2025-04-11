@@ -213,46 +213,67 @@ def list_classroom():
 
 def student_list(classroom_id):
     try:
-        header = request.headers.get('Authorization')
+        header = request.headers.get("Authorization")
         token = header.split()[1]
 
         if not token:
-            return jsonify({'error': 'No token in header authorization'}), 404
-        
+            return jsonify({"error": "No token in header authorization"}), 404
+
         decoded_token = decode_token(token)
 
-        if decoded_token['sub']:
+        if decoded_token["sub"]:
             identity = decoded_token["sub"]
         else:
-            return jsonify({'error': 'No identity found in token'}), 404
-        
+            return jsonify({"error": "No identity found in token"}), 404
+
         identity = json.loads(identity)
 
         if isinstance(identity, dict):
-            role = identity['role']
+            role = identity["role"]
 
-        if role=='teacher':
+        if role == "teacher":
             users = ClassroomUser.query.filter_by(classroom_id=classroom_id).all()
 
             serialized_users = [
                 {
-                    'userId': u.user.id,
-                    'firstName': u.user.first_name,
-                    'secondName': u.user.second_name,
-                    'email': u.user.email,
+                    "userId": u.user.id,
+                    "firstName": u.user.first_name,
+                    "secondName": u.user.second_name,
+                    "email": u.user.email,
                 }
                 for u in users
             ]
 
-            return jsonify({
-                'message': 'User found successfully',
-                'user': serialized_users
-            }), 200
+            return (
+                jsonify(
+                    {"message": "User found successfully", "user": serialized_users}
+                ),
+                200,
+            )
         else:
-            return jsonify({'error': 'You are not authorized'}), 400
+            return jsonify({"error": "You are not authorized"}), 400
 
     except Exception as e:
-        return jsonify({'error': str(e)}), 400
+        return jsonify({"error": str(e)}), 400
+
+
+def remove_student(classroom_id):
+    try:
+        data = request.get_json()
+        user_id = data.get("userId")
+
+        student = ClassroomUser.query.filter_by(
+            user_id=user_id,
+            classroom_id=classroom_id,
+        ).first()
+
+        db.session.delete(student)
+        db.session.commit()
+
+        return jsonify({"message": "Student Removed"})
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
 
 
 def leave_class(classroom_id):

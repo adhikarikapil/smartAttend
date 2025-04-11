@@ -20,17 +20,23 @@ function Dashboard() {
   const [currentClassroom, setCurrentClassroom] = useState([]);
   const [alertMessage, setAlertMessage] = useState("");
   const [alertType, setAlertType] = useState("");
-  const [currentStudent, setCurrentStudent] = useState([])
+  const [currentStudent, setCurrentStudent] = useState([]);
   const [isStudentsModalOpen, setIsStudentModalOpen] = useState(false);
+  const [currentClassroomId, setCurrentClassroomId] = useState();
+  const [studentRemoved, setStudentRemoved] = useState(false);
+  const [studentJoined, setStudentJoined] = useState(false);
 
   const listClassroomGrid = async () => {
     const response = await classroomList();
     if (response && Array.isArray(response.classroom)) {
       setCurrentClassroom(response.classroom);
-    }else{
-      setCurrentClassroom(response.classroom ?? [])
+    } else {
+      setCurrentClassroom(response.classroom ?? []);
     }
   };
+  useEffect(() => {
+    listClassroomGrid();
+  }, [studentJoined, studentRemoved]);
 
   useEffect(() => {
     listClassroomGrid();
@@ -41,7 +47,7 @@ function Dashboard() {
     setAlertType("");
 
     const response = await leaveClassroom(classroomId);
-    
+
     if (response.message) {
       listClassroomGrid();
       setAlertMessage("Classroom Left Successfully!!");
@@ -55,7 +61,6 @@ function Dashboard() {
       setAlertMessage("");
     }, 1000);
   };
-
   const dismissClass = async (classroomId) => {
     setAlertMessage("");
     setAlertType("");
@@ -74,7 +79,7 @@ function Dashboard() {
     }
 
     setTimeout(() => {
-      setAlertMessage('') 
+      setAlertMessage("");
     }, 1500);
   };
 
@@ -82,9 +87,9 @@ function Dashboard() {
     const response = await listStudent(classroomId);
 
     if (response && Array.isArray(response.user)) {
-      setCurrentStudent(response.user)
+      setCurrentStudent(response.user);
     }
-  }
+  };
 
   const TeacherDashboard = () => (
     <>
@@ -163,10 +168,14 @@ function Dashboard() {
                 </div>
               </div>
               <div className="class-card-footer">
-                <button className="class-action-btn attendance" 
-                  onClick={()=>{
-                    setIsStudentModalOpen(true);
-                    students(classroom.classroomId)
+                <button
+                  className="class-action-btn attendance"
+                  onClick={() => {
+                    setCurrentClassroomId(Number(classroom.classroomId));
+                    students(classroom.classroomId);
+                    setTimeout(() => {
+                      setIsStudentModalOpen(true);
+                    }, 500);
                   }}
                 >
                   Manage Class
@@ -176,7 +185,7 @@ function Dashboard() {
                 </button>
                 <button
                   className="class-action-btn leave"
-                  onClick={()=>dismissClass(classroom.classroomId)}
+                  onClick={() => dismissClass(classroom.classroomId)}
                 >
                   Dismiss Class
                 </button>
@@ -233,7 +242,10 @@ function Dashboard() {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor" > <path
+                    stroke="currentColor"
+                  >
+                    {" "}
+                    <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
@@ -285,10 +297,17 @@ function Dashboard() {
           <JoinClassroom
             closeModal={() => setIsJoinModalOpen(false)}
             onClassroomJoined={listClassroomGrid}
+            onJoined={() => setStudentJoined((prev) => !prev)}
           />
         )}
         {isStudentsModalOpen && (
-          <ListStudent existingStudents={currentStudent} />
+          <ListStudent
+            existingClassroomId={currentClassroomId}
+            existingStudents={currentStudent}
+            closeModal={() => setIsStudentModalOpen(false)}
+            listStudentTable={students}
+            onStudentRemoved={() => setStudentRemoved((prev) => !prev)}
+          />
         )}
       </main>
     </div>

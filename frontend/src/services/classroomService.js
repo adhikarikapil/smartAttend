@@ -77,6 +77,20 @@ export const listStudent = async (classroomId) => {
       Authorization: `Bearer ${accessToken}`,
     },
   });
-  const data = await response.json()
+  const data = await response.json();
+  return data;
+};
+
+export const removeStudent = async (classroomId, userId) => {
+  const accessToken = localStorage.getItem('accessToken')
+  const response = await fetch(`${API_URL}/classroom/remove/${classroomId}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      'Authorization': `Bearer ${accessToken}`
+    },
+    body: JSON.stringify({ userId }),
+  });
+  const data = await response.json();
   return data;
 };

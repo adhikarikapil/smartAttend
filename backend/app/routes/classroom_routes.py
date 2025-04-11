@@ -5,7 +5,8 @@ from app.controllers.classroom_controller import (
     list_classroom,
     leave_class,
     dismiss_class,
-    student_list
+    student_list,
+    remove_student,
 )
 
 classroom_bp = Blueprint("classroom", __name__)
@@ -14,5 +15,6 @@ classroom_bp.route("/create", methods=["POST"])(create_classroom)
 classroom_bp.route("/join", methods=["POST"])(join_classroom)
 classroom_bp.route("/list", methods=["GET"])(list_classroom)
 classroom_bp.route("/leave/<int:classroom_id>", methods=["DELETE"])(leave_class)
-classroom_bp.route("dismiss/<int:classroom_id>", methods=["DELETE"])(dismiss_class)
-classroom_bp.route('list/<int:classroom_id>', methods=["GET"])(student_list)
+classroom_bp.route("/dismiss/<int:classroom_id>", methods=["DELETE"])(dismiss_class)
+classroom_bp.route('/remove/<int:classroom_id>', methods=["POST"])(remove_student)
+classroom_bp.route("list/<int:classroom_id>", methods=["GET"])(student_list)
