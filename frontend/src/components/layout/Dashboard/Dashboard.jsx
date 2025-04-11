@@ -4,24 +4,87 @@ import Navbar from "../Navbar/Navbar";
 import { useAuth } from "../../../context/AuthContext";
 import CreateClassroom from "../../classroom/CreateClassroom/CreateClassroom";
 import JoinClassroom from "../../classroom/JoinClassroom/JoinClassroom";
-import { classroomList } from "../../../services/classroomService";
+import ListStudent from "../../classroom/ListStudent/ListStudent";
+import {
+  classroomList,
+  dismissClassroom,
+  leaveClassroom,
+  listStudent,
+} from "../../../services/classroomService";
 
 function Dashboard() {
+  const API_URL = import.meta.env.VITE_API_URL;
   const { user } = useAuth();
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
   const [currentClassroom, setCurrentClassroom] = useState([]);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [alertType, setAlertType] = useState("");
+  const [currentStudent, setCurrentStudent] = useState([])
+  const [isStudentsModalOpen, setIsStudentModalOpen] = useState(false);
 
   const listClassroomGrid = async () => {
     const response = await classroomList();
-    if (response && response.classroom) {
+    if (response && Array.isArray(response.classroom)) {
       setCurrentClassroom(response.classroom);
+    }else{
+      setCurrentClassroom(response.classroom ?? [])
     }
   };
 
   useEffect(() => {
     listClassroomGrid();
   }, []);
+
+  const leaveClass = async (classroomId) => {
+    setAlertMessage("");
+    setAlertType("");
+
+    const response = await leaveClassroom(classroomId);
+    
+    if (response.message) {
+      listClassroomGrid();
+      setAlertMessage("Classroom Left Successfully!!");
+      setAlertType("success");
+    } else {
+      setAlertMessage(response.error || "Cannot leave Classroom!!");
+      setAlertType("error");
+    }
+
+    setTimeout(() => {
+      setAlertMessage("");
+    }, 1000);
+  };
+
+  const dismissClass = async (classroomId) => {
+    setAlertMessage("");
+    setAlertType("");
+
+    const response = await dismissClassroom(classroomId);
+
+    if (response.message) {
+      setAlertMessage("Classroom Dissmissed Successfully!!");
+      setAlertType("success");
+      setTimeout(() => {
+        listClassroomGrid();
+      }, 1000);
+    } else {
+      setAlertMessage(response.error || "Cannot Dismiss Classroom!!");
+      setAlertType("error");
+    }
+
+    setTimeout(() => {
+      setAlertMessage('') 
+    }, 1500);
+  };
+
+  const students = async (classroomId) => {
+    const response = await listStudent(classroomId);
+
+    if (response && Array.isArray(response.user)) {
+      setCurrentStudent(response.user)
+    }
+  }
 
   const TeacherDashboard = () => (
     <>
@@ -48,6 +111,11 @@ function Dashboard() {
             </svg>
             Create New Class
           </button>
+          {alertMessage && (
+            <div className={`leave-alert-message ${alertType}`}>
+              {alertMessage}
+            </div>
+          )}
         </div>
         <div className="classes-grid">
           {currentClassroom.map((classroom) => (
@@ -95,13 +163,21 @@ function Dashboard() {
                 </div>
               </div>
               <div className="class-card-footer">
-                <button className="class-action-btn attendance">
+                <button className="class-action-btn attendance" 
+                  onClick={()=>{
+                    setIsStudentModalOpen(true);
+                    students(classroom.classroomId)
+                  }}
+                >
                   Manage Class
                 </button>
                 <button className="class-action-btn view">
                   Upload Material
                 </button>
-                <button className="class-action-btn leave">
+                <button
+                  className="class-action-btn leave"
+                  onClick={()=>dismissClass(classroom.classroomId)}
+                >
                   Dismiss Class
                 </button>
               </div>
@@ -138,6 +214,11 @@ function Dashboard() {
               </svg>
               Join Class
             </button>
+            {alertMessage && (
+              <div className={`leave-alert-message ${alertType}`}>
+                {alertMessage}
+              </div>
+            )}
           </div>
         </div>
         <div className="classes-grid">
@@ -152,9 +233,7 @@ function Dashboard() {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
+                    stroke="currentColor" > <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
@@ -175,7 +254,12 @@ function Dashboard() {
                   Take Attendance
                 </button>
                 <button className="class-action-btn view">View Material</button>
-                <button className="class-action-btn leave">Leave</button>
+                <button
+                  className="class-action-btn leave"
+                  onClick={() => leaveClass(classroom.classroomId)}
+                >
+                  Leave
+                </button>
               </div>
             </div>
           ))}
@@ -202,6 +286,9 @@ function Dashboard() {
             closeModal={() => setIsJoinModalOpen(false)}
             onClassroomJoined={listClassroomGrid}
           />
+        )}
+        {isStudentsModalOpen && (
+          <ListStudent existingStudents={currentStudent} />
         )}
       </main>
     </div>

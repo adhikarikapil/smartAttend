@@ -36,7 +36,8 @@ function CreateClassroom({ closeModal, onClassroomCreated }) {
     setFormData((prevData) => ({ ...prevData, code: randomCode }));
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault()
     setAlertMessage("");
     setAlertType("");
 
@@ -45,7 +46,7 @@ function CreateClassroom({ closeModal, onClassroomCreated }) {
       formData.code,
       formData.description
     );
-    console.log(response)
+    console.log(response);
     if (response.message) {
       setAlertMessage("Classroom Created Sucessfully!!!");
       setAlertType("success");
@@ -55,7 +56,7 @@ function CreateClassroom({ closeModal, onClassroomCreated }) {
         description: "",
       });
       setTimeout(() => {
-        onClassroomCreated(); 
+        onClassroomCreated();
       }, 1000);
     } else {
       setAlertMessage(response.error || "Classroom Create Failed!!!");
@@ -91,7 +92,6 @@ function CreateClassroom({ closeModal, onClassroomCreated }) {
             </button>
           </div>
           <form
-            action="submit"
             className="create-class-form"
             onSubmit={handleSubmit}
           >
@@ -121,7 +121,9 @@ function CreateClassroom({ closeModal, onClassroomCreated }) {
                   required
                   onChange={handleChange}
                 />
-                <button type="button" onClick={generateRandomCode}>Generate Code</button>
+                <button type="button" onClick={generateRandomCode}>
+                  Generate Code
+                </button>
               </div>
               <span className="code-hint">
                 Enter a 6-character code for students to join the class

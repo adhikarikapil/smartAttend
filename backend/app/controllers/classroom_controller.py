@@ -148,11 +148,10 @@ def list_classroom():
                         "firstName": c.creator.first_name,
                         "secondName": c.creator.second_name,
                         "email": c.creator.email,
-                        "members": len(c.members)
+                        "members": len(c.members),
                     }
                     for c in classroom
                 ]
-
 
                 return (
                     jsonify(
@@ -212,5 +211,111 @@ def list_classroom():
         return jsonify({"error": str(e)})
 
 
-def student_list():
-    pass
+def student_list(classroom_id):
+    try:
+        header = request.headers.get('Authorization')
+        token = header.split()[1]
+
+        if not token:
+            return jsonify({'error': 'No token in header authorization'}), 404
+        
+        decoded_token = decode_token(token)
+
+        if decoded_token['sub']:
+            identity = decoded_token["sub"]
+        else:
+            return jsonify({'error': 'No identity found in token'}), 404
+        
+        identity = json.loads(identity)
+
+        if isinstance(identity, dict):
+            role = identity['role']
+
+        if role=='teacher':
+            users = ClassroomUser.query.filter_by(classroom_id=classroom_id).all()
+
+            serialized_users = [
+                {
+                    'userId': u.user.id,
+                    'firstName': u.user.first_name,
+                    'secondName': u.user.second_name,
+                    'email': u.user.email,
+                }
+                for u in users
+            ]
+
+            return jsonify({
+                'message': 'User found successfully',
+                'user': serialized_users
+            }), 200
+        else:
+            return jsonify({'error': 'You are not authorized'}), 400
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 400
+
+
+def leave_class(classroom_id):
+    try:
+        header = request.headers.get("Authorization")
+        token = header.split()[1]
+
+        if not token:
+            return jsonify({"error": "No token in authorization headers"}), 400
+
+        decoded_token = decode_token(token)
+
+        if decoded_token["sub"]:
+            identity = decoded_token["sub"]
+        else:
+            return jsonify({"error": "No identity in the token"}), 404
+
+        identity = json.loads(identity)
+
+        if isinstance(identity, dict):
+            user_id = identity["userId"]
+
+        classroom = ClassroomUser.query.filter_by(
+            user_id=user_id, classroom_id=classroom_id
+        ).first()
+
+        db.session.delete(classroom)
+        db.session.commit()
+
+        return jsonify({"message": "Classroom Left!!!"}), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+
+
+def dismiss_class(classroom_id):
+    try:
+        header = request.headers.get("Authorization")
+        token = header.split()[1]
+
+        if not token:
+            return jsonify({"error": "No token in header authorization"}), 404
+
+        decoded_token = decode_token(token)
+
+        if decoded_token["sub"]:
+            identity = decoded_token["sub"]
+        else:
+            return jsonify({"error": "No identity in token!!"}), 404
+
+        identity = json.loads(identity)
+
+        if isinstance(identity, dict):
+            user_id = identity["userId"]
+
+        classroom = Classroom.query.filter_by(
+            creator_id=user_id, id=classroom_id
+        ).first()
+
+        db.session.delete(classroom)
+        db.session.commit()
+
+        return jsonify({"message": "Classroom Dismissed Successfully!!"}), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
