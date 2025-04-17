@@ -17,4 +17,3 @@ class Config:
         "JWT_SECRET_KEY",
         "bdad6c8805ea8e4ac2e718f8c4c699ccdd28435622aa0ecc3ad449e7678c427e",
     )
-    

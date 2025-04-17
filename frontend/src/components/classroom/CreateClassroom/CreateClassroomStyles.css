@@ -164,6 +164,15 @@
   transform: translateY(-2px);
 }
 
+.generate-btn {
+  color: black;
+  transition: 0.3s ease all;
+}
+
+.generate-btn:hover {
+  background-color: white;
+}
+
 .modal-alert-message {
   display: flex;
   justify-content: center;

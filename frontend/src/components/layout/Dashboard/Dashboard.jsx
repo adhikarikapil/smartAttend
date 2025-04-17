@@ -38,10 +38,6 @@ function Dashboard() {
     listClassroomGrid();
   }, [studentJoined, studentRemoved]);
 
-  useEffect(() => {
-    listClassroomGrid();
-  }, []);
-
   const leaveClass = async (classroomId) => {
     setAlertMessage("");
     setAlertType("");

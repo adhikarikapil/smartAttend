@@ -78,9 +78,9 @@ function Login() {
                   onChange={handleFormChange}
                   required
                 />
-                <div className="forgot-password">
+                {/* <div className="forgot-password">
                   <a href="/forgot-password">Forgot password?</a>
-                </div>
+                </div> */}
               </div>
               <button type="submit">Login</button>
             </form>

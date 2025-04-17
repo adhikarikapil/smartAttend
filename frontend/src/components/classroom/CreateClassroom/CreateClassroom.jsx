@@ -121,7 +121,7 @@ function CreateClassroom({ closeModal, onClassroomCreated }) {
                   required
                   onChange={handleChange}
                 />
-                <button type="button" onClick={generateRandomCode}>
+                <button type="button" className="generate-btn" onClick={generateRandomCode}>
                   Generate Code
                 </button>
               </div>
