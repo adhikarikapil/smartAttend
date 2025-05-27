@@ -72,7 +72,7 @@ function Navbar() {
             window.location.href = "/attendance";
           }}
         >
-          Attendance
+          View Attendance
         </div>
       </div>
       <div className="navbar-profile">
@@ -111,7 +111,11 @@ function Navbar() {
           <div className={`navbar-dropdown ${isOpen ? "active" : ""}`}>
             {isAuthenticated ? (
               <>
-                <button className="w-40">Re-register Face</button>
+                {user?.role === "student" ? (
+                  <button className="w-40">Register Face</button>
+                ) : (
+                  ""
+                )}
                 <button onClick={isLoggingOut}>Logout</button>
               </>
             ) : (

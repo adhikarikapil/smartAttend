@@ -15,3 +15,4 @@ ENV/
 .env.production.local
 .DS_Store
 .flaskenv
+face_data/
