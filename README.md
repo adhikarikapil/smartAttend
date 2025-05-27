@@ -49,6 +49,8 @@ This project is a **Face Recognition Attendance System** designed to make classr
      source myEnv/bin/activate
      ```
 
+    - for fish shell
+
      ```fish (LINUX)
      source myEnv/bin/activate.fish
      ```
