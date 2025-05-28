@@ -112,7 +112,7 @@ function Navbar() {
             {isAuthenticated ? (
               <>
                 {user?.role === "student" ? (
-                  <button className="w-40">Register Face</button>
+                  <button className="w-40" onClick={()=>window.location.href='/face-register'}>Register Face</button>
                 ) : (
                   ""
                 )}

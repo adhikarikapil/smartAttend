@@ -7,6 +7,7 @@ import Register from "./components/auth/Register/Register";
 import Dashboard from "./components/layout/Dashboard/Dashboard";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/common/ProtectedRoute/ProtectedRoute";
+import FaceRegistration from "./components/face/FaceRegistration";
 
 function App() {
   return (
@@ -24,9 +25,21 @@ function App() {
             <Route
               path="/dashboard"
               element={
-                <ProtectedRoute allowedRoles={["teacher", "student"]}>
-                  <Dashboard />
-                </ProtectedRoute>
+                <>
+                  <ProtectedRoute allowedRoles={["teacher", "student"]}>
+                    <Dashboard />
+                  </ProtectedRoute>
+                </>
+              }
+            />
+            <Route
+              path="/face-register"
+              element={
+                <>
+                  <ProtectedRoute allowedRoles={["student"]}>
+                    <FaceRegistration />
+                  </ProtectedRoute>
+                </>
               }
             />
           </Routes>

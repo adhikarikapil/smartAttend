@@ -5,17 +5,35 @@ import numpy as np
 import os
 from werkzeug.utils import secure_filename
 from app.models.user import User
+from app.utils.jwt_utils import decode_token
+import json
 
 
 def register_face():
-    student_id = request.form.get('id')
     roll_no = request.form.get('rollNo')
-    first_name = request.form.get('firstName')
-    second_name = request.form.get('secondName')
+
+    header = request.headers.get('Authorization')
+    token = header.split()[1]
+
+    if not token: 
+        return jsonify({'error': 'No token in authorization headers'}), 400
+    
+    decoded_token = decode_token(token)
+
+    if decoded_token['sub']:
+        identity = decoded_token['sub']
+
+    identity = json.loads(identity)
+
+    if isinstance(identity, dict):
+        student_id = identity['userId']
+    else:
+        return jsonify({'error': 'Invalid identity format in token'})
+    
 
     if 'image' not in request.files or not student_id or not roll_no:
         return jsonify({'error': 'Missing face image or rollno or student id'}), 400
-    
+
     image_file = request.files['image']
     image_path = f'/tmp/{secure_filename(image_file.filename)}'
     image_file.save(image_path)
@@ -29,10 +47,12 @@ def register_face():
     encoding = face_encoding[0]
 
     root_path = 'face_data'
-    student_folder_name = f"{roll_no}_{first_name}_{second_name}".strip().replace(" ", "_")
+    student_folder_name = f"{roll_no}_{student_id}"
     student_path = os.path.join(root_path, student_folder_name)
     os.makedirs(student_path, exist_ok=True)
 
     np.save(os.path.join(student_path, 'encoding.npy'), encoding)
 
     return jsonify({'message': 'Face Registered Successfully'}), 200
+
+

@@ -1,0 +1,439 @@
+.face-registration-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 100px;
+  background: linear-gradient(135deg, #f6f8fc 0%, #e9f0f7 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.face-registration-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(79, 70, 229, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.face-registration-input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: slideUp 0.6s ease forwards;
+}
+
+.face-registration-input:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.face-registration-title {
+  display: flex;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--primary-gradient);
+  padding: 25px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+.face-registration-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+}
+
+.face-registration-form-container {
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.face-registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+  min-width: 320px;
+  max-width: 45%;
+}
+
+.face-registration-form input {
+  font-size: 16px;
+  height: 55px;
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.face-registration-form input:hover {
+  border-color: var(--primary-1);
+  background: #ffffff;
+}
+
+.face-registration-form input:focus {
+  border-color: var(--primary-1);
+  box-shadow: 0 0 0 3px rgba(var(--primary-1-rgb), 0.1);
+  background: #ffffff;
+}
+
+.face-registration-form input::placeholder {
+  color: #999;
+  opacity: 0.7;
+  font-size: 16px;
+}
+
+.face-registration-form button {
+  background: var(--primary-gradient);
+  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  height: 55px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.face-registration-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+}
+
+.face-registration-form button:active {
+  transform: translateY(1px);
+}
+
+.face-registration-form button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+  );
+  transition: 0.5s;
+}
+
+.face-registration-form button:hover::before {
+  left: 100%;
+}
+
+.face-registration-form button:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.face-registration-form button:disabled::before {
+  display: none;
+}
+
+.face-alert-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  padding: 18px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  animation: slideDown 0.3s ease forwards;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.face-alert-message.error {
+  background-color: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.face-alert-message.success {
+  background-color: #dcfce7;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.face-preview-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 25px;
+  background: rgba(249, 250, 251, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  min-width: 320px;
+  max-width: 45%;
+  position: sticky;
+  top: 100px;
+}
+
+.face-preview-section h3 {
+  font-size: 1.1rem;
+  color: #1e293b;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.face-preview-image {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e5e7eb;
+}
+
+.face-preview-placeholder {
+  width: 100%;
+  max-width: 320px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border-radius: 8px;
+  border: 2px dashed #d1d5db;
+  color: #6b7280;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.face-preview-details {
+  width: 100%;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.face-preview-details p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.face-preview-details span {
+  font-weight: 600;
+  color: #1e293b;
+  text-align: right;
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Status styles */
+.status-waiting {
+  color: #6b7280;
+}
+
+.status-waiting span {
+  color: #6b7280;
+}
+
+.status-warning {
+  color: #d97706;
+}
+
+.status-warning span {
+  color: #d97706;
+}
+
+.status-success {
+  color: #059669;
+}
+
+.status-success span {
+  color: #059669;
+}
+
+.capture-button {
+  background: var(--secondary-gradient);
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+}
+
+.capture-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.2);
+}
+
+.capture-button:active {
+  transform: translateY(1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .face-registration-form-container {
+    gap: 30px;
+  }
+
+  .face-registration-form,
+  .face-preview-section {
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .face-registration-form-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .face-registration-form,
+  .face-preview-section {
+    width: 100%;
+    max-width: 600px;
+    min-width: unset;
+  }
+
+  .face-preview-section {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .face-registration-container {
+    padding-top: 80px;
+  }
+
+  .face-registration-input {
+    margin: 0 auto;
+    max-width: 95%;
+  }
+
+  .face-registration-form-container {
+    padding: 20px;
+  }
+
+  .face-registration-title {
+    font-size: 1.3rem;
+    padding: 20px;
+  }
+
+  .face-preview-section {
+    padding: 15px;
+  }
+
+  .face-preview-image,
+  .face-preview-placeholder {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .face-preview-details {
+    padding: 12px;
+  }
+
+  .face-preview-details p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .face-registration-form-container {
+    padding: 15px;
+  }
+
+  .face-registration-form {
+    gap: 20px;
+  }
+
+  .face-registration-form input {
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .face-registration-form button {
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .capture-button {
+    max-width: 100%;
+  }
+}
