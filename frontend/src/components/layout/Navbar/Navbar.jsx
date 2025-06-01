@@ -3,7 +3,7 @@ import "./NavbarStyles.css";
 import Profile from "../../../assets/profile.jpeg";
 import { useAuth } from "../../../context/AuthContext";
 
-function Navbar() {
+function Navbar({ hasExistingRegistration }) {
   const { user, logout, isAuthenticated } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState("");
@@ -112,7 +112,21 @@ function Navbar() {
             {isAuthenticated ? (
               <>
                 {user?.role === "student" ? (
-                  <button className="w-40" onClick={()=>window.location.href='/face-register'}>Register Face</button>
+                  hasExistingRegistration === "false" ? (
+                    <button
+                      className="w-40"
+                      onClick={() => (window.location.href = "/face-register")}
+                    >
+                      Register Face
+                    </button>
+                  ) : (
+                    <button
+                      className="w-40"
+                      onClick={() => (window.location.href = "/face-register")}
+                    >
+                      Re-register Face
+                    </button>
+                  )
                 ) : (
                   ""
                 )}

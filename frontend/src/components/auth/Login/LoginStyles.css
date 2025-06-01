@@ -25,9 +25,7 @@
 .login-input {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    left: 750px;
-    top: 250px;
+    position: relative;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
@@ -252,6 +250,9 @@
     }
 
     .login-input {
+        position: relative;
+        left: auto;
+        top: auto;
         margin: 0 auto;
         max-width: 100%;
     }
@@ -282,5 +283,29 @@
     .login-alert-message {
         width: calc(100% - 40px);
         right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding-top: 60px;
+    }
+
+    .login-input {
+        margin: 0 10px;
+    }
+
+    .login-form-container {
+        padding: 15px;
+    }
+
+    .login-title {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .login-form button {
+        height: 40px;
+        font-size: 0.875rem;
     }
 }
