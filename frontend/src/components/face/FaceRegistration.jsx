@@ -17,7 +17,8 @@ function FaceRegistration() {
   const [registrationStatus, setRegistrationStatus] = useState({
     isReady: false,
     message: "Waiting for input...",
-    type: "waiting"
+    type: "waiting",
+    suggestions: []
   });
 
   const API_URL = import.meta.env.VITE_API_URL;
@@ -27,25 +28,29 @@ function FaceRegistration() {
       setRegistrationStatus({
         isReady: false,
         message: "Enter roll number and capture image",
-        type: "waiting"
+        type: "waiting",
+        suggestions: []
       });
     } else if (!textData.rollNo) {
       setRegistrationStatus({
         isReady: false,
         message: "Enter roll number",
-        type: "warning"
+        type: "warning",
+        suggestions: []
       });
     } else if (!capturedImage) {
       setRegistrationStatus({
         isReady: false,
         message: "Capture your image",
-        type: "warning"
+        type: "warning",
+        suggestions: []
       });
     } else {
       setRegistrationStatus({
         isReady: true,
         message: "Ready to Register",
-        type: "success"
+        type: "success",
+        suggestions: []
       });
     }
   }, [textData.rollNo, capturedImage]);
@@ -106,6 +111,16 @@ function FaceRegistration() {
       } else {
         setAlertMessage(data.error || "Registration failed");
         setAlertType("error");
+      }
+      
+      if (data.suggestion) {
+        setRegistrationStatus({
+          ...registrationStatus,
+          isReady: false,
+          message: data.error,
+          type: 'error',
+          suggestions: [data.suggestion]
+        })
       }
     } catch (err) {
       setAlertMessage(`An error occurred: ${err.message}`);
@@ -176,6 +191,16 @@ function FaceRegistration() {
               <p className={`status-${registrationStatus.type}`}>
                 Status: <span>{registrationStatus.message}</span>
               </p>
+              {registrationStatus.suggestions?.length > 0 && (
+                <div className="suggestion-box">
+                  <p>Suggestions:</p>
+                  <ul>
+                    {registrationStatus.suggestions.map((suggestion, i) => (
+                      <li key={(i)}>{suggestion}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>
