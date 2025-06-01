@@ -102,7 +102,7 @@ function FaceRegistration() {
 
         setTimeout(() => {
           window.location.href = "/face-register";
-        }, 5000);
+        }, 2000);
       } else {
         setAlertMessage(data.error || "Registration failed");
         setAlertType("error");
