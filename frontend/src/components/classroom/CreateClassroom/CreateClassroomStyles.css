@@ -211,3 +211,279 @@
     transform: translateY(0);
   }
 }
+
+.create-classroom-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6f8fc 0%, #e9f0f7 100%);
+  padding-top: 90px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.create-classroom-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.create-classroom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.create-classroom-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.create-classroom-form {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #1e293b;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.btn-cancel,
+.btn-submit {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel {
+  background: #f1f5f9;
+  color: #64748b;
+  border: none;
+}
+
+.btn-cancel:hover {
+  background: #e2e8f0;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  border: none;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .create-classroom-content {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .create-classroom-container {
+    padding-top: 80px;
+    padding-bottom: 32px;
+  }
+
+  .create-classroom-content {
+    padding: 0 16px;
+  }
+
+  .create-classroom-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .create-classroom-title {
+    font-size: 1.75rem;
+  }
+
+  .create-classroom-form {
+    padding: 32px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    font-size: 0.9375rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 10px 14px;
+    font-size: 0.9375rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-cancel,
+  .btn-submit {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-classroom-container {
+    padding-top: 70px;
+    padding-bottom: 24px;
+  }
+
+  .create-classroom-content {
+    padding: 0 12px;
+  }
+
+  .create-classroom-title {
+    font-size: 1.5rem;
+  }
+
+  .create-classroom-form {
+    padding: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    font-size: 0.875rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 8px 12px;
+    font-size: 0.875rem;
+  }
+
+  .form-group textarea {
+    min-height: 100px;
+  }
+
+  .form-actions {
+    margin-top: 24px;
+  }
+
+  .btn-cancel,
+  .btn-submit {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+}
+
+/* Add smooth transitions for responsive changes */
+.create-classroom-form,
+.form-group input,
+.form-group textarea,
+.form-group select,
+.btn-cancel,
+.btn-submit {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ensure proper stacking on mobile */
+@media (max-width: 768px) {
+  .create-classroom-form > * {
+    z-index: 1;
+  }
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  .btn-cancel,
+  .btn-submit {
+    min-height: 44px;
+  }
+}
+
+/* Ensure proper spacing for very small screens */
+@media (max-width: 360px) {
+  .create-classroom-container {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  .create-classroom-content {
+    padding: 0 8px;
+  }
+
+  .create-classroom-form {
+    padding: 20px;
+  }
+
+  .create-classroom-title {
+    font-size: 1.25rem;
+  }
+}

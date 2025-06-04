@@ -1,3 +1,312 @@
+.join-classroom-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6f8fc 0%, #e9f0f7 100%);
+  padding-top: 90px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.join-classroom-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.join-classroom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.join-classroom-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .join-classroom-form {
-    padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #1e293b;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.btn-cancel,
+.btn-join {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel {
+  background: #f1f5f9;
+  color: #64748b;
+  border: none;
+}
+
+.btn-cancel:hover {
+  background: #e2e8f0;
+}
+
+.btn-join {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  border: none;
+}
+
+.btn-join:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.btn-join:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.classroom-info {
+  margin-top: 32px;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 16px;
+  border: 2px solid #e2e8f0;
+}
+
+.classroom-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.classroom-info p {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.classroom-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .join-classroom-content {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .join-classroom-container {
+    padding-top: 80px;
+    padding-bottom: 32px;
+  }
+
+  .join-classroom-content {
+    padding: 0 16px;
+  }
+
+  .join-classroom-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .join-classroom-title {
+    font-size: 1.75rem;
+  }
+
+  .join-classroom-form {
+    padding: 32px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    font-size: 0.9375rem;
+  }
+
+  .form-group input {
+    padding: 10px 14px;
+    font-size: 0.9375rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-cancel,
+  .btn-join {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 0.9375rem;
+  }
+
+  .classroom-info {
+    margin-top: 24px;
+    padding: 20px;
+  }
+
+  .classroom-info h3 {
+    font-size: 1.125rem;
+  }
+
+  .classroom-info p {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .join-classroom-container {
+    padding-top: 70px;
+    padding-bottom: 24px;
+  }
+
+  .join-classroom-content {
+    padding: 0 12px;
+  }
+
+  .join-classroom-title {
+    font-size: 1.5rem;
+  }
+
+  .join-classroom-form {
+    padding: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    font-size: 0.875rem;
+  }
+
+  .form-group input {
+    padding: 8px 12px;
+    font-size: 0.875rem;
+  }
+
+  .form-actions {
+    margin-top: 24px;
+  }
+
+  .btn-cancel,
+  .btn-join {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+
+  .classroom-info {
+    margin-top: 20px;
+    padding: 16px;
+  }
+
+  .classroom-info h3 {
+    font-size: 1rem;
+  }
+
+  .classroom-info p {
+    font-size: 0.875rem;
+  }
+}
+
+/* Add smooth transitions for responsive changes */
+.join-classroom-form,
+.form-group input,
+.btn-cancel,
+.btn-join,
+.classroom-info {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ensure proper stacking on mobile */
+@media (max-width: 768px) {
+  .join-classroom-form > * {
+    z-index: 1;
+  }
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  .btn-cancel,
+  .btn-join {
+    min-height: 44px;
+  }
+}
+
+/* Ensure proper spacing for very small screens */
+@media (max-width: 360px) {
+  .join-classroom-container {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  .join-classroom-content {
+    padding: 0 8px;
+  }
+
+  .join-classroom-form {
+    padding: 20px;
+  }
+
+  .join-classroom-title {
+    font-size: 1.25rem;
+  }
+
+  .classroom-info {
+    padding: 12px;
+  }
 }

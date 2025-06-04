@@ -1,9 +1,11 @@
 .login-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: flex-start;
-    width: 100%;
     min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
     padding-top: 100px;
     background: linear-gradient(135deg, #f6f8fc 0%, #e9f0f7 100%);
     position: relative;
@@ -23,12 +25,13 @@
 }
 
 .login-input {
-    display: flex;
-    flex-direction: column;
-    position: relative;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
     border-radius: 16px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     background: rgba(255, 255, 255, 0.95);
@@ -72,6 +75,8 @@
 }
 
 .login-form-container {
+    width: 100%;
+    box-sizing: border-box;
     padding: 25px;
     background: rgba(255, 255, 255, 0.95);
     border-bottom-left-radius: 16px;
@@ -79,6 +84,8 @@
 }
 
 .login-form {
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -216,8 +223,12 @@
 .login-alert-message {
     position: fixed;
     top: 90px;
-    right: 20px;
-    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    z-index: 1000;
+    margin: 0 auto;
     padding: 15px 20px;
     border-radius: 12px;
     font-size: 0.875rem;
@@ -225,7 +236,6 @@
     text-align: left;
     animation: slideIn 0.3s ease forwards;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
     backdrop-filter: blur(10px);
 }
 
@@ -244,17 +254,15 @@
 /* Responsive styles */
 @media (max-width: 768px) {
     .login-container {
-        padding-top: 70px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-top: 80px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     .login-input {
-        position: relative;
-        left: auto;
-        top: auto;
+        width: 100%;
+        max-width: 400px;
         margin: 0 auto;
-        max-width: 100%;
     }
 
     .login-form-container {
@@ -262,8 +270,8 @@
     }
 
     .login-title {
-        font-size: 1.125rem;
-        padding: 15px;
+        font-size: 1.25rem;
+        padding: 16px;
     }
 
     .login-form {
@@ -281,31 +289,68 @@
     }
 
     .login-alert-message {
-        width: calc(100% - 40px);
-        right: 20px;
+        width: calc(100% - 32px);
+        max-width: 400px;
+        right: 16px;
+        left: 16px;
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 480px) {
     .login-container {
         padding-top: 60px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
     .login-input {
-        margin: 0 10px;
+        max-width: 100%;
     }
 
     .login-form-container {
-        padding: 15px;
+        padding: 16px;
     }
 
     .login-title {
-        font-size: 1rem;
-        padding: 12px;
+        font-size: 1.125rem;
+        padding: 14px;
     }
 
+    .login-form input,
     .login-form button {
         height: 40px;
         font-size: 0.875rem;
+    }
+
+    .login-form label {
+        font-size: 0.75rem;
+    }
+}
+
+/* Add smooth transitions for responsive changes */
+.login-input,
+.login-form-container,
+.login-form,
+.login-form input,
+.login-form button {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add a max-width to prevent the form from becoming too wide on large screens */
+@media (min-width: 1200px) {
+    .login-input {
+        max-width: 450px;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
     }
 }
