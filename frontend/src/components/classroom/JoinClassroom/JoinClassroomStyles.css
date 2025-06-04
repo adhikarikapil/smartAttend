@@ -1,28 +1,28 @@
 .join-classroom-container {
   min-height: 100vh;
   background: linear-gradient(135deg, #f6f8fc 0%, #e9f0f7 100%);
-  padding-top: 90px;
-  padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 32px;
   box-sizing: border-box;
 }
 
 .join-classroom-content {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 .join-classroom-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
 }
 
 .join-classroom-title {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #1e293b;
   margin: 0;
@@ -34,30 +34,30 @@
 .join-classroom-form {
   background: rgba(255, 255, 255, 0.98);
   border-radius: 24px;
-  padding: 40px;
+  padding: 32px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
 .form-group {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
   display: block;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #1e293b;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .form-group input {
   width: 100%;
-  padding: 12px 16px;
+  padding: 10px 14px;
   border: 2px solid #e2e8f0;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #1e293b;
   background: #f8fafc;
   transition: all 0.3s ease;
@@ -72,15 +72,15 @@
 .form-actions {
   display: flex;
   justify-content: flex-end;
-  gap: 16px;
-  margin-top: 32px;
+  gap: 12px;
+  margin-top: 24px;
 }
 
 .btn-cancel,
 .btn-join {
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -114,24 +114,24 @@
 }
 
 .classroom-info {
-  margin-top: 32px;
-  padding: 24px;
+  margin-top: 24px;
+  padding: 20px;
   background: #f8fafc;
   border-radius: 16px;
   border: 2px solid #e2e8f0;
 }
 
 .classroom-info h3 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: #1e293b;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .classroom-info p {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #64748b;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .classroom-info p:last-child {
@@ -147,75 +147,16 @@
 
 @media (max-width: 768px) {
   .join-classroom-container {
-    padding-top: 80px;
-    padding-bottom: 32px;
-  }
-
-  .join-classroom-content {
-    padding: 0 16px;
-  }
-
-  .join-classroom-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .join-classroom-title {
-    font-size: 1.75rem;
-  }
-
-  .join-classroom-form {
-    padding: 32px;
-  }
-
-  .form-group {
-    margin-bottom: 20px;
-  }
-
-  .form-group label {
-    font-size: 0.9375rem;
-  }
-
-  .form-group input {
-    padding: 10px 14px;
-    font-size: 0.9375rem;
-  }
-
-  .form-actions {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .btn-cancel,
-  .btn-join {
-    width: 100%;
-    padding: 10px 20px;
-    font-size: 0.9375rem;
-  }
-
-  .classroom-info {
-    margin-top: 24px;
-    padding: 20px;
-  }
-
-  .classroom-info h3 {
-    font-size: 1.125rem;
-  }
-
-  .classroom-info p {
-    font-size: 0.9375rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .join-classroom-container {
     padding-top: 70px;
     padding-bottom: 24px;
   }
 
   .join-classroom-content {
-    padding: 0 12px;
+    padding: 0 14px;
+  }
+
+  .join-classroom-header {
+    margin-bottom: 20px;
   }
 
   .join-classroom-title {
@@ -224,6 +165,7 @@
 
   .join-classroom-form {
     padding: 24px;
+    max-width: 400px;
   }
 
   .form-group {
@@ -231,22 +173,24 @@
   }
 
   .form-group label {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
 
   .form-group input {
     padding: 8px 12px;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
 
   .form-actions {
-    margin-top: 24px;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .btn-cancel,
   .btn-join {
+    width: 100%;
     padding: 8px 16px;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
 
   .classroom-info {
@@ -259,7 +203,63 @@
   }
 
   .classroom-info p {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .join-classroom-container {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  .join-classroom-content {
+    padding: 0 10px;
+  }
+
+  .join-classroom-title {
+    font-size: 1.25rem;
+  }
+
+  .join-classroom-form {
+    padding: 20px;
+    max-width: 320px;
+  }
+
+  .form-group {
+    margin-bottom: 14px;
+  }
+
+  .form-group label {
+    font-size: 0.75rem;
+  }
+
+  .form-group input {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .form-actions {
+    margin-top: 20px;
+  }
+
+  .btn-cancel,
+  .btn-join {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .classroom-info {
+    margin-top: 16px;
+    padding: 14px;
+  }
+
+  .classroom-info h3 {
+    font-size: 0.9375rem;
+  }
+
+  .classroom-info p {
+    font-size: 0.75rem;
   }
 }
 
@@ -308,5 +308,100 @@
 
   .classroom-info {
     padding: 12px;
+  }
+}
+
+.join-alert-message {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 300px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: left;
+  animation: slideInRight 0.3s ease forwards, fadeOut 0.3s ease forwards 4.7s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.join-alert-message.error {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+.join-alert-message.success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+/* Progress bar for auto-dismiss */
+.join-alert-message::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0 0 12px 12px;
+  animation: progress 5s linear forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .join-alert-message {
+    top: 70px;
+    right: 16px;
+    left: 16px;
+    width: auto;
+    max-width: 300px;
+    font-size: 0.8125rem;
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .join-alert-message {
+    top: 60px;
+    right: 12px;
+    left: 12px;
+    font-size: 0.75rem;
+    padding: 10px 14px;
   }
 }
