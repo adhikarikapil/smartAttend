@@ -6,7 +6,6 @@ import { useAuth } from "../../../context/AuthContext";
 function Navbar({ hasExistingRegistration }) {
   const { user, logout, isAuthenticated } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState("");
   const [alertType, setAlertType] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
@@ -15,32 +14,13 @@ function Navbar({ hasExistingRegistration }) {
     setCurrentPath(window.location.pathname);
   }, []);
 
-  // Close mobile menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isMobileMenuOpen && !event.target.closest('.navbar-tags') && !event.target.closest('.navbar-menu-button')) {
-        setIsMobileMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, [isMobileMenuOpen]);
-
   // Navigation handlers
   const handleRegisterClick = () => {
     window.location.href = "/register";
-    setIsMobileMenuOpen(false);
   };
 
   const handleLoginClick = () => {
     window.location.href = "/login";
-    setIsMobileMenuOpen(false);
-  };
-
-  const handleNavigation = (path) => {
-    window.location.href = path;
-    setIsMobileMenuOpen(false);
   };
 
   const showLoginLink = currentPath === "/register";
@@ -56,12 +36,10 @@ function Navbar({ hasExistingRegistration }) {
       setAlertMessage(data.error);
       setAlertType("error");
     }
-    setIsMobileMenuOpen(false);
   };
 
   const isLogin = () => {
     window.location.href = "/login";
-    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -73,38 +51,30 @@ function Navbar({ hasExistingRegistration }) {
       )}
       <div
         className="navbar-titles"
-        onClick={() => handleNavigation("/")}
+        onClick={() => {
+          window.location.href = "/";
+        }}
       >
         <h2>SmartAttend</h2>
       </div>
-
-      {/* Mobile menu button */}
-      <button 
-        className="navbar-menu-button"
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-label="Toggle menu"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-
-      {/* Navigation menu */}
-      <div className={`navbar-tags ${isMobileMenuOpen ? 'mobile-menu' : ''}`}>
+      <div className="navbar-tags">
         <div
           className="navbar-menu"
-          onClick={() => handleNavigation("/dashboard")}
+          onClick={() => {
+            window.location.href = "/dashboard";
+          }}
         >
           Dashboard
         </div>
         <div
           className="navbar-menu"
-          onClick={() => handleNavigation("/attendance")}
+          onClick={() => {
+            window.location.href = "/attendance";
+          }}
         >
           View Attendance
         </div>
       </div>
-
       <div className="navbar-profile">
         {/* Conditionally render auth links */}
         {showLoginLink && (
@@ -132,7 +102,8 @@ function Navbar({ hasExistingRegistration }) {
 
         <img
           src={Profile}
-          alt="Profile"
+          alt=""
+          id="pic"
           className="size-11 rounded-full"
           onClick={() => setIsOpen(!isOpen)}
         />
@@ -143,13 +114,15 @@ function Navbar({ hasExistingRegistration }) {
                 {user?.role === "student" ? (
                   hasExistingRegistration === "false" ? (
                     <button
-                      onClick={() => handleNavigation("/face-register")}
+                      className="w-40"
+                      onClick={() => (window.location.href = "/face-register")}
                     >
                       Register Face
                     </button>
                   ) : (
                     <button
-                      onClick={() => handleNavigation("/face-register")}
+                      className="w-40"
+                      onClick={() => (window.location.href = "/face-register")}
                     >
                       Re-register Face
                     </button>
