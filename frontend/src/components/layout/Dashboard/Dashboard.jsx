@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./DashboardStyles.css";
 import Navbar from "../Navbar/Navbar";
 import { useAuth } from "../../../context/AuthContext";
@@ -14,6 +15,8 @@ import {
 
 function Dashboard() {
   const API_URL = import.meta.env.VITE_API_URL;
+  const navigate = useNavigate();
+
   const { user } = useAuth();
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
@@ -120,7 +123,13 @@ function Dashboard() {
         </div>
         <div className="classes-grid">
           {currentClassroom.map((classroom) => (
-            <div key={classroom.classroomId} className="class-card">
+            <div
+              key={classroom.classroomId}
+              className="class-card"
+              onClick={()=>{
+                navigate('/take-attendance', {state: {classroom}})
+              }}
+            >
               <div className="class-card-header">
                 <h3>{classroom.name}</h3>
               </div>
@@ -166,7 +175,8 @@ function Dashboard() {
               <div className="class-card-footer">
                 <button
                   className="class-action-btn attendance"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.stopPropagation()
                     setCurrentClassroomId(Number(classroom.classroomId));
                     students(classroom.classroomId);
                     setTimeout(() => {
@@ -181,7 +191,10 @@ function Dashboard() {
                 </button>
                 <button
                   className="class-action-btn leave"
-                  onClick={() => dismissClass(classroom.classroomId)}
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    dismissClass(classroom.classroomId)}
+                  }
                 >
                   Dismiss Class
                 </button>

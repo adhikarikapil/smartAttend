@@ -274,7 +274,6 @@
   white-space: nowrap;
 }
 
-/* Status styles */
 .status-waiting {
   color: #64748b;
 }
@@ -324,7 +323,6 @@
   transform: translateY(1px);
 }
 
-/* Confirmation Dialog Styles */
 .confirmation-overlay {
   position: fixed;
   top: 0;
@@ -452,7 +450,6 @@
   box-shadow: none;
 }
 
-/* Status badge styles */
 .status-badge {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: white;
@@ -465,7 +462,6 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Suggestion box styles */
 .suggestion-box {
   background: #f8fafc;
   padding: 20px;
@@ -515,7 +511,6 @@
   margin-right: 12px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1024px) {
   .face-registration-form-container {
     flex-direction: column;
@@ -685,7 +680,6 @@
   }
 }
 
-/* Add smooth transitions for responsive changes */
 .face-registration-form-container,
 .face-registration-form,
 .face-preview-section,
@@ -696,7 +690,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Ensure proper stacking on mobile */
 @media (max-width: 768px) {
   .face-registration-form-container > * {
     z-index: 1;
@@ -707,7 +700,6 @@
   }
 }
 
-/* Improve touch targets on mobile */
 @media (max-width: 768px) {
   .face-registration-form button,
   .capture-button,
@@ -719,7 +711,6 @@
   }
 }
 
-/* Ensure proper spacing for status badge */
 @media (max-width: 480px) {
   .status-badge {
     font-size: 0.75rem;
@@ -728,7 +719,6 @@
   }
 }
 
-/* Improve form layout on very small screens */
 @media (max-width: 360px) {
   .face-registration-form-container {
     padding: 16px;

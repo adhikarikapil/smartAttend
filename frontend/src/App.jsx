@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Login from "./components/auth/Login/Login";
@@ -8,6 +7,7 @@ import Dashboard from "./components/layout/Dashboard/Dashboard";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/common/ProtectedRoute/ProtectedRoute";
 import FaceRegistration from "./components/face/FaceRegistration";
+import TakeAttendance from "./components/attendance/TakeAttendance/TakeAttendance";
 
 function App() {
   return (
@@ -38,6 +38,16 @@ function App() {
                 <>
                   <ProtectedRoute allowedRoles={["student"]}>
                     <FaceRegistration />
+                  </ProtectedRoute>
+                </>
+              }
+            />
+            <Route 
+              path="/take-attendance"
+              element={
+                <>
+                  <ProtectedRoute allowedRoles={['teacher']}>
+                    <TakeAttendance />
                   </ProtectedRoute>
                 </>
               }

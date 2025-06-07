@@ -353,6 +353,10 @@
   transform: translateY(-5px);
 }
 
+.class-card:active {
+  transform: scale(0.95)
+}
+
 .class-card-header {
   padding: 1.5rem;
   background: linear-gradient(

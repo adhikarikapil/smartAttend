@@ -117,14 +117,14 @@ function Navbar({ hasExistingRegistration }) {
                       className="w-40"
                       onClick={() => (window.location.href = "/face-register")}
                     >
-                      Register Face
+                      Re-register Face
                     </button>
                   ) : (
                     <button
                       className="w-40"
                       onClick={() => (window.location.href = "/face-register")}
                     >
-                      Re-register Face
+                      Register Face
                     </button>
                   )
                 ) : (
