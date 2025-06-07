@@ -4,6 +4,7 @@ from app.extentions import db, jwt, cors, migrate
 from app.routes.auth_routes import auth_bp
 from app.routes.classroom_routes import classroom_bp
 from app.routes.face_routes import face_bp
+from app.routes.attendance_routes import attendance_bp
 
 def create_app():
     app = Flask(__name__)
@@ -26,5 +27,6 @@ def create_app():
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
     app.register_blueprint(classroom_bp, url_prefix='/api/classroom')
     app.register_blueprint(face_bp, url_prefix='/api/face')
+    app.register_blueprint(attendance_bp, url_prefix='/api/attendance')
 
     return app

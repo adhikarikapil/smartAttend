@@ -33,6 +33,7 @@ class ClassroomUser(db.Model):
     user_email = db.Column(db.String(120), nullable=False)
 
     user = db.relationship('User', backref='joined_classrooms')
+    face = db.relationship('Face_data', backref='student')
 
     def __init__(self, classroom_id, user_id, user_email):
         self.classroom_id = classroom_id

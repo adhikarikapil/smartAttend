@@ -10,7 +10,7 @@ class Attendance(db.Model):
     roll_no = db.Column(db.Integer, db.ForeignKey("facedata.roll_no"), nullable=False)
     classroom_id = db.Column(db.Integer, db.ForeignKey("classrooms.id"), nullable=False)
     taken_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    date = db.Column(db.Date, nullable=False, default=date.today)
+    date = db.Column(db.Date, nullable=False, default=datetime.now(timezone.utc).date())
     status = db.Column(db.String(10), nullable=False)
     marked_at = db.Column(
         db.DateTime, nullable=False, default=datetime.now(timezone.utc)
