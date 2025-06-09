@@ -1,6 +1,7 @@
 import { jwtDecode } from "jwt-decode";
 
 const API_URL = import.meta.env.VITE_API_URL;
+const REFRESH_TOKEN_URL = "http://localhost:5000/api/auth/refresh";
 
 export const loginUser = async (email, password) => {
   const response = await fetch(`${API_URL}/auth/login`, {
@@ -65,38 +66,42 @@ export const logoutUser = async () => {
   return data;
 };
 
-export const refreshAccessToken = async () => {
+export async function refreshAccessToken() {
   const refreshToken = localStorage.getItem("refreshToken");
   if (!refreshToken) {
-    console.error("No refresh token available!!");
-    setTimeout(() => {
-      window.location.href = "/login";
-    }, 1000);
+    console.log("No refresh token found, logging out.");
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    return { success: false, error: "Refresh token missing" };
   }
-
-  const response = await fetch(`${API_URL}/auth/refresh`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${refreshToken}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ refreshToken }),
-  });
-  const data = await response.json();
-
-  if (response.status == 201 || response.ok) {
-    localStorage.setItem("accessToken", data.accessToken);
-  } else {
-    console.error("Cannot get new token, Login Again!!");
-    setTimeout(() => {
-      window.location.href = "/login";
-    }, 1000);
+  try {
+    const res = await fetch(REFRESH_TOKEN_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ refreshToken })
+    });
+    const data = await res.json();
+    if (data.accessToken && data.refreshToken) {
+      localStorage.setItem("accessToken", data.accessToken);
+      localStorage.setItem("refreshToken", data.refreshToken);
+      return { success: true, accessToken: data.accessToken, refreshToken: data.refreshToken, user: data.user };
+    } else {
+      console.log("Refresh token call did not return a new access token, logging out.");
+      localStorage.removeItem("accessToken");
+      localStorage.removeItem("refreshToken");
+      return { success: false, error: "Refresh token call did not return a new access token" };
+    }
+  } catch {
+    console.log("Refresh token call failed, logging out.");
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    return { success: false, error: "Refresh token call failed" };
   }
-};
+}
 
 export const isTokenExpired = async () => {
   const accessToken = localStorage.getItem("accessToken");
-  const currentTime = new Date().getTime() / 1000; // In seconds
+  const currentTime = new Date().getTime() / 1000;
   const decodedToken = jwtDecode(accessToken);
 
   if (decodedToken.exp < currentTime) {

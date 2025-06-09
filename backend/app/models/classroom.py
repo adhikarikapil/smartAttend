@@ -30,6 +30,7 @@ class ClassroomUser(db.Model):
 
     classroom_id = db.Column(db.Integer, db.ForeignKey('classrooms.id'), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    roll_no = db.Column(db.Integer, db.ForeignKey('facedata.roll_no'), nullable=True)
     user_email = db.Column(db.String(120), nullable=False)
 
     user = db.relationship('User', backref='joined_classrooms')

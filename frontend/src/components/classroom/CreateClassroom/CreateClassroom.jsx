@@ -46,7 +46,6 @@ function CreateClassroom({ closeModal, onClassroomCreated }) {
       formData.code,
       formData.description
     );
-    console.log(response);
     if (response.message) {
       setAlertMessage("Classroom Created Sucessfully!!!");
       setAlertType("success");
