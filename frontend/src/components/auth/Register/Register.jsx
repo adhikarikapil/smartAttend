@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../layout/Navbar/Navbar";
 import "./RegisterSyles.css";
 
 function Register() {
   const API_URL = import.meta.env.VITE_API_URL;
+  const navigate = useNavigate()
 
   const [alertMessage, setAlertMessage] = useState("");
   const [alertType, setAlertType] = useState("");
@@ -77,7 +79,7 @@ function Register() {
         });
 
         setTimeout(() => {
-          window.location.href = "/login";
+          navigate('/login')
         }, 2500);
       } else {
         setAlertMessage(data.error || "Registration failed");

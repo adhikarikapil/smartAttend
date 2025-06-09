@@ -39,7 +39,10 @@ def register_user():
         db.session.add(new_user)
         db.session.commit()
 
-        return jsonify({"message": "User created successfully!!!"}), 201
+        return (
+            jsonify({"message": "User created successfully!!!"}),
+            201,
+        )
 
     except Exception as e:
         return jsonify({"error": str(e)})
@@ -60,23 +63,45 @@ def login_user():
         user = User.query.filter_by(email=email).first()
 
         if access_token:
-            return (
-                jsonify(
-                    {
-                        "message": "Login Sucessful!!!",
-                        "accessToken": access_token,
-                        "refreshToken": refresh_token,
-                        "user": {
-                            "userId": user.id,
-                            'firstName': user.first_name,
-                            'secondName': user.second_name,
-                            'email': user.email,
-                            'role': user.role,
+            if user.first_login:
+                user.first_login = False
+                db.session.commit()
+                return (
+                    jsonify(
+                        {
+                            "message": "Login Sucessful!!!",
+                            "accessToken": access_token,
+                            "refreshToken": refresh_token,
+                            "isFirstLogin": "It is his first login",
+                            "user": {
+                                "userId": user.id,
+                                "firstName": user.first_name,
+                                "secondName": user.second_name,
+                                "email": user.email,
+                                "role": user.role,
+                            },
                         }
-                    }
-                ),
-                200,
-            )
+                    ),
+                    200,
+                )
+            else:
+                return (
+                    jsonify(
+                        {
+                            "message": "Login Sucessful!!!",
+                            "accessToken": access_token,
+                            "refreshToken": refresh_token,
+                            "user": {
+                                "userId": user.id,
+                                "firstName": user.first_name,
+                                "secondName": user.second_name,
+                                "email": user.email,
+                                "role": user.role,
+                            },
+                        }
+                    ),
+                    200,
+                )
         else:
             return jsonify({"error": "Invalid Email or Password!!!"}), 401
 
@@ -91,7 +116,6 @@ def refresh_token():
 
         if not refresh_token:
             return jsonify({"error": "Refresh Token is Required!!!"}), 400
-        
 
         if is_token_blacklisted(refresh_token):
             return (

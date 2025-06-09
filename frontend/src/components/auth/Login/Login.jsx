@@ -10,6 +10,7 @@ function Login() {
   const [alertMessage, setAlertMessage] = useState("");
   const [alertType, setAlertType] = useState("");
 
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -31,11 +32,15 @@ function Login() {
     const response = await login(formData.email, formData.password);
 
     if (response.success) {
-      setAlertType("success");
-      setAlertMessage("Login successful!");
-      setTimeout(() => {
-        navigate("/dashboard");
-      }, 1000);
+      if (response.response.isFirstLogin){
+        const isFirstLogin = response.response.isFirstLogin
+        setAlertType("success");
+        setAlertMessage("Login successful!");
+        navigate('/dashboard', {state: {isFirstLogin}})
+      }
+        setAlertType("success");
+        setAlertMessage("Login successful!");
+        
     } else {
       setAlertType("error");
       setAlertMessage(response.error || "Login failed");

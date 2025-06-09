@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./DashboardStyles.css";
 import Navbar from "../Navbar/Navbar";
 import { useAuth } from "../../../context/AuthContext";
@@ -16,6 +16,7 @@ import {
 function Dashboard() {
   const API_URL = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
+  const location = useLocation();
 
   const { user } = useAuth();
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
@@ -28,6 +29,15 @@ function Dashboard() {
   const [currentClassroomId, setCurrentClassroomId] = useState();
   const [studentRemoved, setStudentRemoved] = useState(false);
   const [studentJoined, setStudentJoined] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(false);
+
+  const { isFirstLogin } = location.state || { isFirstLogin: "" };
+
+  useEffect(() => {
+    if (isFirstLogin) {
+      setShowWelcome(true);
+    }
+  }, []);
 
   const listClassroomGrid = async () => {
     const response = await classroomList();
@@ -126,8 +136,8 @@ function Dashboard() {
             <div
               key={classroom.classroomId}
               className="class-card"
-              onClick={()=>{
-                navigate('/take-attendance', {state: {classroom}})
+              onClick={() => {
+                navigate("/take-attendance", { state: { classroom } });
               }}
             >
               <div className="class-card-header">
@@ -176,7 +186,7 @@ function Dashboard() {
                 <button
                   className="class-action-btn attendance"
                   onClick={(e) => {
-                    e.stopPropagation()
+                    e.stopPropagation();
                     setCurrentClassroomId(Number(classroom.classroomId));
                     students(classroom.classroomId);
                     setTimeout(() => {
@@ -192,9 +202,9 @@ function Dashboard() {
                 <button
                   className="class-action-btn leave"
                   onClick={(e) => {
-                    e.stopPropagation()
-                    dismissClass(classroom.classroomId)}
-                  }
+                    e.stopPropagation();
+                    dismissClass(classroom.classroomId);
+                  }}
                 >
                   Dismiss Class
                 </button>
@@ -240,6 +250,7 @@ function Dashboard() {
           </div>
         </div>
         <div className="classes-grid">
+          {isFirstLogin && <div>As you are First Here Register your face</div>}
           {currentClassroom.map((classroom) => (
             <div key={classroom.classroomId} className="class-card">
               <div className="class-card-header">
@@ -290,7 +301,39 @@ function Dashboard() {
   );
 
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-container" onClick={() => setShowWelcome(false)}>
+      {showWelcome && (
+        <div className="welcome-overlay">
+          <div className="welcome-modal">
+            <div className="webcome-header">
+              <h2>Welcome to SmartAttend! 👋</h2>
+            </div>
+            <div className="welcom-content">
+              <div className="paragraph">
+                We're excited to have you on board! To get started with
+                SmartAttend, you'll need to register your face for attendace
+                tracking.
+                <div className="welcome-steps">
+                  <h3>Next Steps:</h3>
+                  <ol>
+                    <li>Click on your profile picture in the top right.</li>
+                    <li>Select "Register" from your the menu.</li>
+                    <li>Follow the instructions to register your face.</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <button
+              className="welcome-button"
+              onClick={() => {
+                setShowWelcome(false);
+              }}
+            >
+              Got it!
+            </button>
+          </div>
+        </div>
+      )}
       <header>
         <Navbar />
       </header>
