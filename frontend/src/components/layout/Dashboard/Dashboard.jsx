@@ -102,7 +102,6 @@ function Dashboard() {
     }
   };
 
-
   const TeacherDashboard = () => (
     <>
       <div className="classes-content">
@@ -145,6 +144,14 @@ function Dashboard() {
             >
               <div className="class-card-header">
                 <h3>{classroom.name}</h3>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate("/notice", { state: { user, classroom } });
+                  }}
+                >
+                  Notice
+                </button>
               </div>
               <div className="class-card-body">
                 <div className="class-info-item">
@@ -199,10 +206,13 @@ function Dashboard() {
                 >
                   Manage Class
                 </button>
-                <button className="class-action-btn view" onClick={(e)=>{
-                  e.stopPropagation()
-                  navigate('/attendance', {state: {classroom}})
-                }}>
+                <button
+                  className="class-action-btn view"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate("/attendance", { state: { classroom } });
+                  }}
+                >
                   View Attendance
                 </button>
                 <button
@@ -261,6 +271,14 @@ function Dashboard() {
             <div key={classroom.classroomId} className="class-card">
               <div className="class-card-header">
                 <h3>{classroom.name}</h3>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate("/notice", { state: { user, classroom } });
+                  }}
+                >
+                  Notice
+                </button>
               </div>
               <div className="class-card-body">
                 <div className="class-info-item">
@@ -288,10 +306,13 @@ function Dashboard() {
                 </div>
               </div>
               <div className="class-card-footer">
-                <button className="class-action-btn attendance" onClick={(e)=>{
-                  e.stopPropagation();
-                  navigate('/attendance', {state: {classroom}})
-                }}>
+                <button
+                  className="class-action-btn attendance"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate("/attendance", { state: { classroom } });
+                  }}
+                >
                   View Attendance
                 </button>
                 <button className="class-action-btn view">View Material</button>
@@ -313,7 +334,7 @@ function Dashboard() {
     <div
       className="dashboard-container"
       onClick={() => {
-        setIsOpen(false)
+        setIsOpen(false);
         setShowWelcome(false);
       }}
     >
@@ -349,9 +370,11 @@ function Dashboard() {
           </div>
         </div>
       )}
-      <header onClick={(e) =>{
-        e.stopPropagation()
-      }}>
+      <header
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
         <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
       </header>
       <main>
