@@ -3404,3 +3404,415 @@
 2025-06-13 14:06:12,543 - app.controllers.attendance_controller - INFO - Received attendance request
 2025-06-13 14:06:12,544 - app.controllers.attendance_controller - INFO - Token decoded successfully
 2025-06-13 14:06:13,615 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 14:25:59,923 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 14:26:01,944 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 14:26:01,944 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 14:26:02,509 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 14:47:47,619 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 14:47:47,895 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 14:47:49,599 - root - INFO - Starting SmartAttend server...
+2025-06-13 14:47:49,602 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 14:47:49,603 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 14:59:43,711 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 14:59:43,921 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 14:59:46,192 - root - INFO - Starting SmartAttend server...
+2025-06-13 14:59:46,196 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 14:59:46,196 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 14:59:53,265 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 14:59:53,450 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 14:59:54,932 - root - INFO - Starting SmartAttend server...
+2025-06-13 14:59:54,935 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 14:59:54,935 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:16:26,056 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 15:16:28,070 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 15:16:28,071 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 15:16:30,036 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 15:16:30,036 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 15:16:30,710 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 15:23:41,482 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 15:23:43,465 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 15:23:43,466 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 15:23:45,541 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 15:23:45,541 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 15:23:47,508 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 15:23:47,508 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 15:23:48,314 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 15:35:22,215 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 15:35:22,371 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:36:59,937 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:36:59,938 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:37:01,157 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:37:01,159 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:37:01,159 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:41:27,876 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 15:41:28,041 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:41:40,451 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:41:40,453 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:41:41,699 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:41:41,701 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:41:41,701 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:46:01,288 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 15:46:01,433 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:50:37,507 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:50:37,508 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:50:38,715 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:50:38,717 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:50:38,718 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:51:03,975 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/routes/attendance_routes.py', reloading
+2025-06-13 15:51:04,158 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:51:05,472 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:51:05,474 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:51:05,474 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:51:06,496 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/routes/attendance_routes.py', reloading
+2025-06-13 15:51:06,675 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:51:07,991 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:51:07,993 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:51:07,994 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:51:09,013 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/routes/attendance_routes.py', reloading
+2025-06-13 15:51:09,195 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:51:10,543 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:51:10,545 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:51:10,545 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:51:11,564 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/routes/attendance_routes.py', reloading
+2025-06-13 15:51:11,748 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:51:13,018 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:51:13,020 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:51:13,020 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:51:16,052 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/routes/attendance_routes.py', reloading
+2025-06-13 15:51:16,191 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:51:17,423 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:51:17,425 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:51:17,426 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:51:19,463 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/routes/attendance_routes.py', reloading
+2025-06-13 15:51:19,629 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:51:20,930 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:51:20,932 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:51:20,932 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:51:22,962 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/routes/attendance_routes.py', reloading
+2025-06-13 15:51:23,121 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:53:00,843 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:53:00,845 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:53:02,030 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:53:02,032 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:53:02,032 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:53:41,451 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 15:53:41,611 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:53:42,806 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:53:42,808 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:53:42,808 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:53:46,847 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 15:53:46,998 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:53:48,442 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:53:48,444 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:53:48,445 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:54:02,601 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 15:54:02,758 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:54:03,995 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:54:03,996 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:54:03,997 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:54:05,017 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 15:54:05,170 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:54:06,398 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:54:06,400 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:54:06,400 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:54:08,436 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 15:54:08,607 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:54:09,832 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:54:09,834 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:54:09,834 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:54:10,855 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 15:54:11,008 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:54:12,250 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:54:12,252 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:54:12,252 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:54:14,275 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 15:54:14,496 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:54:15,731 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:54:15,732 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:54:15,733 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 15:54:19,787 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 15:54:19,927 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:56:24,233 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:56:24,235 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 15:56:25,583 - root - INFO - Starting SmartAttend server...
+2025-06-13 15:56:25,585 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 15:56:25,585 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 16:00:07,792 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 16:00:07,945 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 16:00:09,283 - root - INFO - Starting SmartAttend server...
+2025-06-13 16:00:09,286 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 16:00:09,286 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 16:16:35,268 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 16:16:35,428 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 16:16:36,736 - root - INFO - Starting SmartAttend server...
+2025-06-13 16:16:36,738 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 16:16:36,738 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 16:16:37,762 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 16:16:37,925 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 16:16:39,186 - root - INFO - Starting SmartAttend server...
+2025-06-13 16:16:39,188 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 16:16:39,188 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 16:16:42,230 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 16:16:42,380 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 16:16:43,592 - root - INFO - Starting SmartAttend server...
+2025-06-13 16:16:43,594 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 16:16:43,595 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 16:16:46,633 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 16:16:46,798 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 16:29:59,172 - root - INFO - Starting SmartAttend server...
+2025-06-13 16:29:59,174 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 16:30:00,423 - root - INFO - Starting SmartAttend server...
+2025-06-13 16:30:00,425 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 16:30:00,426 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 16:30:06,127 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 16:30:08,165 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 16:30:08,165 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 16:30:08,415 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 16:42:17,223 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 16:42:17,467 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 16:42:19,403 - root - INFO - Starting SmartAttend server...
+2025-06-13 16:42:19,406 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 16:42:19,406 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:03:06,632 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 17:03:08,662 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 17:03:08,663 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 17:03:10,654 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 17:03:10,654 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 17:03:12,647 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 17:03:12,648 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 17:03:13,128 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 17:16:03,057 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:16:03,246 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:16:04,537 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:16:04,540 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:16:04,541 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:16:08,596 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:16:08,736 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:16:09,970 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:16:09,971 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:16:09,972 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:16:23,123 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:16:23,303 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:16:24,534 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:16:24,537 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:16:24,537 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:16:29,598 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:16:29,767 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:16:31,040 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:16:31,042 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:16:31,042 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:16:35,092 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:16:35,261 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:16:36,566 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:16:36,568 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:16:36,568 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:16:44,668 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:16:44,822 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:16:46,071 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:16:46,072 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:16:46,073 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:16:48,104 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:16:48,247 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:16:49,472 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:16:49,474 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:16:49,474 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:17:00,600 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:17:00,781 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:17:02,034 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:17:02,036 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:17:02,036 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:17:03,050 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:17:03,221 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:17:04,572 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:17:04,574 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:17:04,575 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:17:08,627 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:17:08,788 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:17:10,103 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:17:10,105 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:17:10,106 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:17:28,317 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:17:28,469 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:17:29,678 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:17:29,679 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:17:29,680 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:17:31,706 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:17:31,847 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:17:33,058 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:17:33,060 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:17:33,060 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:17:34,078 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:17:34,214 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:17:35,444 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:17:35,445 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:17:35,446 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:17:36,463 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:17:36,603 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:17:37,838 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:17:37,840 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:17:37,840 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:17:40,876 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:17:41,019 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:17:42,301 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:17:42,303 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:17:42,303 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:17:43,322 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:17:43,460 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:17:44,676 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:17:44,678 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:17:44,678 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:17:45,692 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:17:45,827 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:17:47,086 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:17:47,088 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:17:47,088 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:17:48,104 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:17:48,244 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:17:49,507 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:17:49,508 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:17:49,509 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:18:02,643 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:18:02,780 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:18:04,052 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:18:04,055 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:18:04,055 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:18:08,098 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:18:08,268 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:18:09,548 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:18:09,550 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:18:09,551 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:18:12,595 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:18:12,738 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:18:13,932 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:18:13,934 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:18:13,934 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:18:22,025 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:18:22,174 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:18:23,433 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:18:23,435 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:18:23,435 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:18:34,557 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:18:34,719 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:18:36,002 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:18:36,004 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:18:36,004 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:18:40,048 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:18:40,213 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:18:41,433 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:18:41,435 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:18:41,435 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:18:56,603 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:18:56,750 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:18:57,933 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:18:57,935 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:18:57,935 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:19:15,126 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:19:15,275 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:19:16,491 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:19:16,493 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:19:16,494 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:19:17,516 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:19:17,679 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:19:18,878 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:19:18,879 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:19:18,880 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:19:22,938 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:19:23,077 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:19:24,299 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:19:24,301 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:19:24,301 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:19:31,376 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:19:31,563 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:19:32,812 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:19:32,813 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:19:32,814 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:19:33,832 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:19:34,067 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:19:35,338 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:19:35,340 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:19:35,340 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:19:37,368 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:19:37,523 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:19:38,712 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:19:38,715 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:19:38,715 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:19:39,735 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:19:39,881 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:19:41,084 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:19:41,086 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:19:41,086 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:19:44,122 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:19:44,273 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:19:45,467 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:19:45,469 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:19:45,469 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:19:55,583 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:19:55,741 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:19:56,999 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:19:57,001 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:19:57,001 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:20:01,054 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:20:01,205 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:20:02,480 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:20:02,482 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:20:02,482 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:20:04,513 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:20:04,657 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:20:05,923 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:20:05,925 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:20:05,925 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:20:06,940 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:20:07,121 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:20:08,361 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:20:08,363 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:20:08,363 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:20:10,388 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:20:10,571 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:20:11,791 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:20:11,793 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:20:11,793 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:20:15,840 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:20:16,024 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:20:17,248 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:20:17,250 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:20:17,250 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:20:27,361 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:20:27,500 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:20:28,814 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:20:28,816 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:20:28,816 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:20:29,833 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:20:30,040 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:20:31,302 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:20:31,304 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:20:31,304 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:20:32,324 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:20:32,473 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:20:33,717 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:20:33,719 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:20:33,719 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:20:37,778 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:20:37,948 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:20:39,194 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:20:39,196 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:20:39,196 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:20:42,234 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:20:42,408 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:20:43,695 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:20:43,697 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:20:43,697 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:20:46,731 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:20:46,881 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:20:48,133 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:20:48,135 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:20:48,135 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:20:54,215 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:20:54,396 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:20:55,721 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:20:55,723 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:20:55,723 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 17:20:57,752 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/models/notice.py', reloading
+2025-06-13 17:20:57,951 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 17:20:59,262 - root - INFO - Starting SmartAttend server...
+2025-06-13 17:20:59,264 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 17:20:59,264 - werkzeug - INFO -  * Debugger PIN: 145-933-237

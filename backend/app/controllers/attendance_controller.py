@@ -298,43 +298,85 @@ def view_attendance():
     token = header.split(" ")[1]
     try:
         decoded_token = decode_token(token)
-        identity = json.loads(decoded_token['sub'])
+        identity = json.loads(decoded_token["sub"])
     except Exception as err:
         return jsonify({"error": f"Invalid token: {str(err)}"})
 
-    classroom_id = request.args.get('classroomId')
+    classroom_id = request.args.get("classroomId")
     if not classroom_id:
         return jsonify({"error": "Missing classroomId"}), 400
-    
-    user_id = identity['userId']
-    role = identity['role']
+
+    user_id = identity["userId"]
+    role = identity["role"]
 
     try:
-        if role == 'student':
-            records = Attendance.query.filter_by(
-                student_id = user_id,
-                classroom_id = classroom_id
-            ).order_by(Attendance.marked_at.desc()).all()
+        if role == "student":
+            records = (
+                Attendance.query.filter_by(
+                    student_id=user_id, classroom_id=classroom_id
+                )
+                .order_by(Attendance.marked_at.desc())
+                .all()
+            )
 
-        elif role == 'teacher':
-            records = Attendance.query.filter_by(
-                classroom_id = classroom_id
-            ).order_by(Attendance.marked_at.desc()).all()
-        elif role == 'admin':
+        elif role == "teacher":
+            records = (
+                Attendance.query.filter_by(classroom_id=classroom_id)
+                .order_by(Attendance.marked_at.desc())
+                .all()
+            )
+        elif role == "admin":
             pass
         else:
-            return jsonify({'error': 'Invalid role'}), 403
-        
+            return jsonify({"error": "Invalid role"}), 403
+
         result = [
             {
-                'studentId': a.student_id,
-                'studentName': a.student_name,
-                'rollNo': a.roll_no,
-                'status': a.status,
-                "date": a.date.strftime("%a, %d %b %Y")
+                "attendanceId": a.id,
+                "studentId": a.student_id,
+                "studentName": a.student_name,
+                "rollNo": a.roll_no,
+                "status": a.status,
+                "date": a.date.strftime("%a, %d %b %Y"),
+                "remark": a.remarks,
             }
             for a in records
         ]
         return jsonify(result), 200
     except Exception as err:
         return jsonify({"error": str(err)}), 400
+
+
+def add_remark():
+    data = request.get_json()
+    attendance_id = data.get("attendanceId")
+    remark = data.get("remark")
+
+    if not attendance_id:
+        return jsonify({"error": "No Attendance Id"}), 400
+    if not remark:
+        return jsonify({"error": "No Remark to Add"}), 400
+
+    header = request.headers.get("Authorization")
+    if not header:
+        return jsonify({"error": "Missing Authorization header"}), 401
+
+    token = header.split(" ")[1]
+    try:
+        decoded_token = decode_token(token)
+        identity = json.loads(decoded_token["sub"])
+    except Exception as err:
+        return jsonify({"error": f"Invalid token: {str(err)}"})
+
+    role = identity["role"]
+
+    if role == "teacher":
+        attendance = Attendance.query.get(attendance_id)
+        if not attendance:
+            return jsonify({"error": "Attendance record not found"}), 404
+
+        attendance.remarks = remark
+        db.session.commit()
+        return jsonify({"message": "Remark added Successfully"}), 200
+    else:
+        return jsonify({"error": "Invalid role"}), 403

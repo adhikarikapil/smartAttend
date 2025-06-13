@@ -16,3 +16,4 @@ ENV/
 .DS_Store
 .flaskenv
 face_data/
+app.log

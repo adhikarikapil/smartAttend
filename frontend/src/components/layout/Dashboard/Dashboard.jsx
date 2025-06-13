@@ -35,10 +35,6 @@ function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);
 
   const { isFirstLogin } = location.state || { isFirstLogin: "" };
-  const token = localStorage.getItem('accessToken')
-  useEffect(() => {
-    console.log(token)
-  }, [])
   useEffect(() => {
     if (isFirstLogin) {
       setShowWelcome(true);
@@ -105,6 +101,7 @@ function Dashboard() {
       setCurrentStudent(response.user);
     }
   };
+
 
   const TeacherDashboard = () => (
     <>
@@ -291,7 +288,8 @@ function Dashboard() {
                 </div>
               </div>
               <div className="class-card-footer">
-                <button className="class-action-btn attendance" onClick={()=>{
+                <button className="class-action-btn attendance" onClick={(e)=>{
+                  e.stopPropagation();
                   navigate('/attendance', {state: {classroom}})
                 }}>
                   View Attendance
