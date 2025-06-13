@@ -1952,3 +1952,1326 @@
 2025-06-13 12:15:29,910 - app.controllers.attendance_controller - INFO - Received attendance request
 2025-06-13 12:15:29,910 - app.controllers.attendance_controller - INFO - Token decoded successfully
 2025-06-13 12:15:30,683 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:17:25,109 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:17:27,118 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:27,118 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:17:29,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:29,117 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:17:31,124 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:31,124 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:17:33,101 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:33,102 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:17:35,123 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:35,124 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:17:37,129 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:37,129 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:17:39,118 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:39,118 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:17:41,118 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:41,119 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:17:43,112 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:43,112 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:17:45,116 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:45,116 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:17:47,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:47,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:17:49,119 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:49,120 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:17:51,103 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:51,103 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:17:53,103 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:53,103 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:17:55,100 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:55,100 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:17:55,343 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 12:17:55,539 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 12:17:57,206 - root - INFO - Starting SmartAttend server...
+2025-06-13 12:17:57,208 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 12:17:57,209 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 12:17:58,536 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:17:59,113 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:17:59,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:01,106 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:01,106 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:03,111 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:03,111 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:05,113 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:05,113 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:07,121 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:07,121 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:09,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:09,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:11,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:11,118 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:13,108 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:13,108 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:15,118 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:15,118 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:17,107 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:17,107 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:19,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:19,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:21,125 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:21,125 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:23,119 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:23,119 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:25,127 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:25,127 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:27,119 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:27,120 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:29,123 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:29,123 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:31,122 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:31,122 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:33,122 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:33,122 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:35,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:35,118 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:37,120 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:37,120 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:39,116 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:39,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:41,119 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:41,120 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:43,121 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:43,121 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:45,116 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:45,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:47,121 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:47,122 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:49,123 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:49,124 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:51,132 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:51,132 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:53,113 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:53,113 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:55,129 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:55,130 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:57,120 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:57,120 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:18:59,098 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:18:59,098 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:01,109 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:01,109 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:03,123 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:03,124 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:05,123 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:05,124 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:07,119 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:07,120 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:09,100 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:09,101 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:11,103 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:11,103 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:13,121 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:13,121 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:15,132 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:15,132 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:17,136 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:17,136 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:19,109 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:19,109 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:21,103 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:21,104 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:23,101 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:23,102 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:25,134 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:25,134 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:27,118 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:27,118 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:29,145 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:29,145 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:31,123 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:31,123 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:33,119 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:33,120 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:35,122 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:35,122 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:37,116 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:37,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:39,145 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:39,145 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:41,133 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:41,133 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:43,115 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:43,115 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:45,120 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:45,120 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:47,116 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:47,116 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:49,125 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:49,125 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:51,133 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:51,133 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:53,126 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:53,126 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:55,119 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:55,119 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:57,122 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:57,122 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:19:59,118 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:19:59,119 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:01,135 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:01,136 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:03,118 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:03,118 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:05,122 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:05,122 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:07,108 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:07,108 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:09,121 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:09,121 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:11,130 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:11,130 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:13,124 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:13,124 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:15,121 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:15,122 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:17,121 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:17,121 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:19,125 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:19,126 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:21,114 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:21,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:23,114 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:23,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:25,126 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:25,127 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:27,123 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:27,123 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:29,099 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:29,099 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:31,104 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:31,105 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:33,112 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:33,112 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:35,098 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:35,099 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:37,101 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:37,102 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:39,102 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:39,102 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:41,070 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:20:41,097 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:20:42,019 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 12:20:42,327 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 12:20:44,296 - root - INFO - Starting SmartAttend server...
+2025-06-13 12:20:44,300 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 12:20:44,301 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 12:20:45,407 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:20:47,099 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:47,099 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:49,106 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:49,106 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:51,103 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:51,104 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:53,098 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:53,098 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:55,136 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:55,136 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:57,104 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:57,105 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:20:59,092 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:20:59,093 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:01,101 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:01,101 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:03,102 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:03,102 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:05,103 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:05,104 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:07,105 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:07,106 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:09,104 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:09,104 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:11,113 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:11,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:13,091 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:13,092 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:15,130 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:15,130 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:17,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:17,118 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:19,108 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:19,109 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:21,107 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:21,107 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:23,122 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:23,122 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:25,112 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:25,112 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:27,111 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:27,112 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:29,125 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:29,126 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:31,107 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:31,107 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:33,113 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:33,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:35,114 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:35,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:37,133 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:37,133 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:39,113 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:39,113 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:41,116 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:41,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:43,111 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:43,111 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:45,096 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:45,097 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:47,108 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:47,109 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:49,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:49,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:51,127 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:51,127 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:53,103 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:53,103 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:55,094 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:55,094 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:57,112 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:57,112 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:21:59,122 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:21:59,122 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:01,127 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:01,127 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:03,113 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:03,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:05,101 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:05,101 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:07,109 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:07,110 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:09,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:09,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:11,120 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:11,121 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:13,102 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:13,102 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:15,109 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:15,110 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:17,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:17,118 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:19,113 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:19,113 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:21,110 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:21,110 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:23,116 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:23,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:25,109 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:25,109 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:27,098 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:27,098 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:29,124 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:29,124 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:31,126 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:31,127 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:33,125 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:33,125 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:35,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:35,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:37,119 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:37,119 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:39,119 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:39,119 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:41,128 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:41,128 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:43,128 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:43,129 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:45,115 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:45,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:47,118 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:47,119 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:49,112 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:49,112 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:51,118 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:51,119 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:53,111 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:53,112 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:55,108 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:55,109 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:57,122 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:57,122 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:22:59,119 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:22:59,119 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:01,115 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:01,115 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:03,110 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:03,110 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:05,123 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:05,124 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:07,116 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:07,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:09,120 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:09,120 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:11,109 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:11,109 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:13,098 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:13,098 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:15,095 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:15,095 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:17,103 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:17,103 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:19,099 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:19,099 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:21,119 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:21,119 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:23,100 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:23,101 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:25,104 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:25,105 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:27,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:27,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:29,094 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:29,094 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:31,119 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:31,119 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:33,096 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:33,096 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:35,101 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:35,102 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:37,125 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:37,125 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:39,126 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:39,127 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:41,120 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:41,121 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:43,116 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:43,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:45,114 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:45,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:47,130 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:47,131 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:49,104 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:49,104 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:51,124 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:51,125 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:53,121 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:53,121 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:55,112 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:55,112 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:23:55,568 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 12:23:55,729 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 12:23:57,044 - root - INFO - Starting SmartAttend server...
+2025-06-13 12:23:57,047 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 12:23:57,047 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 12:23:57,137 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:23:59,099 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:23:59,100 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:01,111 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:01,112 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:03,126 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:03,126 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:05,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:05,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:07,116 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:07,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:09,102 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:09,103 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:11,130 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:11,131 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:13,122 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:13,123 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:15,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:15,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:17,132 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:17,132 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:19,110 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:19,111 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:21,110 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:21,110 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:23,118 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:23,118 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:25,110 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:25,111 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:27,111 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:27,111 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:29,113 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:29,113 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:31,109 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:31,109 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:33,115 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:33,116 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:35,115 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:35,115 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:37,108 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:37,109 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:39,109 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:39,109 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:41,109 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:41,109 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:43,108 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:43,108 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:45,110 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:45,110 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:47,114 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:47,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:49,109 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:49,109 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:51,114 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:51,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:53,115 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:53,115 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:55,104 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:55,105 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:57,112 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:57,113 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:24:59,117 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:24:59,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:01,113 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:01,113 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:03,116 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:03,116 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:05,112 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:05,112 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:07,114 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:07,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:09,106 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:09,107 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:11,126 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:11,126 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:13,116 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:13,116 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:15,115 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:15,116 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:17,125 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:17,125 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:19,101 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:19,101 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:21,124 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:21,124 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:23,111 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:23,112 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:25,113 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:25,113 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:27,113 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:27,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:29,114 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:29,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:31,100 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:31,100 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:33,113 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:33,113 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:35,123 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:35,123 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:37,115 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:37,115 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:39,135 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:39,135 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:41,109 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:41,110 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:43,122 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:43,122 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:45,116 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:45,117 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:47,115 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:47,115 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:49,128 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:49,128 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:51,101 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:51,101 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:53,119 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:53,119 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:55,135 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:55,136 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:57,129 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:57,130 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:25:59,105 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:25:59,105 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:01,112 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:01,113 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:03,132 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:03,133 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:05,096 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:05,096 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:07,149 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:07,149 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:09,114 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:09,114 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:11,115 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:11,115 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:13,111 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:13,111 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:15,110 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:15,111 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:17,120 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:17,121 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:19,110 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:19,110 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:21,102 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:21,103 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:23,101 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:23,102 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:25,096 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:25,097 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:27,096 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:27,096 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:29,104 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:29,105 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:31,102 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:31,102 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:33,096 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:33,097 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:35,096 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:35,097 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:37,101 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:37,102 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:39,100 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:39,100 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:41,111 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:41,112 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:43,109 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:43,109 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:45,104 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:45,104 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:47,112 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:47,113 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:49,140 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:49,140 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:51,122 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:51,123 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:53,097 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:53,098 - app.controllers.attendance_controller - ERROR - Token decode error
+2025-06-13 12:26:54,555 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:26:54,860 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:26:56,901 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:56,902 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:26:58,869 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:26:58,870 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:27:00,878 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:27:00,879 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:27:01,131 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:27:50,090 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:27:52,096 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:27:52,096 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:27:54,088 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:27:54,089 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:27:56,099 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:27:56,100 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:27:58,091 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:27:58,092 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:28:00,085 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:28:00,085 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:28:01,039 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:28:57,128 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 12:28:57,317 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 12:32:30,254 - root - INFO - Starting SmartAttend server...
+2025-06-13 12:32:30,256 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 12:32:31,695 - root - INFO - Starting SmartAttend server...
+2025-06-13 12:32:31,697 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 12:32:31,698 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 12:32:33,810 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:32:34,892 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:32:34,892 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:32:36,748 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:32:55,033 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:32:57,014 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:32:57,015 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:32:59,024 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:32:59,024 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:33:00,420 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:33:09,195 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:33:11,195 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:33:11,195 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:33:12,163 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:33:38,847 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:33:40,860 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:33:40,861 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:33:42,853 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:33:42,854 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:33:44,844 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:33:44,845 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:33:46,838 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:33:46,838 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:33:48,828 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:33:48,829 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:33:50,865 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:33:50,865 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:33:52,847 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:33:52,848 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:33:54,845 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:33:54,845 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:33:56,852 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:33:56,852 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:33:58,844 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:33:58,844 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:00,855 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:00,856 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:02,848 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:02,848 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:04,860 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:04,860 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:06,844 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:06,844 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:08,852 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:08,853 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:10,851 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:10,852 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:12,855 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:12,856 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:14,866 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:14,866 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:16,857 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:16,858 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:18,859 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:18,859 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:20,854 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:20,854 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:22,851 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:22,851 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:24,853 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:24,854 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:26,846 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:26,847 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:28,859 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:28,859 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:30,856 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:30,856 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:32,835 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:32,836 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:34,879 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:34,879 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:36,855 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:36,855 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:38,845 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:38,846 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:40,874 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:40,875 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:42,893 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:42,894 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:44,849 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:44,850 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:46,854 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:46,855 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:48,858 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:48,859 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:50,850 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:50,851 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:52,852 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:52,852 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:54,872 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:54,873 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:56,860 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:56,861 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:34:58,849 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:34:58,849 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:00,861 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:00,861 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:02,864 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:02,864 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:04,856 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:04,856 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:06,867 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:06,867 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:08,862 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:08,862 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:10,862 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:10,862 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:12,874 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:12,874 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:14,866 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:14,867 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:16,865 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:16,865 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:18,860 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:18,860 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:20,849 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:20,849 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:22,855 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:22,856 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:24,842 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:24,842 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:26,858 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:26,858 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:28,862 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:28,863 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:30,860 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:30,860 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:32,860 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:32,860 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:34,859 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:34,859 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:36,854 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:36,854 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:38,851 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:38,851 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:40,867 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:40,867 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:42,832 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:42,832 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:44,867 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:44,868 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:46,839 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:46,840 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:48,861 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:48,861 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:50,878 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:50,878 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:52,834 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:52,835 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:54,862 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:54,863 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:56,853 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:56,853 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:35:58,878 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:35:58,879 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:00,856 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:00,857 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:02,854 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:02,854 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:04,860 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:04,860 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:06,852 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:06,852 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:08,869 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:08,870 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:10,860 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:10,861 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:12,869 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:12,869 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:14,854 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:14,855 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:16,859 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:16,860 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:18,900 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:18,901 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:20,867 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:20,867 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:22,855 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:22,855 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:24,875 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:24,875 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:26,858 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:26,859 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:28,017 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:36:28,024 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:36:30,055 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:30,055 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:32,067 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:32,067 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:34,061 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:34,062 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:36,052 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:36,052 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:38,042 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:38,042 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:40,072 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:40,072 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:42,076 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:42,077 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:44,066 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:44,066 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:46,090 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:46,091 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:48,070 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:48,070 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:50,071 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:50,071 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:52,060 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:52,060 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:54,092 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:54,092 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:56,069 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:56,069 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:36:58,060 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:36:58,060 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:37:00,071 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:37:00,071 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:37:02,079 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:37:02,079 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:37:03,349 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:37:34,797 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:37:36,808 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:37:36,809 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:37:37,559 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:39:31,210 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:39:33,237 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:39:33,238 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:39:35,236 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:39:35,237 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:39:37,231 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:39:37,231 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:39:39,235 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:39:39,235 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:39:39,627 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:39:39,631 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:39:41,655 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:39:41,655 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:39:43,673 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:39:43,674 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:39:44,397 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:40:00,855 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:40:02,902 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:02,903 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:04,903 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:04,903 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:06,884 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:06,884 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:08,909 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:08,910 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:10,889 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:10,890 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:12,908 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:12,909 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:14,883 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:14,883 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:16,898 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:16,898 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:18,899 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:18,900 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:20,885 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:20,886 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:22,902 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:22,902 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:24,917 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:24,917 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:26,903 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:26,903 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:28,897 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:28,897 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:30,874 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:30,874 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:32,889 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:32,890 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:34,900 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:34,900 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:36,900 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:36,901 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:38,890 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:38,891 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:40,901 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:40,901 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:42,891 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:42,891 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:44,904 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:44,904 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:46,912 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:46,912 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:48,900 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:48,901 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:50,897 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:50,897 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:52,874 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:52,874 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:54,906 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:54,907 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:56,877 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:56,877 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:40:58,906 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:40:58,907 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:00,919 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:00,920 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:02,906 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:02,906 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:04,870 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:04,870 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:06,899 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:06,900 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:08,900 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:08,901 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:10,901 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:10,901 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:12,897 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:12,897 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:14,898 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:14,898 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:16,882 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:16,882 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:18,896 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:18,896 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:20,898 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:20,898 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:22,895 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:22,895 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:24,923 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:24,925 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:26,891 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:26,892 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:28,873 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:28,873 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:30,877 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:30,878 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:32,894 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:32,894 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:34,873 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:34,873 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:36,143 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:41:36,154 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:41:38,189 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:38,189 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:40,192 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:40,192 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:42,178 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:42,178 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:44,179 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:44,179 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:46,188 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:46,189 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:48,192 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:48,193 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:50,164 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:50,164 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:52,172 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:52,173 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:54,193 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:41:54,194 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:41:54,346 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:42:11,165 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:42:13,198 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:13,199 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:15,208 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:15,208 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:17,210 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:17,211 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:18,951 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:42:18,955 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:42:20,984 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:20,984 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:22,631 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:42:22,635 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:42:24,684 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:24,685 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:26,687 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:26,687 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:28,656 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:28,656 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:30,670 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:30,670 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:32,675 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:32,676 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:34,673 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:34,674 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:36,685 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:36,685 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:38,665 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:38,665 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:40,674 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:40,674 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:42,681 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:42,681 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:44,659 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:44,659 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:46,669 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:46,669 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:48,674 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:48,674 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:50,681 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:50,681 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:52,671 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:52,671 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:54,666 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:54,666 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:56,673 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:56,673 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:42:58,683 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:42:58,683 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:00,674 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:00,674 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:02,680 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:02,681 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:04,672 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:04,672 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:06,690 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:06,691 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:08,687 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:08,687 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:10,678 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:10,679 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:12,665 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:12,665 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:14,674 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:14,674 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:16,683 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:16,683 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:18,670 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:18,671 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:20,701 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:20,701 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:22,684 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:22,685 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:24,678 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:24,679 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:26,670 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:26,671 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:28,677 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:28,677 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:30,685 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:30,685 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:32,674 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:32,674 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:34,678 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:34,678 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:36,656 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:43:36,656 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:43:38,231 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 12:43:38,449 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 12:46:15,046 - root - INFO - Starting SmartAttend server...
+2025-06-13 12:46:15,048 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 12:46:16,424 - root - INFO - Starting SmartAttend server...
+2025-06-13 12:46:16,427 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 12:46:16,428 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 12:46:22,926 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:46:23,519 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 12:46:23,730 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 12:46:25,105 - root - INFO - Starting SmartAttend server...
+2025-06-13 12:46:25,107 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 12:46:25,107 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 12:46:27,122 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:46:28,681 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:46:28,682 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:46:30,675 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:46:30,676 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:46:32,674 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:46:32,674 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:11,251 - root - INFO - Starting SmartAttend server...
+2025-06-13 12:58:11,253 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 12:58:12,532 - root - INFO - Starting SmartAttend server...
+2025-06-13 12:58:12,533 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 12:58:12,534 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 12:58:28,014 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:58:30,054 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:30,054 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:32,030 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:32,030 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:32,181 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:58:32,204 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:58:33,996 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:33,997 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:35,996 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:35,997 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:37,992 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:37,993 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:39,994 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:39,995 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:41,996 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:41,997 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:43,991 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:43,991 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:45,994 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:45,995 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:47,998 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:47,999 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:49,993 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:49,994 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:51,994 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:51,995 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:53,998 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:53,999 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:55,992 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:55,993 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:58:57,097 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 12:58:57,349 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 12:58:58,764 - root - INFO - Starting SmartAttend server...
+2025-06-13 12:58:58,766 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 12:58:58,766 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 12:58:59,204 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:58:59,997 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:58:59,998 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:59:01,992 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:59:01,993 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:59:03,994 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:59:03,994 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:59:05,990 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:59:05,991 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:59:07,990 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:59:07,991 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:59:09,985 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:59:09,985 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:59:11,965 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 12:59:12,264 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 12:59:13,647 - root - INFO - Starting SmartAttend server...
+2025-06-13 12:59:13,649 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 12:59:13,650 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 12:59:13,782 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:59:13,999 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:59:14,000 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:59:14,144 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 12:59:14,207 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 12:59:15,990 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:59:15,991 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:59:17,984 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:59:17,985 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:59:19,995 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:59:19,997 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:59:21,997 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 12:59:21,998 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 12:59:23,557 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:00:16,507 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:00:16,509 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 13:00:17,881 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:00:17,883 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 13:00:17,883 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 13:00:22,835 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:00:24,134 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:00:24,134 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:00:26,121 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:00:26,122 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:00:27,277 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:00:27,344 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:00:28,094 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:00:28,095 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:00:30,091 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:00:30,091 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:00:42,555 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:00:42,557 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 13:00:43,865 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:00:43,867 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 13:00:43,868 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 13:00:44,928 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:00:46,096 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:00:46,097 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:00:48,093 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:00:48,094 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:00:48,697 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:00:48,937 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:00:50,974 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:00:50,975 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:00:52,189 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:00:52,244 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:00:52,931 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:00:52,932 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:00:53,364 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:01:50,150 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:01:50,152 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 13:01:51,543 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:01:51,545 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 13:01:51,545 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 13:01:53,242 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:01:55,275 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:01:55,275 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:01:56,174 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:02:05,737 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 13:02:06,033 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 13:02:07,456 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:02:07,458 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 13:02:07,458 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 13:02:13,532 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 13:02:13,785 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 13:02:15,205 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:02:15,208 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 13:02:15,209 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 13:02:21,317 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 13:02:21,538 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 13:02:22,851 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:02:22,853 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 13:02:22,853 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 13:02:25,886 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 13:02:26,067 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 13:02:27,504 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:02:27,506 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 13:02:27,507 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 13:02:29,530 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 13:02:29,735 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 13:02:31,113 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:02:31,115 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 13:02:31,115 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 13:02:34,175 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 13:02:34,484 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 13:04:29,493 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:04:29,495 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 13:04:30,984 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:04:30,986 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 13:04:30,987 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 13:04:32,372 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:04:33,839 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:04:33,840 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:04:35,431 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:04:35,487 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:04:35,802 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:04:35,804 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:04:37,800 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:04:37,801 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:04:39,796 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:04:39,796 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:04:41,803 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:04:41,803 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:04:43,797 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:04:43,798 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:04:45,794 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:04:45,795 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:04:47,794 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:04:47,795 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:04:49,796 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:04:49,797 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:04:51,789 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:04:51,789 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:04:53,801 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:04:53,801 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:11:37,101 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:11:37,104 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 13:11:38,582 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:11:38,584 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 13:11:38,584 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 13:11:42,020 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:11:43,311 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:11:43,312 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:11:45,309 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:11:45,309 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:11:46,016 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:14:36,114 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 13:14:36,397 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 13:14:37,832 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:14:37,834 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 13:14:37,835 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 13:14:44,223 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:14:46,270 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:14:46,270 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:14:47,630 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:19:44,395 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:19:45,815 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:19:51,934 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:19:53,959 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:19:53,959 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:19:55,364 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:20:06,440 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:20:08,467 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:20:08,467 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:20:09,742 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:20:23,726 - werkzeug - INFO -  * Detected change in '/home/skeotaku/dev/smartAttend/backend/app/controllers/attendance_controller.py', reloading
+2025-06-13 13:20:23,896 - werkzeug - INFO -  * Restarting with stat
+2025-06-13 13:20:25,253 - root - INFO - Starting SmartAttend server...
+2025-06-13 13:20:25,255 - werkzeug - WARNING -  * Debugger is active!
+2025-06-13 13:20:25,255 - werkzeug - INFO -  * Debugger PIN: 145-933-237
+2025-06-13 13:20:35,214 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:20:37,237 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:20:37,237 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:20:39,247 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:20:39,247 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:20:41,247 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:20:41,248 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:20:43,233 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:20:43,233 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:20:45,232 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:20:45,232 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:20:47,231 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:20:47,231 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:20:49,247 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:20:49,248 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:20:51,241 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:20:51,242 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:20:53,214 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:20:53,214 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:20:55,228 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:20:55,228 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:20:57,233 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:20:57,233 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:20:59,241 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:20:59,241 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:21:01,231 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:21:01,232 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:21:03,225 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:21:03,226 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:21:05,252 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:21:05,253 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:21:07,220 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:21:07,221 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:21:09,188 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:21:09,188 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:21:11,222 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:21:11,223 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:21:12,282 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:21:12,297 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:21:14,316 - app.controllers.attendance_controller - INFO - Received attendance request
+2025-06-13 13:21:14,316 - app.controllers.attendance_controller - INFO - Token decoded successfully
+2025-06-13 13:21:15,636 - app.controllers.attendance_controller - INFO - Client Disconnected
+2025-06-13 13:21:43,537 - app.controllers.attendance_controller - INFO - Client Connected
+2025-06-13 13:21:44,591 - app.controllers.attendance_controller - INFO - Client Disconnected

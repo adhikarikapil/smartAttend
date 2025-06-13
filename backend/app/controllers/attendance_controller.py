@@ -33,54 +33,79 @@ def load_all_encodings():
 
 @socketio.on("connect")
 def handle_connect():
-    logger.info("Client Connected", extra={
-        "sid": request.sid,
-        "transport": request.environ.get('socketio').transport.name if hasattr(request.environ, 'socketio') else 'unknown',
-        "headers": dict(request.headers),
-        "remote_addr": request.remote_addr
-    })
+    logger.info(
+        "Client Connected",
+        extra={
+            "sid": request.sid,
+            "transport": (
+                request.environ.get("socketio").transport.name
+                if hasattr(request.environ, "socketio")
+                else "unknown"
+            ),
+            "headers": dict(request.headers),
+            "remote_addr": request.remote_addr,
+        },
+    )
     print(f"Client Connected - SID: {request.sid}")
 
 
 @socketio.on("connect_error")
 def handle_connect_error(error):
-    logger.error("Connection error", extra={
-        "error": str(error),
-        "sid": request.sid if hasattr(request, 'sid') else 'unknown',
-        "headers": dict(request.headers) if hasattr(request, 'headers') else {},
-        "remote_addr": request.remote_addr if hasattr(request, 'remote_addr') else 'unknown'
-    })
+    logger.error(
+        "Connection error",
+        extra={
+            "error": str(error),
+            "sid": request.sid if hasattr(request, "sid") else "unknown",
+            "headers": dict(request.headers) if hasattr(request, "headers") else {},
+            "remote_addr": (
+                request.remote_addr if hasattr(request, "remote_addr") else "unknown"
+            ),
+        },
+    )
     print(f"Connection error: {str(error)}")
 
 
 @socketio.on("disconnect")
 def handle_disconnect():
-    logger.info("Client Disconnected", extra={
-        "sid": request.sid,
-        "reason": request.environ.get('socketio').transport.name if hasattr(request.environ, 'socketio') else 'unknown'
-    })
+    logger.info(
+        "Client Disconnected",
+        extra={
+            "sid": request.sid,
+            "reason": (
+                request.environ.get("socketio").transport.name
+                if hasattr(request.environ, "socketio")
+                else "unknown"
+            ),
+        },
+    )
     print(f"Client Disconnected - SID: {request.sid}")
 
 
 @socketio.on("mark_attendance")
 def mark_attendance(data):
-    logger.info("Received attendance request", extra={
-        "sid": request.sid,
-        "classroom_id": data.get("classroomId"),
-        "has_image": bool(data.get("image")),
-        "has_token": bool(data.get("token"))
-    })
-    
+    logger.info(
+        "Received attendance request",
+        extra={
+            "sid": request.sid,
+            "classroom_id": data.get("classroomId"),
+            "has_image": bool(data.get("image")),
+            "has_token": bool(data.get("token")),
+        },
+    )
+
     token = data.get("token")
     classroom_id = data.get("classroomId")
     image_data = data.get("image")
 
     if not image_data or not classroom_id or not token:
-        logger.error("Missing required data", extra={
-            "has_image": bool(image_data),
-            "has_classroom_id": bool(classroom_id),
-            "has_token": bool(token)
-        })
+        logger.error(
+            "Missing required data",
+            extra={
+                "has_image": bool(image_data),
+                "has_classroom_id": bool(classroom_id),
+                "has_token": bool(token),
+            },
+        )
         emit(
             "attendance_response",
             {"error": "Missing image or classroom Id or token"},
@@ -140,10 +165,10 @@ def mark_attendance(data):
 
             if not recent_attendance:
                 try:
-                    user = User.query.filter_by(id = student_id).first()
+                    user = User.query.filter_by(id=student_id).first()
                     attendance = Attendance(
                         student_id=student_id,
-                        student_name = user.first_name + user.second_name,
+                        student_name=user.first_name + user.second_name,
                         roll_no=matched_student["roll_no"],
                         classroom_id=classroom_id,
                         taken_by=teacher_id,
@@ -201,7 +226,6 @@ def mark_absent_students():
         )
 
     current_date = datetime.now(timezone.utc).date()
-
     enrolled_students = ClassroomUser.query.filter_by(classroom_id=classroom_id).all()
     enrolled_student_ids = {e.user_id for e in enrolled_students}
 
@@ -213,16 +237,37 @@ def mark_absent_students():
     absent_student_ids = enrolled_student_ids - present_student_ids
 
     try:
+        absent_student = []
         for student_id in absent_student_ids:
             face_data = Face_data.query.filter_by(user_id=student_id).first()
+            two_hrs_ago = datetime.now(timezone.utc) - timedelta(hours=2)
+
+            recent_absent = (
+                Attendance.query.filter_by(
+                    classroom_id=classroom_id, student_id=student_id
+                )
+                .filter(Attendance.marked_at >= two_hrs_ago)
+                .first()
+            )
+
+            if recent_absent:
+                return jsonify({"error": "Absent already marked"})
 
             if not face_data:
                 continue
-            
-            user = User.query.filter_by(id = student_id).first()
+
+            user = User.query.filter_by(id=student_id).first()
+
+            absent_student.append(
+                {
+                    "name": f"{user.first_name} {user.second_name}",
+                    "rollNo": face_data.roll_no,
+                }
+            )
+
             attendance = Attendance(
                 student_id=student_id,
-                student_name = user.first_name + user.second_name,
+                student_name=user.first_name + user.second_name,
                 roll_no=face_data.roll_no,
                 classroom_id=classroom_id,
                 taken_by=teacher_id,
@@ -234,4 +279,12 @@ def mark_absent_students():
         db.session.rollback()
         return jsonify({"error": f"Error adding absent student: {str(err)}"}), 400
 
-    return jsonify({"message": f"{len(absent_student_ids)} students are marked absent"}), 200
+    return (
+        jsonify(
+            {
+                "message": f"{len(absent_student_ids)} students are marked absent",
+                'absentStudents': absent_student
+            }
+        ),
+        200,
+    )

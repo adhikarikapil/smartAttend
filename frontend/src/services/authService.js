@@ -42,24 +42,24 @@ export const logoutUser = async () => {
   }
 
   try {
-    const response = await fetch(`${API_URL}/auth/logout`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken}`,
-      },
-      body: JSON.stringify({ accessToken, refreshToken }),
-    });
-    const data = await response.json();
+  const response = await fetch(`${API_URL}/auth/logout`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify({ accessToken, refreshToken }),
+  });
+  const data = await response.json();
 
     if (response.ok) {
-      localStorage.removeItem("accessToken");
-      localStorage.removeItem("refreshToken");
-      localStorage.removeItem("userData");
-      setTimeout(() => {
-        window.location.href = "/login";
-      }, 1000);
-    } else {
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
+    localStorage.removeItem("userData");
+    setTimeout(() => {
+      window.location.href = "/login";
+    }, 1000);
+  } else {
       console.error("Failed to logout:", data.error);
       setTimeout(() => {
         window.location.href = "/login";
@@ -86,18 +86,18 @@ export async function refreshAccessToken() {
   }
 
   try {
-    const response = await fetch(`${API_URL}/auth/refresh`, {
-      method: "POST",
+  const response = await fetch(`${API_URL}/auth/refresh`, {
+    method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ refreshToken })
-    });
+  });
 
-    const data = await response.json();
-    
+  const data = await response.json();
+
     if (response.ok && data.accessToken) {
-      localStorage.setItem("accessToken", data.accessToken);
+    localStorage.setItem("accessToken", data.accessToken);
       return { success: true, accessToken: data.accessToken };
-    } else {
+  } else {
       console.log("Refresh token call failed:", data.error);
       localStorage.removeItem("accessToken");
       localStorage.removeItem("refreshToken");
@@ -115,15 +115,15 @@ export async function refreshAccessToken() {
 
 export const isTokenExpired = async () => {
   try {
-    const accessToken = localStorage.getItem("accessToken");
+  const accessToken = localStorage.getItem("accessToken");
     if (!accessToken) {
       return await refreshAccessToken();
     }
 
     const currentTime = new Date().getTime() / 1000;
-    const decodedToken = jwtDecode(accessToken);
+  const decodedToken = jwtDecode(accessToken);
 
-    if (decodedToken.exp < currentTime) {
+  if (decodedToken.exp < currentTime) {
       return await refreshAccessToken();
     }
     return { success: true };

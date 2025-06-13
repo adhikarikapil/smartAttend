@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Webcam from "react-webcam";
 import Navbar from "../layout/Navbar/Navbar";
-import "./FaceRegistration.css";
+import "./FaceRegistrationStyles.css";
 
 function FaceRegistration() {
   const videoConstraints = {
