@@ -6,11 +6,12 @@ from app.routes.auth_routes import auth_bp
 from app.routes.classroom_routes import classroom_bp
 from app.routes.face_routes import face_bp
 from app.routes.attendance_routes import attendance_bp
+from app.routes.notice_route import notice_bp
 
 
 def create_app():
     app = Flask(__name__)
-    
+
     # Update CORS configuration with more specific settings
     CORS(app)
 
@@ -34,5 +35,6 @@ def create_app():
     app.register_blueprint(classroom_bp, url_prefix="/api/classroom")
     app.register_blueprint(face_bp, url_prefix="/api/face")
     app.register_blueprint(attendance_bp, url_prefix="/api/attendance")
+    app.register_blueprint(notice_bp, url_prefix="/api/notice")
 
     return app
