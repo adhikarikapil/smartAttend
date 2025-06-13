@@ -51,28 +51,10 @@ function Navbar({ hasExistingRegistration, isOpen, setIsOpen }) {
       <div
         className="navbar-titles"
         onClick={() => {
-          window.location.href = "/";
+          window.location.href = "/dashboard";
         }}
       >
         <h2>SmartAttend</h2>
-      </div>
-      <div className="navbar-tags">
-        <div
-          className="navbar-menu"
-          onClick={() => {
-            window.location.href = "/dashboard";
-          }}
-        >
-          Dashboard
-        </div>
-        <div
-          className="navbar-menu"
-          onClick={() => {
-            window.location.href = "/attendance";
-          }}
-        >
-          View Attendance
-        </div>
       </div>
       <div className="navbar-profile">
         {/* Conditionally render auth links */}

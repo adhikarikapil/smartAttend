@@ -283,8 +283,58 @@ def mark_absent_students():
         jsonify(
             {
                 "message": f"{len(absent_student_ids)} students are marked absent",
-                'absentStudents': absent_student
+                "absentStudents": absent_student,
             }
         ),
         200,
     )
+
+
+def view_attendance():
+    header = request.headers.get("Authorization")
+    if not header:
+        return jsonify({"error": "Missing Authorization header"}), 401
+
+    token = header.split(" ")[1]
+    try:
+        decoded_token = decode_token(token)
+        identity = json.loads(decoded_token['sub'])
+    except Exception as err:
+        return jsonify({"error": f"Invalid token: {str(err)}"})
+
+    classroom_id = request.args.get('classroomId')
+    if not classroom_id:
+        return jsonify({"error": "Missing classroomId"}), 400
+    
+    user_id = identity['userId']
+    role = identity['role']
+
+    try:
+        if role == 'student':
+            records = Attendance.query.filter_by(
+                student_id = user_id,
+                classroom_id = classroom_id
+            ).order_by(Attendance.marked_at.desc()).all()
+
+        elif role == 'teacher':
+            records = Attendance.query.filter_by(
+                classroom_id = classroom_id
+            ).order_by(Attendance.marked_at.desc()).all()
+        elif role == 'admin':
+            pass
+        else:
+            return jsonify({'error': 'Invalid role'}), 403
+        
+        result = [
+            {
+                'studentId': a.student_id,
+                'studentName': a.student_name,
+                'rollNo': a.roll_no,
+                'status': a.status,
+                "date": a.date.strftime("%a, %d %b %Y")
+            }
+            for a in records
+        ]
+        return jsonify(result), 200
+    except Exception as err:
+        return jsonify({"error": str(err)}), 400
