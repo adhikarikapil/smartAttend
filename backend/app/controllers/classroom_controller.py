@@ -25,7 +25,7 @@ def create_classroom():
         if isinstance(identity, dict):
             user_id = identity["userId"]
         else:
-            return jsonify({"error": "Invalid identity format"})
+            return jsonify({"error": "Invalid identity format"}), 400
 
         if not user_id:
             return jsonify({"error": "No user data or missing user data in Token"}), 404

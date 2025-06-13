@@ -21,10 +21,9 @@ class Attendance(db.Model):
     teacher = db.relationship("User", foreign_keys=[taken_by])
     classroom = db.relationship("Classroom", backref="attendance")
 
-    def __init__(self, student_id, roll_no, classroom_id, taken_by, status, remarks):
+    def __init__(self, student_id, roll_no, classroom_id, taken_by, status):
         self.student_id = student_id
         self.roll_no = roll_no
         self.classroom_id = classroom_id
         self.taken_by = taken_by
         self.status = status
-        self.remarks = remarks
