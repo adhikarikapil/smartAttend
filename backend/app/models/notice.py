@@ -20,3 +20,10 @@ class Notice(db.Model):
         self.teacher_id = teacher_id
         self.title = title
         self.message = message
+
+class NoticeSeen(db.Model):
+    id  = db.Column(db.Integer, primary_key=True)
+    student_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    notice_id = db.Column(db.Integer, db.ForeignKey('notice.id'), nullable=False)
+    seen_at = db.Column(db.DateTime, default=datetime.now(timezone.utc))
+    
