@@ -29,20 +29,27 @@ function JoinClassroom({ closeModal, onClassroomJoined, onJoined }) {
     setAlertMessage("");
     setAlertType("");
 
-    const response = await joinClassroom(formData.code);
+    try {
+      const response = await joinClassroom(formData.code);
 
-    if (response.message) {
-      onJoined();
-      setFormData({
-        code: "",
-      });
-      setAlertMessage("Classroom Joined Successfully!!!");
-      setAlertType("success");
-      setTimeout(() => {
+      if (response.message) {
+        setFormData({ code: "" });
+        setAlertMessage("Classroom Joined Successfully!!!");
+        setAlertType("success");
+        
+        onJoined();
         onClassroomJoined();
-      }, 1000);
-    } else {
-      setAlertMessage(response.error || "Cannot Join Classroom!!!");
+        
+        setTimeout(() => {
+          closeModal();
+        }, 1500);
+      } else {
+        setAlertMessage(response.error || "Cannot Join Classroom!!!");
+        setAlertType("error");
+      }
+    } catch (error) {
+      console.error("Error joining classroom:", error);
+      setAlertMessage("Failed to join classroom. Please try again.");
       setAlertType("error");
     }
   };

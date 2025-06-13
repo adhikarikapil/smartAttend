@@ -88,18 +88,26 @@ def join_classroom():
 
         classroom_id = classroom_to_join.id
 
-        already_join = ClassroomUser.query.filter_by(classroom_id=classroom_id).first()
+        # Fix: Check if this specific user has already joined
+        already_join = ClassroomUser.query.filter_by(
+            classroom_id=classroom_id, 
+            user_id=user_id
+        ).first()
+        
         if already_join:
-            return jsonify({"error": "Classroom Already Joined"}), 400
+            return jsonify({"error": "You have already joined this classroom"}), 400
 
         new_join = ClassroomUser(
-            classroom_id=classroom_id, user_id=user_id, user_email=user_email
+            classroom_id=classroom_id, 
+            user_id=user_id, 
+            user_email=user_email
         )
         try:
             db.session.add(new_join)
             db.session.commit()
-        except:
-            return jsonify({"error": "Cannot join!!!"}), 400
+        except Exception as e:
+            db.session.rollback()
+            return jsonify({"error": f"Cannot join classroom: {str(e)}"}), 400
 
         return jsonify({"message": "User joined successfully!!"}), 200
 

@@ -3,9 +3,8 @@ import "./NavbarStyles.css";
 import Profile from "../../../assets/profile.jpeg";
 import { useAuth } from "../../../context/AuthContext";
 
-function Navbar({ hasExistingRegistration }) {
+function Navbar({ hasExistingRegistration, isOpen, setIsOpen }) {
   const { user, logout, isAuthenticated } = useAuth();
-  const [isOpen, setIsOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState("");
   const [alertType, setAlertType] = useState("");
   const [alertMessage, setAlertMessage] = useState("");

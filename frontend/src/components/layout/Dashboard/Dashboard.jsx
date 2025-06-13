@@ -31,6 +31,9 @@ function Dashboard() {
   const [studentJoined, setStudentJoined] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
 
+  // For navbar
+  const [isOpen, setIsOpen] = useState(false);
+
   const { isFirstLogin } = location.state || { isFirstLogin: "" };
 
   useEffect(() => {
@@ -301,7 +304,13 @@ function Dashboard() {
   );
 
   return (
-    <div className="dashboard-container" onClick={() => setShowWelcome(false)}>
+    <div
+      className="dashboard-container"
+      onClick={() => {
+        setIsOpen(false)
+        setShowWelcome(false);
+      }}
+    >
       {showWelcome && (
         <div className="welcome-overlay">
           <div className="welcome-modal">
@@ -334,8 +343,10 @@ function Dashboard() {
           </div>
         </div>
       )}
-      <header>
-        <Navbar />
+      <header onClick={(e) =>{
+        e.stopPropagation()
+      }}>
+        <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
       </header>
       <main>
         {user?.role === "teacher" ? <TeacherDashboard /> : <StudentDashboard />}

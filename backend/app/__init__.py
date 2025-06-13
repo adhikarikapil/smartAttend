@@ -10,13 +10,14 @@ from app.routes.attendance_routes import attendance_bp
 
 def create_app():
     app = Flask(__name__)
+    
+    # Update CORS configuration with more specific settings
     CORS(app)
 
     app.config.from_object(Config)
 
     # Ensure these JWT settings are set
     app.config["JWT_SECRET_KEY"] = app.config.get("SECRET_KEY", "super-secret-key")
-    # Use the correct parameter names for JWT blacklist settings
     app.config["JWT_TOKEN_LOCATION"] = ["headers"]
     app.config["JWT_BLOCKLIST_ENABLED"] = True
     app.config["JWT_BLOCKLIST_TOKEN_CHECKS"] = ["access", "refresh"]

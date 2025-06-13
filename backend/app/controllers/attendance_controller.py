@@ -1,7 +1,7 @@
 from flask import request, jsonify
 from flask_socketio import SocketIO, emit
 from app.extentions import db, socketio
-from app.models import Attendance, Face_data, ClassroomUser
+from app.models import Attendance, Face_data, ClassroomUser, User
 from app.utils.jwt_utils import decode_token
 from datetime import datetime, timezone, timedelta
 import os, cv2, face_recognition, json, base64
@@ -140,8 +140,10 @@ def mark_attendance(data):
 
             if not recent_attendance:
                 try:
+                    user = User.query.filter_by(id = student_id).first()
                     attendance = Attendance(
                         student_id=student_id,
+                        student_name = user.first_name + user.second_name,
                         roll_no=matched_student["roll_no"],
                         classroom_id=classroom_id,
                         taken_by=teacher_id,
@@ -201,7 +203,7 @@ def mark_absent_students():
     current_date = datetime.now(timezone.utc).date()
 
     enrolled_students = ClassroomUser.query.filter_by(classroom_id=classroom_id).all()
-    enrolled_student_ids = {e.student_id for e in enrolled_students}
+    enrolled_student_ids = {e.user_id for e in enrolled_students}
 
     present_attendance = Attendance.query.filter_by(
         classroom_id=classroom_id, date=current_date, status="Present"
@@ -213,11 +215,15 @@ def mark_absent_students():
     try:
         for student_id in absent_student_ids:
             face_data = Face_data.query.filter_by(user_id=student_id).first()
-            roll_no = Face_data.roll_no if face_data else "Unknown"
 
+            if not face_data:
+                continue
+            
+            user = User.query.filter_by(id = student_id).first()
             attendance = Attendance(
                 student_id=student_id,
-                roll_no=roll_no,
+                student_name = user.first_name + user.second_name,
+                roll_no=face_data.roll_no,
                 classroom_id=classroom_id,
                 taken_by=teacher_id,
                 status="Absent",
@@ -225,8 +231,7 @@ def mark_absent_students():
             db.session.add(attendance)
         db.session.commit()
     except Exception as err:
+        db.session.rollback()
         return jsonify({"error": f"Error adding absent student: {str(err)}"}), 400
-    return (
-        jsonify({"message": f"{len(absent_student_ids)} students are marked absent"}),
-        200,
-    )
+
+    return jsonify({"message": f"{len(absent_student_ids)} students are marked absent"}), 200

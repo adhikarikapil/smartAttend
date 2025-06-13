@@ -7,6 +7,7 @@ class Attendance(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     student_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    student_name = db.Column(db.String(50), nullable=False)
     roll_no = db.Column(db.Integer, db.ForeignKey("facedata.roll_no"), nullable=False)
     classroom_id = db.Column(db.Integer, db.ForeignKey("classrooms.id"), nullable=False)
     taken_by = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
@@ -21,8 +22,9 @@ class Attendance(db.Model):
     teacher = db.relationship("User", foreign_keys=[taken_by])
     classroom = db.relationship("Classroom", backref="attendance")
 
-    def __init__(self, student_id, roll_no, classroom_id, taken_by, status):
+    def __init__(self, student_id,student_name, roll_no, classroom_id, taken_by, status):
         self.student_id = student_id
+        self.student_name = student_name
         self.roll_no = roll_no
         self.classroom_id = classroom_id
         self.taken_by = taken_by

@@ -8,6 +8,7 @@ import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/common/ProtectedRoute/ProtectedRoute";
 import FaceRegistration from "./components/face/FaceRegistration";
 import TakeAttendance from "./components/attendance/TakeAttendance/TakeAttendance";
+import AttendanceReport from "./components/attendance/AttendanceReport/AttendanceReport";
 
 function App() {
   return (
@@ -42,16 +43,26 @@ function App() {
                 </>
               }
             />
-            <Route 
+            <Route
               path="/take-attendance"
               element={
                 <>
-                  <ProtectedRoute allowedRoles={['teacher']}>
+                  <ProtectedRoute allowedRoles={["teacher"]}>
                     <TakeAttendance />
                   </ProtectedRoute>
                 </>
               }
             />
+            <Route 
+              path='/attendance'
+              element={
+                <>
+                  <ProtectedRoute allowedRoles={['teacher']}>
+                    <AttendanceReport />
+                  </ProtectedRoute>
+                </>
+              }
+             />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
