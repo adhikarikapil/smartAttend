@@ -30,6 +30,7 @@ function Dashboard() {
   const [studentRemoved, setStudentRemoved] = useState(false);
   const [studentJoined, setStudentJoined] = useState(false);
   const [showWelcome, setShowWelcome] = useState(false);
+  const [unseenCount, setunseenCount] = useState({});
 
   // For navbar
   const [isOpen, setIsOpen] = useState(false);
@@ -101,6 +102,60 @@ function Dashboard() {
       setCurrentStudent(response.user);
     }
   };
+
+  const fetchUnseenCounts = async () => {
+    const count = {};
+    const token = localStorage.getItem("accessToken");
+
+    try {
+      const response = await fetch(`${API_URL}/notice/unseen`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const data = await response.json();
+      data.forEach(({ classroomId, unseenCount }) => {
+        count[classroomId] = unseenCount;
+      });
+    } catch (error) {
+      setAlertMessage("Error fetching unseen notice count: ", error);
+      setAlertType("error");
+    }
+    setunseenCount(count);
+    console.log(unseenCount);
+  };
+
+  const handleNoticeClick = async (classroom) => {
+    const token = localStorage.getItem("accessToken");
+    try {
+      const response = await fetch(`${API_URL}/notice/seen`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          classroomId: classroom.classroomId,
+        }),
+      });
+      if (response.ok) {
+        setunseenCount((prev) => ({ ...prev, [classroom.classroomId]: 0 }));
+
+        navigate("/notice", { state: { user, classroom } });
+      }
+    } catch (err) {
+      setAlertMessage("Failed to mark notices as seen: ", err);
+      setAlertType("error");
+    }
+  };
+
+  useEffect(() => {
+    if (user?.role === "student" && currentClassroom.length > 0) {
+      fetchUnseenCounts();
+    }
+  }, [currentClassroom]);
 
   const TeacherDashboard = () => (
     <>
@@ -232,103 +287,114 @@ function Dashboard() {
     </>
   );
 
-  const StudentDashboard = () => (
-    <>
-      <div className="classes-content">
-        <div className="classes-header">
-          <h1>My Classes</h1>
-          <div className="student-header-actions">
-            <button
-              className="join-class-btn"
-              onClick={() => setIsJoinModalOpen(true)}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="add-icon"
+  const StudentDashboard = () => {
+    return (
+      <>
+        <div className="classes-content">
+          <div className="classes-header">
+            <h1>My Classes</h1>
+            <div className="student-header-actions">
+              <button
+                className="join-class-btn"
+                onClick={() => setIsJoinModalOpen(true)}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
-                />
-              </svg>
-              Join Class
-            </button>
-            {alertMessage && (
-              <div className={`leave-alert-message ${alertType}`}>
-                {alertMessage}
-              </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="add-icon"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+                  />
+                </svg>
+                Join Class
+              </button>
+              {alertMessage && (
+                <div className={`leave-alert-message ${alertType}`}>
+                  {alertMessage}
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="classes-grid">
+            {isFirstLogin && (
+              <div>As you are First Here Register your face</div>
             )}
+            {currentClassroom.map((classroom) => (
+              <div key={classroom.classroomId} className="class-card">
+                <div className="class-card-header">
+                  <h3>{classroom.name}</h3>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleNoticeClick(classroom);
+                    }}
+                  >
+                    Notice
+                    {unseenCount[classroom.classroomId] > 0 && (
+                      <span className="unseen-badge">
+                        {unseenCount[classroom.classroomId]}
+                      </span>
+                    )}
+                  </button>
+                </div>
+                <div className="class-card-body">
+                  <div className="class-info-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      {" "}
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                      />
+                    </svg>
+                    <span>
+                      {classroom.creatorFirstName} {classroom.creatorSecondName}
+                    </span>
+                  </div>
+                  <div className="class-info-item description">
+                    <h2>Description:</h2>
+                    <span>{classroom.description}</span>
+                  </div>
+                </div>
+                <div className="class-card-footer">
+                  <button
+                    className="class-action-btn attendance"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigate("/attendance", { state: { classroom } });
+                    }}
+                  >
+                    View Attendance
+                  </button>
+                  <button className="class-action-btn view">
+                    View Material
+                  </button>
+                  <button
+                    className="class-action-btn leave"
+                    onClick={() => leaveClass(classroom.classroomId)}
+                  >
+                    Leave
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="classes-grid">
-          {isFirstLogin && <div>As you are First Here Register your face</div>}
-          {currentClassroom.map((classroom) => (
-            <div key={classroom.classroomId} className="class-card">
-              <div className="class-card-header">
-                <h3>{classroom.name}</h3>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigate("/notice", { state: { user, classroom } });
-                  }}
-                >
-                  Notice
-                </button>
-              </div>
-              <div className="class-card-body">
-                <div className="class-info-item">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    {" "}
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                  <span>
-                    {classroom.creatorFirstName} {classroom.creatorSecondName}
-                  </span>
-                </div>
-                <div className="class-info-item description">
-                  <h2>Description:</h2>
-                  <span>{classroom.description}</span>
-                </div>
-              </div>
-              <div className="class-card-footer">
-                <button
-                  className="class-action-btn attendance"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigate("/attendance", { state: { classroom } });
-                  }}
-                >
-                  View Attendance
-                </button>
-                <button className="class-action-btn view">View Material</button>
-                <button
-                  className="class-action-btn leave"
-                  onClick={() => leaveClass(classroom.classroomId)}
-                >
-                  Leave
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
-  );
+      </>
+    );
+  };
 
   return (
     <div

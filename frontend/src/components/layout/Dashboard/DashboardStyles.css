@@ -135,12 +135,24 @@
 }
 
 .class-card-header button {
-  background-color: #16a34a;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 100%);
+  color: white;
 }
 
 .class-card-header button:hover {
-  background-color: #16a34a;
-  transform: scale(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
 }
 
 .class-card-header button:active{
@@ -374,4 +386,24 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+/* Update styles for the unseen notice badge */
+.unseen-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.2);
+  border: 2px solid white;
 }

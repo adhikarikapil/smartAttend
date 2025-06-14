@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import "./NoticeStyles.css";
 
 function Notice() {
+  const navigate = useNavigate();
   const location = useLocation();
   const { user, classroom } = location.state || { user: [], classroom: [] };
 
@@ -27,6 +28,11 @@ function Notice() {
     e.preventDefault();
     setAlertMessage("");
     setAlertType("");
+
+    setFormData({
+      title: "",
+      message: "",
+    });
 
     const token = localStorage.getItem("accessToken");
     const response = await fetch(
@@ -53,10 +59,12 @@ function Notice() {
 
     setAlertMessage("Notice added successfully.");
     setAlertType("success");
+    setAddNoticeModal(false);
 
     setTimeout(() => {
       setAlertMessage("");
       setAlertType("");
+      handleFetchNotice();
     }, 2000);
   };
 
@@ -76,13 +84,46 @@ function Notice() {
     setNotices(data.notice);
   };
 
+  const handleDelete = async (noticeId) => {
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/notice/delete`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            noticeId: noticeId,
+          }),
+        }
+      );
+      const data = await response.json();
+      if (response.ok) {
+        setAlertMessage(data.message);
+        setAlertType("success");
+        setTimeout(() => {
+          handleFetchNotice();
+          setAlertMessage("");
+          setAlertType("");
+        }, 2000);
+      } else {
+        setAlertMessage(data.error);
+        setAlertType("error");
+      }
+    } catch (error) {
+      setAlertMessage("Error delete notice: ", error);
+      setAlertType("error");
+    }
+  };
+
   useEffect(() => {
     handleFetchNotice();
   }, [classroom.classroomId]);
 
   return (
     <div className="main-container">
-      <div className={`notice-container ${addNoticeModal ? "modal-open" : ""}`}>
+      <div className="notice-container">
         {alertMessage && (
           <div className={`notice-alert ${alertType}`}>{alertMessage}</div>
         )}
@@ -109,17 +150,47 @@ function Notice() {
                   <span className="timestamp">
                     {new Date(notice.createdAt).toLocaleString()}
                   </span>
+                  {user?.role === "teacher" && (
+                    <button
+                      className="delete"
+                      onClick={() => {
+                        handleDelete(notice.id);
+                      }}
+                    >
+                      Delete
+                    </button>
+                  )}
                 </li>
               ))}
             </ul>
           )}
+          <button
+            className="dashboard-button"
+            onClick={() => {
+              navigate("/dashboard");
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              />
+            </svg>
+            Go to Dashboard
+          </button>
         </div>
       </div>
       {addNoticeModal && (
-        <div className="modal-overlay" onClick={()=>{setAddNoticeModal(false)}}>
+        <div className="modal-overlay">
           <form className="notice-form" onSubmit={handleAddNotice}>
             <h2>Add Notice</h2>
-
             <input
               type="text"
               name="title"
@@ -136,15 +207,15 @@ function Notice() {
               rows="4"
               required
             />
+            <button type="submit">Send Notice</button>
             <button
-              type="submit"
+              type="button"
               onClick={() => {
                 setAddNoticeModal(false);
               }}
             >
-              Send Notice
+              Cancel
             </button>
-            <button onClick={()=>{setAddNoticeModal(false)}}>Cancel</button>
           </form>
         </div>
       )}
