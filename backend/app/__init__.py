@@ -7,6 +7,7 @@ from app.routes.classroom_routes import classroom_bp
 from app.routes.face_routes import face_bp
 from app.routes.attendance_routes import attendance_bp
 from app.routes.notice_route import notice_bp
+from app.routes.admin_routes import admin_bp
 
 
 def create_app():
@@ -36,5 +37,6 @@ def create_app():
     app.register_blueprint(face_bp, url_prefix="/api/face")
     app.register_blueprint(attendance_bp, url_prefix="/api/attendance")
     app.register_blueprint(notice_bp, url_prefix="/api/notice")
+    app.register_blueprint(admin_bp, url_prefix="/api/admin")
 
     return app

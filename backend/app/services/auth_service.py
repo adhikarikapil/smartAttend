@@ -18,7 +18,6 @@ def authenticate_user(email, password):
         )
         refresh_token = generate_refresh_token(user.id)
 
-        # Store the refresh token in the database
         try:
             new_refresh_token = Refresh_token(token=refresh_token, user_id=user.id)
             db.session.add(new_refresh_token)
@@ -39,7 +38,6 @@ def refresh_access_token(refresh_token):
         print("Attempted to use blacklisted refresh token")
         return None
 
-    # Decode the token to get user_id
     decoded_data = decode_token(refresh_token)
     if not decoded_data or "sub" not in decoded_data:
         print("Invalid refresh token format")
@@ -63,7 +61,6 @@ def refresh_access_token(refresh_token):
             print("Token not found in database or user_id mismatch")
             return None
 
-        # Get the user and generate new access token
         user = User.query.get(user_id)
         if user:
             return generate_access_token(
@@ -80,10 +77,8 @@ def refresh_access_token(refresh_token):
 def logout(access_token, refresh_token):
     from app.utils import logout_user
 
-    # Find and remove the refresh token from the database
     success = False
     try:
-        # Try to find the token in the database
         token_record = Refresh_token.query.filter_by(token=refresh_token).first()
         if token_record:
             db.session.delete(token_record)
@@ -93,8 +88,6 @@ def logout(access_token, refresh_token):
         print(f"Error removing refresh token from DB: {e}")
         db.session.rollback()
 
-    # Add tokens to blacklist
     blacklist_success = logout_user(access_token, refresh_token)
 
-    # Return true if either operation succeeded
     return success or blacklist_success

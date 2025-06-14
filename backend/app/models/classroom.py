@@ -36,7 +36,8 @@ class ClassroomUser(db.Model):
     user = db.relationship('User', backref='joined_classrooms')
     face = db.relationship('Face_data', backref='student')
 
-    def __init__(self, classroom_id, user_id, user_email):
+    def __init__(self, classroom_id, user_id, user_email, roll_no):
         self.classroom_id = classroom_id
         self.user_id = user_id
         self.user_email = user_email
+        self.roll_no = roll_no

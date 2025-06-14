@@ -1,17 +1,16 @@
 from flask import request, jsonify
 from app.extentions import db
-from app.models.classroom import Classroom, ClassroomUser
+from app.models.classroom import Classroom, ClassroomUser 
+from app.models.face_data import Face_data
 from app.models.user import User
 from app.utils.jwt_utils import decode_token
 import json
 
 
-# handle http request for creating classroom
 def create_classroom():
     try:
         data = request.get_json()
 
-        # Extract access token for userData
         header = request.headers.get("authorization")
         token = header.split()[1]
 
@@ -78,7 +77,6 @@ def join_classroom():
         else:
             return jsonify({"error": "Invalid identity format in token"}), 400
 
-        # Extract Post data
         code = data.get("code")
 
         classroom_to_join = Classroom.query.filter_by(code=code).first()
@@ -88,7 +86,6 @@ def join_classroom():
 
         classroom_id = classroom_to_join.id
 
-        # Fix: Check if this specific user has already joined
         already_join = ClassroomUser.query.filter_by(
             classroom_id=classroom_id, 
             user_id=user_id
@@ -96,11 +93,14 @@ def join_classroom():
         
         if already_join:
             return jsonify({"error": "You have already joined this classroom"}), 400
+            
 
+        roll_no = db.session.query(Face_data.roll_no).filter_by(user_id = user_id).first()
         new_join = ClassroomUser(
             classroom_id=classroom_id, 
             user_id=user_id, 
-            user_email=user_email
+            user_email=user_email,
+            roll_no = roll_no
         )
         try:
             db.session.add(new_join)

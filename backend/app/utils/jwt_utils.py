@@ -8,7 +8,7 @@ from datetime import datetime, timezone, timedelta
 from app.utils.blacklist import blacklist
 import json
 
-ACCESS_TOKEN_EXPIRY = 30  # In minutes
+ACCESS_TOKEN_EXPIRY = 120  # In minutes
 REFRESH_TOKEN_EXPIRY = 90  # In days
 
 
