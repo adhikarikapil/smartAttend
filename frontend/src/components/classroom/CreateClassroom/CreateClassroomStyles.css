@@ -1,67 +1,82 @@
-.modal-overlay {
+.create-modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
   z-index: 1000;
+  padding: 1rem;
 }
 
-.modal-content {
-  background: white;
-  border-radius: 16px;
-  width: 90%;
-  max-width: 600px;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+.create-modal-content {
+  background: #ffffff;
+  border-radius: 24px;
+  width: min(95%, 450px);
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  transform: translateY(0);
+  animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .modal-header {
-  padding: 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #f1f5f9;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #ffffff;
+  border-radius: 24px 24px 0 0;
 }
 
 .modal-header h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1e293b;
+  color: #0f172a;
   margin: 0;
+  letter-spacing: -0.025em;
 }
 
 .close-button {
-  background: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
   border: none;
-  padding: 0.5rem;
+  background: #f8fafc;
+  color: #64748b;
   cursor: pointer;
-  border-radius: 50%;
-  transition: all 0.3s ease;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
 }
 
 .close-button:hover {
-  background-color: #f3f4f6;
-}
-
-.close-button:active {
-  outline: none;
+  background: #f1f5f9;
+  color: #0f172a;
+  transform: rotate(90deg);
 }
 
 .close-button svg {
-  width: 24px;
-  height: 24px;
-  color: #64748b;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
 }
 
 .create-class-form {
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .form-group {
@@ -72,26 +87,37 @@
   display: block;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #1e293b;
+  color: #334155;
   margin-bottom: 0.5rem;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  font-size: 0.875rem;
-  color: #1e293b;
-  transition: all 0.3s ease;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #0f172a;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+  border-color: #cbd5e1;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
 }
 
 .form-actions {
@@ -103,108 +129,103 @@
 
 .cancel-btn,
 .submit-btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  padding: 0.875rem 1.5rem;
+  border-radius: 12px;
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+  min-width: 100px;
 }
 
 .cancel-btn {
-  background: white;
-  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
   color: #64748b;
-  outline: none;
 }
 
 .cancel-btn:hover {
-  background: #f8fafc;
+  background: #f1f5f9;
   border-color: #cbd5e1;
+  color: #334155;
+  transform: translateY(-1px);
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  background: #3b82f6;
   border: none;
   color: white;
+  position: relative;
+  overflow: hidden;
 }
 
 .submit-btn:hover {
+  background: #2563eb;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
-.code-input {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: monospace;
-  font-size: 1rem !important;
-}
-
-.code-hint {
-  display: block;
-  font-size: 0.75rem;
-  color: #64748b;
-  margin-top: 0.25rem;
+.submit-btn:active {
+  transform: translateY(0);
 }
 
 .form-group-code {
   display: flex;
-  gap: 10px;
+  gap: 0.75rem;
+  align-items: center;
 }
 
 .form-group-code button {
-  background: transparent;
-  border: 1px solid var(--primary-1);
-  transition: all 0.3s ease;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  color: #334155;
+  padding: 0.875rem 1rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .form-group-code button:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  transform: translateY(-2px);
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #0f172a;
+  transform: translateY(-1px);
 }
 
-.generate-btn {
-  color: black;
-  transition: 0.3s ease all;
-}
-
-.generate-btn:hover {
-  background-color: white;
+.form-group-code button:active {
+  transform: translateY(0);
 }
 
 .modal-alert-message {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto 20px;
-  padding: 15px 20px;
-  border-radius: 8px;
-  font-size: 14px;
+  margin: 0 2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
   font-weight: 500;
   text-align: center;
   animation: slideDown 0.3s ease forwards;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .modal-alert-message.error {
-  background-color: #fee2e2;
+  background: #fef2f2;
   color: #dc2626;
-  border: 1px solid #fecaca;
+  border: 1px solid #fee2e2;
 }
 
 .modal-alert-message.success {
-  background-color: #dcfce7;
+  background: #f0fdf4;
   color: #16a34a;
-  border: 1px solid #bbf7d0;
+  border: 1px solid #dcfce7;
 }
 
 @keyframes slideDown {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
   to {
     opacity: 1;

@@ -56,8 +56,8 @@ function JoinClassroom({ closeModal, onClassroomJoined, onJoined }) {
 
   return (
     <>
-      <div className="modal-overlay">
-        <div className="modal-content">
+      <div className="join-modal-overlay">
+        <div className="join-modal-content">
           {alertMessage && (
             <div className={`modal-alert-message ${alertType}`}>
               {alertMessage}

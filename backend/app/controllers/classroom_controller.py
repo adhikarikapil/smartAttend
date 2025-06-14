@@ -95,7 +95,12 @@ def join_classroom():
             return jsonify({"error": "You have already joined this classroom"}), 400
             
 
-        roll_no = db.session.query(Face_data.roll_no).filter_by(user_id = user_id).first()
+        roll_no = (
+            db.session.query(Face_data.roll_no)
+            .filter_by(user_id=user_id)
+            .first()
+        )
+        roll_no = roll_no[0] if roll_no else None
         new_join = ClassroomUser(
             classroom_id=classroom_id, 
             user_id=user_id, 

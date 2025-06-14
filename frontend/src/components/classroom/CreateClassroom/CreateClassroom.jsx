@@ -65,8 +65,8 @@ function CreateClassroom({ closeModal, onClassroomCreated }) {
 
   return (
     <div>
-      <div className="modal-overlay">
-        <div className="modal-content">
+      <div className="create-modal-overlay">
+        <div className="create-modal-content">
           {alertMessage && (
             <div className={`modal-alert-message ${alertType}`}>
               {alertMessage}
