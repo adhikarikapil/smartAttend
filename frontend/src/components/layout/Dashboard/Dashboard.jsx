@@ -32,7 +32,6 @@ function Dashboard() {
   const [showWelcome, setShowWelcome] = useState(false);
   const [unseenCount, setunseenCount] = useState({});
 
-  // For navbar
   const [isOpen, setIsOpen] = useState(false);
 
   const { isFirstLogin } = location.state || { isFirstLogin: "" };
@@ -119,13 +118,28 @@ function Dashboard() {
       data.forEach(({ classroomId, unseenCount }) => {
         count[classroomId] = unseenCount;
       });
+      setunseenCount(count);
     } catch (error) {
       setAlertMessage("Error fetching unseen notice count: ", error);
       setAlertType("error");
     }
-    setunseenCount(count);
-    console.log(unseenCount);
   };
+
+  useEffect(() => {
+    if (user?.role === "student" && currentClassroom.length > 0) {
+      fetchUnseenCounts();
+    }
+  }, [currentClassroom, user?.role]);
+
+  useEffect(() => {
+    if (user?.role === "student") {
+      const interval = setInterval(() => {
+        fetchUnseenCounts();
+      }, 30000);
+
+      return () => clearInterval(interval);
+    }
+  }, [user?.role]);
 
   const handleNoticeClick = async (classroom) => {
     const token = localStorage.getItem("accessToken");
@@ -150,12 +164,6 @@ function Dashboard() {
       setAlertType("error");
     }
   };
-
-  useEffect(() => {
-    if (user?.role === "student" && currentClassroom.length > 0) {
-      fetchUnseenCounts();
-    }
-  }, [currentClassroom]);
 
   const TeacherDashboard = () => (
     <>

@@ -10,6 +10,7 @@ import FaceRegistration from "./components/face/FaceRegistration";
 import TakeAttendance from "./components/attendance/TakeAttendance/TakeAttendance";
 import AttendanceReport from "./components/attendance/AttendanceReport/AttendanceReport";
 import Notice from "./components/Notice/Notice";
+import AdminDashboard from "./components/admin/AdminDashboard/AdminDashboard";
 
 function App() {
   return (
@@ -65,15 +66,20 @@ function App() {
               }
             />
             <Route
-              path="notice"
+              path="/notice"
               element={
                 <>
-                  <ProtectedRoute allowedRoles={["teacher", 'student']}>
+                  <ProtectedRoute allowedRoles={["teacher", "student"]}>
                     <Notice />
                   </ProtectedRoute>
                 </>
               }
             />
+            <Route path="/admin-dashboard" element={
+              <ProtectedRoute allowedRoles={['admin']}>
+                <AdminDashboard />
+              </ProtectedRoute>
+            } />
           </Routes>
         </BrowserRouter>
       </AuthProvider>

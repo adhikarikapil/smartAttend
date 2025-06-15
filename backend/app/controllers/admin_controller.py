@@ -49,7 +49,7 @@ def fetch_user():
                     "teacherName": t.first_name + t.second_name,
                     "teacherEmail": t.email,
                     "teacherRole": t.role,
-                    'teacherCreatedAt': t.created_at
+                    "teacherCreatedAt": t.created_at,
                 }
                 for t in teacher_user
             ]
@@ -61,7 +61,8 @@ def fetch_user():
                     "studentName": s.first_name + s.second_name,
                     "studentEmail": s.email,
                     "studentRole": s.role,
-                    'studentCreatedAt': s.created_at
+                    "studentCreatedAt": s.created_at,
+                    'studentRollNo': s.face_data.roll_no if s.face_data else None
                 }
                 for s in student_user
             ]
@@ -98,7 +99,7 @@ def fetch_classrooms():
                     "classroomCode": c.code,
                     "classroomDescription": c.description,
                     "classroomTeacherId": c.creator_id,
-                    'classroomCreatedAt': c.created_at
+                    "classroomCreatedAt": c.created_at,
                 }
                 for c in classrooms
             ]
@@ -130,7 +131,7 @@ def fetch_classroomUser():
                     "joinedStudentId": j.user_id,
                     "joinedRollNo": j.roll_no,
                     "joinedEmail": j.user_email,
-                    'studentJoinedAt': j.joined_at
+                    "studentJoinedAt": j.joined_at,
                 }
                 for j in joined_students
             ]
@@ -159,17 +160,22 @@ def fetch_faceData():
         return jsonify({"error": "Invalid Identity format"}), 400
 
     try:
-        if role == 'admin':
+        if role == "admin":
             face_datas = Face_data.query.all()
             face_data = [
                 {
-                    'faceStudentId': f.user_id,
-                    'faceStudentRollNo': f.roll_no,
-                    'faceStudentImagePath': f.image_path,
-                    'faceStudentEncodingPath': f.encoding_path,
-                    'faceCreatedAt': f.created_at
-                }for f in face_data
+                    "faceStudentId": f.user_id,
+                    "faceStudentRollNo": f.roll_no,
+                    "faceStudentImagePath": f.image_path,
+                    "faceStudentEncodingPath": f.encoding_path,
+                    "faceCreatedAt": f.created_at,
+                }
+                for f in face_datas
             ]
+            return (
+                jsonify({"number of face data": len(face_data), "facedata": face_data}),
+                200,
+            )
         else:
             print("Invalid Role for fetching classrooms")
             return jsonify({"error": "Invalid Role for fetching classroom"}), 400
@@ -180,4 +186,38 @@ def fetch_faceData():
 
 
 def fetch_attendance():
-    pass
+    header = request.headers.get("Authorization")
+    identity = get_identity_from_header(header)
+    if identity:
+        role = identity["role"]
+    else:
+        print("Invalid Identity format")
+        return jsonify({"error": "Invalid Identity format"}), 400
+
+    try:
+        if role == "admin":
+            attendances = Attendance.query.all()
+            attendance = [
+                {
+                    "attendanceId": a.id,
+                    "attendanceStudentId": a.student_id,
+                    "attendanceStudentName": a.student_name,
+                    "attendanceRollNo": a.roll_no,
+                    "attendanceClassroomId": a.classroom_id,
+                    "attendanceTakenBy": a.taken_by,
+                    "attendanceDate": a.date,
+                    "attendanceStatus": a.status,
+                    "attendanceRemarks": a.remarks,
+                    "attendanceMarkedAt": a.marked_at,
+                }
+                for a in attendances
+            ]
+            return (
+                jsonify(
+                    {"Number of Attendance": len(attendance), "attendance": attendance}
+                ),
+                200,
+            )
+    except Exception as err:
+        print(f"Error fetching attendance: {str(err)}")
+        return jsonify({"error": f"Error fetching attendance: {str(err)}"}), 400

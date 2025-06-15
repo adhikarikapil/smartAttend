@@ -19,10 +19,6 @@ export const loginUser = async (email, password) => {
     localStorage.setItem("accessToken", data.accessToken);
     localStorage.setItem("refreshToken", data.refreshToken);
     localStorage.setItem("userData", JSON.stringify(data.user));
-
-    setTimeout(() => {
-      window.location.href = "/dashboard";
-    }, 1000);
   } else {
     console.error(data.error);
   }

@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./UnauthorizedStyles.css";
+import {logoutUser} from './../../../services/authService.js'
 
 function Unauthorized() {
   const navigate = useNavigate();
@@ -38,7 +39,10 @@ function Unauthorized() {
           </button>
           <button
             className="unauthorized-button secondary"
-            onClick={() => navigate("/login")}
+            onClick={()=>{
+              logoutUser();
+              navigate('/login')
+            }}
           >
             Back to Login
           </button>

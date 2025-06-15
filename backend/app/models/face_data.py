@@ -11,7 +11,7 @@ class Face_data(db.Model):
     encoding_path = db.Column(db.String(500), nullable=False)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now(timezone.utc))
 
-    user = db.relationship('User', backref='face_data')
+    user = db.relationship('User', backref=db.backref('face_data', uselist=False))
 
     def __init__(self, user_id, roll_no, image_path, encoding_path):
         self.user_id = user_id
