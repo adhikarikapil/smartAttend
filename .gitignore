@@ -1,4 +1,6 @@
 MyEnv/
+myEnv/
+.envrc
 __pycache__/
 *.py[cod]
 *$py.class
