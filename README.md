@@ -1,3 +1,4 @@
+#Hello
 # Face Recognition Attendance System
 
 This project is a **Face Recognition Attendance System** designed to make classroom more efficient by using facial recognition technology. Teachers can create classess, take attendance, and view reports, while students can join classes and register their faces for attendance tracking.
